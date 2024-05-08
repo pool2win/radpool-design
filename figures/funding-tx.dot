@@ -1,0 +1,9 @@
+digraph funding {    
+    fontname="Helvetica,Arial,sans-serif"
+    node [fontname="Helvetica,Arial,sans-serif"]
+    edge [fontname="Helvetica,Arial,sans-serif"]    
+    node [shape=record];
+    rankdir="LR";
+
+    fundingtx [label="Funding Tx | {{Existing Federation | New Member} | New Federation OR Existing Federation + CSV}"];
+}
