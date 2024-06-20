@@ -1,0 +1,27 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    asciidoctor (2.0.23)
+    asciidoctor-diagram (2.3.0)
+      asciidoctor (>= 1.5.7, < 3.x)
+      asciidoctor-diagram-ditaamini (~> 1.0)
+      asciidoctor-diagram-plantuml (~> 1.2021)
+      rexml
+    asciidoctor-diagram-batik (1.17)
+    asciidoctor-diagram-ditaamini (1.0.3)
+    asciidoctor-diagram-plantuml (1.2024.5)
+      asciidoctor-diagram-batik (~> 1.17)
+    rexml (3.2.8)
+      strscan (>= 3.0.9)
+    strscan (3.1.0)
+
+PLATFORMS
+  aarch64-linux
+  ruby
+
+DEPENDENCIES
+  asciidoctor
+  asciidoctor-diagram
+
+BUNDLED WITH
+   2.5.9

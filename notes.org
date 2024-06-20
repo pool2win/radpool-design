@@ -1,0 +1,71 @@
+* Notes
+
+** Work Generation
+
+1. Syndicate members generate the coinbase address together using a
+   DKG protocol.
+2. All syndicate members generate the blocks and payout to the miners.
+3. All syndicate members randomise the work definition so that miners
+   are not working on the same "search space".
+   1. The randomisation comes from the coinbase transaction generated
+      by the syndicate member - as sigscript for coinbase input or an
+      extra op_return in the output.
+
+*** Address Generation
+
+1. Syndicate members have a new address generated in advance
+   1. This is achieved by continuously running DKG protocol.
+2. Syndicate members are free to reuse addresses for next blocks. They
+   can later generate new address and send work update messages to
+   miners.   
+      
+** Share Generation
+
+1. Miners generate shares for the work generate by syndicate members.
+
+** Block Discovery
+
+1. A bitcoin block is found as one of the shares.
+2. When a syndicate member sees a bitcoin block, it
+   1. Immediately broadcastas it to bitcoin
+   2. It allows broadcasts to the syndicate members, who in turn
+      broadcast it to bitcoin network. This speeds up the
+      dissemination of the broadcast protocol.
+3. Syndicate members switch to the new block and new work for the new
+   block.
+4. 
+
+** Share Propagation Among Syndicate Members
+
+1. Syndicate members sign shares they receieve from miners and
+   broadcast them to the rest of the syndicate.
+   1. Miners this way are "delegating their voting" rights to
+      syndicate members.
+   2. Miners can withdraw these voting rights by switching to a
+      different syndicate member or a different mining syndicate
+      altogether.      
+
+** Syndicate Fee Distribution Algorithm      
+
+1. Syndicate membership is weighted by how much of the hashpower they
+   have attracted.
+   1. All syndicate members see this hash power and can derive the
+      membership view of the syndicate by running a deterministic
+      algorithm.
+
+** Payouts
+
+1. Coinbase pays the syndicate.
+2. The syndicate members compute the miner payouts, each one builds
+   the transaction to payout miners.
+3. If syndicate members sign the payout transaction using FROST, then
+   we have agreement on the payout computation.
+
+*** How do syndicate members generate the same payout tx?
+
+1. Deterministic algorithm to order payments to miners
+2. How is each syndicate member sure they have all the messages
+   required to generate the same payout tx?
+   1. Run reliable broadcast and Raft/Paxos between syndicate members
+      every fixed interval period to agree on the share history
+      receieved from miners.
