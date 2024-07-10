@@ -3,24 +3,46 @@
 Kulpreet Singh, @jungly
 :toc:
 
+== Problems with Centralised Pool
+
+image::../figures/centralised.png[alt="centralised pools",width="50%"]
+
+. Opaque share accounting.
+. Centralised blocktemplate generation by single entity running the pool.
+. Payouts can be blocked by pool operator.
+. Smaller miners can be paying much larger fees than larger miners.
+
+== Problem with P2P pools
+
+image::../figures/p2p.png[alt="p2p pools",width="50%"]
+
+. Miners need to run and maintain services along with their mining rigs.
+. Payouts are under the control of a threshold, which can be hijacked by someone with a 51% hashrate.
+. Running Threshold Signatures on a P2P model is still not solved.
+  . The network model required by FROST requires that nodes are a connected in a point to point network.
+
+== Mining Syndicate as the Solution
+
+image::../figures/fedpool.png[alt="Mining Syndicate/Federation",width="50%"]
+
 Mining syndicate resists mining centralisation by providing the
-services of a reducing variance for miners, building blocktemplates,
-and making miner payouts using secure multi party computation
-protocols.
+services of reducing variance for miners, building blocktemplates, and
+making miner payouts over payment channels enabling the pool to scale
+by consuming a constant amount of blockspace for payouts.
 
 There are two types of parties in the system.
 
 . Miners - running mining facilities and do not need to run bitcoin node.
-. Syndicate members - run bitcoin node, generate block templates and sign miner payout transactions. 
+. Syndicate members - these run bitcoin nodes, generate block templates and sign miner payout transactions.
 
 Miners register using any syndicate member and communicate with the
-syndicate using stratum (v1/v2) protocol.
-
-Syndicate members take on most of the complexity in this
-design. Here's a list of responsibilities the syndicate members take
-on:
+syndicate using stratum (v1/v2) protocol. Syndicate members take on
+the complexity in this design, allowing miners to switch from
+centralised pools without running any services. Here's a list of
+responsibilities the syndicate members take on:
 
 . Build block templates.
+. Run services to let miners register with them.
 . Run stratum servers that miners use to generate shares.
 . Run consistent share accounting by using state replication across the members.
 . Sign miner payout transactions using Schnorr threshold signatures.
@@ -29,15 +51,6 @@ The coinbase and payout transaction are constructed such that neither
 the miner nor any syndicate member can steal or deny progress. As
 members join the syndicate the threshold requirement for the number of
 honest parties is increased.
-
-== Objectives
-
-The mining syndicate based design meets the following goals:
-
-. Transparent share accounting.
-. Independent blocktemplate generation by syndicate members.
-. Guaranteed payouts for miners independent of blocktemplate used.
-. Fee negotiation between syndicate members and miners.
 
 == System Overview
 
@@ -82,30 +95,35 @@ BiRel_D(syndicate_b, syndicate_c, "replication", "p2p communication")
 === Syndicate Operation
 
 The syndicate members run all the services that pool operators need
-to run. The difference is the the syndicate is transparent and all members can
-verify correct operations of all other members.
+to run. The difference is the the syndicate is transparent and all
+members can verify correct operations of all other
+members. Furthermore, syndicate membership is open and members can
+join and leave the syndicate using the FOSS implementation of the
+syndicate node.
+
+The joining part is permissioned and if a syndicate has reached a
+point it can't scale further, it will start rejecting join
+requests. Parties can then start new syndicates once they can attract
+enough hashrate.
+
+[INFO]
+====
+We provide the tools, people run the syndicates!
+====
 
 .Syndicate Member Responsibilites
 . Run a node that can handle the share validation at scale.
 . Run stratum interfaces for miner interaction.
-. Expose miner registration interface.
+. Provide a miner registration interface.
 . Generate block templates and the stratum work 
 . Contribute capital that is used to pay miners.
-. Generate block templates and 
+. Provide interfaces for miners to check their balances and collect their earnings.
 
+==== Capital Requirements and Risks Mitigation
 
 The capital required to fund the pool is distributed across the
-syndicate memebers and more importantly the syndicate results in a
-transparent pool where all syndicate members and miners can validate
-all syndicate members are working correctly. If a member is not
-working according to the agreed upon protocols, the honest syndicate
-members stop rewarding the dishonest member and will eventually remove
-the dishonest member from the syndicate.
-
-The above is made possible by point to point communication between
-syndicate members as well as bitcoin contracts between the syndicate
-members and miners signed using FROST threshold signatures generated
-by the syndicate.
+syndicate members reducing the capital risks for any individual
+syndicate member.
 
 When a new member wants to join a syndicate, the existing members will
 reduce their earnings with no guarantees that the new member will be
@@ -115,6 +133,19 @@ are found more frequently, the syndicate will need more capital and to
 keep functionining.
 
 TODO: Capital calculation.
+
+==== Transparent and Open Operations
+
+A mining syndicate results in a transparent pool where all syndicate
+members validate all other syndicate members are working correctly. If
+a member is not working according to the agreed upon protocols, the
+honest syndicate members stop rewarding the dishonest member and will
+eventually remove the dishonest member from the syndicate.
+
+The above is made possible by point to point communication between
+syndicate members as well as the bitcoin contracts between the
+syndicate members and miners signed using FROST threshold signatures
+generated by the syndicate.
 
 // [plantuml, target=frost-overview]
 // ....
@@ -145,10 +176,11 @@ TODO: Capital calculation.
 == Comparison With Centralised Pools
 
 .Pros
-. Diverse blocktemplates.
-. Resilience - as long a threshold number of members are reachable, the syndicate can continue to make progress.
+. Diversity of block templates - Each syndicate member is free to choose the transaction in a block, the only requirement is that 
 . Transparent share accounting - miners can validate their payouts are correct.
-  . Miners (or anyone) can run tools we provide to monitor the
+  . Miners (or anyone) can access the pool's data by joining the p2p syndicate network.
+  . We will provide these tools to monitor the pool's accounting and fairness.
+. Resilience - as long a threshold number of members are reachable, the syndicate can continue to make progress.
   syndicate for payout fairness.
 
 .Cons
@@ -157,15 +189,28 @@ TODO: Capital calculation.
 == Comparison With P2P Pools
 
 .Pros
-. Miners don't need to run any servers or run any validation at all.
-. Zero friction to switch to Syndicated Mining from centralised pools.
-. No need for p2p communication between miners - scale depends only on the ability to scale the syndicate p2p communication.
+. Zero friction to switch from centralised pools. Just change your stratum endpoint and off you go.
+. Miners don't need to run any servers or run any validation.
+. No need for p2p communication between miners - scalability of the pool depends only on the ability to scale the syndicate p2p communication, which is a much easier challenge.
 . No consensus required between miners on the state of shares generated.
 
 .Cons
 . Block template generation is managed by syndicate members.
   . However, anyone can join the syndicate and provide block
   templates, including miners themselves.
+
+== Coinbase, Blocktemplates and Payouts
+
+The key component that validates the proposal is how coinbases and
+blocktemplates are constructed by syndicate members and how payouts
+are made to miners.
+
+.Payout sub-system requirements
+. Miners can unilaterally exit.
+. Syndicate make progress as long as threshold number of members are honest.
+. Miners receive payout for all shares using the PPLNS distribution.
+. Syndicate members can't steal shares of miners.
+. Miners work on a block only if they know their fair share of payout is included in the coinbase.
 
 
 == Syndicate Protocols
@@ -351,15 +396,3 @@ with the syndicate.
 === Blocktemplate Generation
 === Payout Mechanism
 === Miner Exit
-
-== Coinbase, Blocktemplates and Payouts
-
-The key component that validates the proposal is how coinbases and
-blocktemplates are constructed by syndicate members and how payouts
-are made to miners.
-
-.Payout sub-system requirements
-. Miners can unilaterally exit.
-. Syndicate make progress as long as threshold number of members are honest.
-. Miners receive payout for all shares using the PPLNS distribution.
-. Syndicate members can't steal shares of miners.

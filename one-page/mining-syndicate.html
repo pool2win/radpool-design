@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<meta name="author" content="2Kulpreet Singh, @jungly">
+<meta name="author" content="Kulpreet Singh, @jungly">
 <title>Mining Syndicate</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -439,12 +439,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>Mining Syndicate</h1>
 <div class="details">
-<span id="author" class="author">2Kulpreet Singh, @jungly</span><br>
+<span id="author" class="author">Kulpreet Singh, @jungly</span><br>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_objectives">Objectives</a></li>
+<li><a href="#_problems_with_centralised_pool">Problems with Centralised Pool</a></li>
+<li><a href="#_problem_with_p2p_pools">Problem with P2P pools</a></li>
+<li><a href="#_mining_syndicate_as_the_solution">Mining Syndicate as the Solution</a></li>
 <li><a href="#_system_overview">System Overview</a>
 <ul class="sectlevel2">
 <li><a href="#_syndicate_operation">Syndicate Operation</a></li>
@@ -472,13 +474,71 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div id="content">
-<div id="preamble">
+<div class="sect1">
+<h2 id="_problems_with_centralised_pool">Problems with Centralised Pool</h2>
 <div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="../figures/centralised.png" alt="centralised pools" width="50%">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Opaque share accounting.</p>
+</li>
+<li>
+<p>Centralised blocktemplate generation by single entity running the pool.</p>
+</li>
+<li>
+<p>Payouts can be blocked by pool operator.</p>
+</li>
+<li>
+<p>Smaller miners can be paying much larger fees than larger miners.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_problem_with_p2p_pools">Problem with P2P pools</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="../figures/p2p.png" alt="p2p pools" width="50%">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Miners need to run and maintain services along with their mining rigs.</p>
+</li>
+<li>
+<p>Payouts are under the control of a threshold, which can be hijacked by someone with a 51% hashrate.</p>
+</li>
+<li>
+<p>Running Threshold Signatures on a P2P model is still not solved.</p>
+</li>
+<li>
+<p>The network model required by FROST requires that nodes are a connected in a point to point network.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mining_syndicate_as_the_solution">Mining Syndicate as the Solution</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="../figures/fedpool.png" alt="Mining Syndicate/Federation" width="50%">
+</div>
+</div>
 <div class="paragraph">
 <p>Mining syndicate resists mining centralisation by providing the
-services of a reducing variance for miners, building blocktemplates,
-and making miner payouts using secure multi party computation
-protocols.</p>
+services of reducing variance for miners, building blocktemplates, and
+making miner payouts over payment channels enabling the pool to scale
+by consuming a constant amount of blockspace for payouts.</p>
 </div>
 <div class="paragraph">
 <p>There are two types of parties in the system.</p>
@@ -489,23 +549,24 @@ protocols.</p>
 <p>Miners - running mining facilities and do not need to run bitcoin node.</p>
 </li>
 <li>
-<p>Syndicate members - run bitcoin node, generate block templates and sign miner payout transactions.</p>
+<p>Syndicate members - these run bitcoin nodes, generate block templates and sign miner payout transactions.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
 <p>Miners register using any syndicate member and communicate with the
-syndicate using stratum (v1/v2) protocol.</p>
-</div>
-<div class="paragraph">
-<p>Syndicate members take on most of the complexity in this
-design. Here&#8217;s a list of responsibilities the syndicate members take
-on:</p>
+syndicate using stratum (v1/v2) protocol. Syndicate members take on
+the complexity in this design, allowing miners to switch from
+centralised pools without running any services. Here&#8217;s a list of
+responsibilities the syndicate members take on:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>Build block templates.</p>
+</li>
+<li>
+<p>Run services to let miners register with them.</p>
 </li>
 <li>
 <p>Run stratum servers that miners use to generate shares.</p>
@@ -523,30 +584,6 @@ on:</p>
 the miner nor any syndicate member can steal or deny progress. As
 members join the syndicate the threshold requirement for the number of
 honest parties is increased.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_objectives">Objectives</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The mining syndicate based design meets the following goals:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Transparent share accounting.</p>
-</li>
-<li>
-<p>Independent blocktemplate generation by syndicate members.</p>
-</li>
-<li>
-<p>Guaranteed payouts for miners independent of blocktemplate used.</p>
-</li>
-<li>
-<p>Fee negotiation between syndicate members and miners.</p>
-</li>
-</ol>
 </div>
 </div>
 </div>
@@ -573,8 +610,24 @@ messages and send shares.</p>
 <h3 id="_syndicate_operation">Syndicate Operation</h3>
 <div class="paragraph">
 <p>The syndicate members run all the services that pool operators need
-to run. The difference is the the syndicate is transparent and all members can
-verify correct operations of all other members.</p>
+to run. The difference is the the syndicate is transparent and all
+members can verify correct operations of all other
+members. Furthermore, syndicate membership is open and members can
+join and leave the syndicate using the FOSS implementation of the
+syndicate node.</p>
+</div>
+<div class="paragraph">
+<p>The joining part is permissioned and if a syndicate has reached a
+point it can&#8217;t scale further, it will start rejecting join
+requests. Parties can then start new syndicates once they can attract
+enough hashrate.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>We provide the tools, people run the syndicates!</p>
+</div>
+</div>
 </div>
 <div class="olist arabic">
 <div class="title">Syndicate Member Responsibilites</div>
@@ -586,7 +639,7 @@ verify correct operations of all other members.</p>
 <p>Run stratum interfaces for miner interaction.</p>
 </li>
 <li>
-<p>Expose miner registration interface.</p>
+<p>Provide a miner registration interface.</p>
 </li>
 <li>
 <p>Generate block templates and the stratum work</p>
@@ -595,24 +648,16 @@ verify correct operations of all other members.</p>
 <p>Contribute capital that is used to pay miners.</p>
 </li>
 <li>
-<p>Generate block templates and</p>
+<p>Provide interfaces for miners to check their balances and collect their earnings.</p>
 </li>
 </ol>
 </div>
+<div class="sect3">
+<h4 id="_capital_requirements_and_risks_mitigation">Capital Requirements and Risks Mitigation</h4>
 <div class="paragraph">
 <p>The capital required to fund the pool is distributed across the
-syndicate memebers and more importantly the syndicate results in a
-transparent pool where all syndicate members and miners can validate
-all syndicate members are working correctly. If a member is not
-working according to the agreed upon protocols, the honest syndicate
-members stop rewarding the dishonest member and will eventually remove
-the dishonest member from the syndicate.</p>
-</div>
-<div class="paragraph">
-<p>The above is made possible by point to point communication between
-syndicate members as well as bitcoin contracts between the syndicate
-members and miners signed using FROST threshold signatures generated
-by the syndicate.</p>
+syndicate members reducing the capital risks for any individual
+syndicate member.</p>
 </div>
 <div class="paragraph">
 <p>When a new member wants to join a syndicate, the existing members will
@@ -626,6 +671,23 @@ keep functionining.</p>
 <p>TODO: Capital calculation.</p>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_transparent_and_open_operations">Transparent and Open Operations</h4>
+<div class="paragraph">
+<p>A mining syndicate results in a transparent pool where all syndicate
+members validate all other syndicate members are working correctly. If
+a member is not working according to the agreed upon protocols, the
+honest syndicate members stop rewarding the dishonest member and will
+eventually remove the dishonest member from the syndicate.</p>
+</div>
+<div class="paragraph">
+<p>The above is made possible by point to point communication between
+syndicate members as well as the bitcoin contracts between the
+syndicate members and miners signed using FROST threshold signatures
+generated by the syndicate.</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -635,16 +697,19 @@ keep functionining.</p>
 <div class="title">Pros</div>
 <ol class="arabic">
 <li>
-<p>Diverse blocktemplates.</p>
-</li>
-<li>
-<p>Resilience - as long a threshold number of members are reachable, the syndicate can continue to make progress.</p>
+<p>Diversity of block templates - Each syndicate member is free to choose the transaction in a block, the only requirement is that</p>
 </li>
 <li>
 <p>Transparent share accounting - miners can validate their payouts are correct.</p>
 </li>
 <li>
-<p>Miners (or anyone) can run tools we provide to monitor the
+<p>Miners (or anyone) can access the pool&#8217;s data by joining the p2p syndicate network.</p>
+</li>
+<li>
+<p>We will provide these tools to monitor the pool&#8217;s accounting and fairness.</p>
+</li>
+<li>
+<p>Resilience - as long a threshold number of members are reachable, the syndicate can continue to make progress.
 syndicate for payout fairness.</p>
 </li>
 </ol>
@@ -666,13 +731,13 @@ syndicate for payout fairness.</p>
 <div class="title">Pros</div>
 <ol class="arabic">
 <li>
-<p>Miners don&#8217;t need to run any servers or run any validation at all.</p>
+<p>Zero friction to switch from centralised pools. Just change your stratum endpoint and off you go.</p>
 </li>
 <li>
-<p>Zero friction to switch to Syndicated Mining from centralised pools.</p>
+<p>Miners don&#8217;t need to run any servers or run any validation.</p>
 </li>
 <li>
-<p>No need for p2p communication between miners - scale depends only on the ability to scale the syndicate p2p communication.</p>
+<p>No need for p2p communication between miners - scalability of the pool depends only on the ability to scale the syndicate p2p communication, which is a much easier challenge.</p>
 </li>
 <li>
 <p>No consensus required between miners on the state of shares generated.</p>
@@ -927,6 +992,9 @@ are made to miners.</p>
 <li>
 <p>Syndicate members can&#8217;t steal shares of miners.</p>
 </li>
+<li>
+<p>Miners work on a block only if they know their fair share of payout is included in the coinbase.</p>
+</li>
 </ol>
 </div>
 </div>
@@ -934,7 +1002,7 @@ are made to miners.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-06-02 09:34:41 +0200
+Last updated 2024-07-10 09:32:07 +0200
 </div>
 </div>
 </body>

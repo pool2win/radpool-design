@@ -69,3 +69,17 @@
    1. Run reliable broadcast and Raft/Paxos between syndicate members
       every fixed interval period to agree on the share history
       receieved from miners.
+
+* Comparison to Braidpool
+
+** Advantages of Fedpool
+
+1. Zero resistance to switch from a centralised pool to fedpool.
+   1. Miner's don't have to run any services or nodes - just as in
+      current centralised pool setups.
+   2. Miner's simply point their workers to the fedpool's stratum
+      server and start mining.
+2. Payout mechanism does not need covenants to resist a 51% attack to
+   steal miner hashrate.
+   1. Payout distribution is committed to in the coinbase. So payout
+      reward can't be stolen post-fact.
