@@ -1,4 +1,4 @@
-== Submit Shares to Federation: Stratum
+= Submit Shares to Federation: Stratum
 
 The miner signs the shares it submits to the federation members. Miners
 will use a proxy for signing their shares. The shares are signed by

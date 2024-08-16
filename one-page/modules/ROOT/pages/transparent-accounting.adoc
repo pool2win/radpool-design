@@ -1,4 +1,4 @@
-== Transparent and Open Operations
+= Transparent and Open Operations
 
 A mining federation results in a transparent pool where all federation
 members validate all other federation members are working correctly. If

@@ -1,3 +1,17 @@
+= Problems
+
+Current effort in bitcoin mining can be split into centralised pools
+or p2p pools.
+
+Centralised pools carry out share validation, accounting and reward
+distribution using a centralised entity - usually a company.
+
+P2P pools push these operational responsibilities to the edges of the
+network - i.e. the miners.
+
+In this section, we consider the problems faced by both these
+approaches.
+
 == Problems with Centralised Pool
 
 image::centralised.png[alt="centralised pools",width="50%"]
@@ -16,3 +30,6 @@ image::p2p.png[alt="p2p pools",width="50%"]
 . Running Threshold Signatures on a P2P model is still not solved.
   . The network model required by FROST needs nodes to be connected in
   a point to point network.
+
+Next we present a the possibility of using a federation of operators
+to replace centralised pool operators.

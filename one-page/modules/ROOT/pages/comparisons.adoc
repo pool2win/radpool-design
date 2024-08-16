@@ -1,3 +1,8 @@
+= Comparison
+
+This section compares the federation appraoch with the centralised an
+p2p solutions.
+
 == Comparison With Centralised Pools
 
 .Pros

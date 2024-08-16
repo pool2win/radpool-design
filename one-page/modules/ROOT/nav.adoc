@@ -10,7 +10,7 @@
 ** xref:resisting-sybil-attacks.adoc[Resist Sybil Attacks]
 ** xref:stratum.adoc[Submit Shares Using Stratum]
 * xref:payout-mechanism.adoc[Payout Mechanism]
-** xref:payout-contracts.adoc[Payout Contracts]
+** xref:bitcoin-contracts.adoc[Bitcoin Contracts]
 * xref:protocols.adoc[Federation Protocols]
 * xref:comparisons.adoc[Comparisons]
 

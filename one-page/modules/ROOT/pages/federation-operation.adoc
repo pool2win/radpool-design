@@ -1,4 +1,4 @@
-== Federation Operation
+= Federation Operation
 
 The federation members run all the services that currently centralised
 pool operators need to run. The difference is the the federation is

@@ -1,4 +1,4 @@
-== Mining Federation as the Solution
+= Mining Federation as the Solution
 
 image::fedpool.png[alt="Mining Syndicate/Federation",width="50%"]
 

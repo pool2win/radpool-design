@@ -1,4 +1,4 @@
-== Using Bitcoin For Federation Group Membership
+= Federation Membership
 
 Group membership has a reduction to consensus. In our trust model, we
 require this consensus to have byzantine fault tolerant

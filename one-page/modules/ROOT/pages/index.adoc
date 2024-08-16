@@ -1,5 +1,4 @@
-
-== Fedpool - Federated Mining Pool
+= Fedpool - Federated Mining Pool
 
 Current mining pools provide no visibility to miners on the share
 accounting or the fees charged by the pool. Further still, the current

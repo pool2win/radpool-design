@@ -1,4 +1,4 @@
-== Coinbase, Blocktemplates and Payouts
+= Coinbase, Blocktemplates and Payouts
 
 The key component that validates the proposal is how coinbases and
 blocktemplates are constructed by federation members and how payouts

@@ -3,7 +3,7 @@ site:
 content:
   sources:
   - url: ..
-    branches: try-antora
+    branches: main
     start_path: one-page
 ui:
   bundle:
@@ -13,5 +13,6 @@ ui:
 asciidoc:
   attributes:
     plantuml-server-url: http://www.plantuml.com/plantuml  
+    page-pagination: ''
   extensions:
     - asciidoctor-plantuml

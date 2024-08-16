@@ -1,4 +1,4 @@
-== Federation Network
+= Federation Network
 
 The federation members open a point to point to connection with all
 other federation members. This channels is authenticated and

@@ -1,4 +1,4 @@
-== Resisting Sybil Attacks
+= Resisting Sybil Attacks
 
 When a miner sends their share to a federation member, the member
 signs the shares before broadcasting to the entire federation. This

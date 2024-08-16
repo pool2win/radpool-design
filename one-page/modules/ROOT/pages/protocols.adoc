@@ -1,9 +1,9 @@
-== Federation Protocols
+= Federation Protocols
 
 The federation and miners follow a number of separate protocols to
 enable the system to work together.
 
-=== Initial Setup
+== Initial Setup
 
 To start a new federation, any member announces their network
 address. The threshold and federation size is set to one.
@@ -26,7 +26,7 @@ Miner <--> FederationMember: Stratum auth, notify, submit
 At this point, the sole federation member acts like a centralised pool
 operator, with transparent share accounting.
 
-=== New Federation Member
+== New Federation Member
 
 To join the federation, a new member has to lock in capital in to a
 bitcoin transaction signed by the Federation using a Schnorr threshold
@@ -53,7 +53,7 @@ NewFederationMember <--> Federation: Run FROST to sign new tx
 @enduml
 ....
 
-=== Federation Member Exit
+== Federation Member Exit
 
 Similar to the protocol followed to add a new member to the federation,
 the federation members create a new transaction with updated
@@ -61,7 +61,7 @@ balances. The member leaving the federation is part of the party that
 runs the threshold signature instance to sign the input spending the
 previous federation output.
 
-=== Federation Member Failures
+== Federation Member Failures
 
 If a member fails (say is unresponsive), the federation continues to
 operate as normal. If more than a threshold number of federation
@@ -71,7 +71,7 @@ along with miners can claim their outputs after the timeout expiry.
 See section on Bitcoin Contracts to see how the transactions are
 structured.
 
-=== New Miner Registration
+== New Miner Registration
 
 A miner register with any of the federation members by following the
 protocol to create a new authentication token. This can follow any of

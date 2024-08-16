@@ -1,4 +1,4 @@
-== Capital Requirements and Risks Mitigation
+= Capital Requirements and Risks Mitigation
 
 The capital required to fund the pool is distributed across the
 federation members reducing the capital risks for any individual

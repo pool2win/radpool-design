@@ -1,4 +1,4 @@
-== System Overview
+= System Overview
 
 The diagarm below shows how the miners and federation members
 communicate. Note, there is no peer to peer communication between
