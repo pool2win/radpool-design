@@ -3,3 +3,6 @@ default:
 
 build:
 	asciidoctor ./mining-syndicate.adoc -r asciidoctor-diagram
+
+antora:
+    npx antora --fetch antora-playbook.yml

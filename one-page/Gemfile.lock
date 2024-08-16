@@ -11,6 +11,8 @@ GEM
     asciidoctor-diagram-ditaamini (1.0.3)
     asciidoctor-diagram-plantuml (1.2024.5)
       asciidoctor-diagram-batik (~> 1.17)
+    asciidoctor-plantuml (0.1.1)
+      asciidoctor (>= 2.0.17, < 3.0.0)
     rexml (3.2.8)
       strscan (>= 3.0.9)
     strscan (3.1.0)
@@ -22,6 +24,7 @@ PLATFORMS
 DEPENDENCIES
   asciidoctor
   asciidoctor-diagram
+  asciidoctor-plantuml
 
 BUNDLED WITH
    2.5.9

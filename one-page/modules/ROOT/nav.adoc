@@ -1,2 +1,16 @@
-* Hello World
-* Another
+* xref:index.adoc[Introduction]
+* xref:problems.adoc[Problems]
+* xref:mining-federation.adoc[Mining Federation]
+** xref:system-overview.adoc[System Overview]
+** xref:federation-operation.adoc[Federation Operation]
+** xref:federation-membership.adoc[Federation Membership]
+** xref:federation-network.adoc[Federation Network Communication]
+** xref:capital-requirements.adoc[Capital Requirements]
+** xref:transparent-accounting.adoc[Transparent Accounting]
+** xref:resisting-sybil-attacks.adoc[Resist Sybil Attacks]
+** xref:stratum.adoc[Submit Shares Using Stratum]
+* xref:payout-mechanism.adoc[Payout Mechanism]
+** xref:payout-contracts.adoc[Payout Contracts]
+* xref:protocols.adoc[Federation Protocols]
+* xref:comparisons.adoc[Comparisons]
+

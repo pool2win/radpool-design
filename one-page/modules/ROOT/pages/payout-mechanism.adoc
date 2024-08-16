@@ -1,0 +1,12 @@
+== Coinbase, Blocktemplates and Payouts
+
+The key component that validates the proposal is how coinbases and
+blocktemplates are constructed by federation members and how payouts
+are made to miners.
+
+.Payout sub-system requirements
+. Miners should be able to exit the pool unilaterally with all their coins, without requiring any permission from the federation or anyone else.
+. Federation should be able to make progress as long as threshold number of members are honest.
+. Miners should receive payout for all their shares using PPLNS reward distribution.
+. Federation members should not be able to steal miners shares.
+. Miners work on a block only if they know their fair share of payout is included in the coinbase.

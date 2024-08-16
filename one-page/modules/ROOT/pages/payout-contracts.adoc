@@ -1,0 +1,5 @@
+== Blocktemplate Generation
+
+== Payout Mechanism
+
+== Miner Exit

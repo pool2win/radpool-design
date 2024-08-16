@@ -1,4 +1,4 @@
-name: Fedpool Design Docs
+name: Fedpool
 version: 0.1
 nav:
 - modules/ROOT/nav.adoc

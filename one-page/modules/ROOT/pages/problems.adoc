@@ -1,0 +1,18 @@
+== Problems with Centralised Pool
+
+image::centralised.png[alt="centralised pools",width="50%"]
+
+. Opaque share accounting.
+. Centralised blocktemplate generation by single entity running the pool.
+. Payouts can be blocked by pool operator.
+. Smaller miners can be paying much larger fees than larger miners.
+
+== Problem with P2P pools
+
+image::p2p.png[alt="p2p pools",width="50%"]
+
+. Miners need to run and maintain services along with their mining rigs.
+. Payouts are under the control of a threshold, which can be hijacked by someone with a 51% hashrate.
+. Running Threshold Signatures on a P2P model is still not solved.
+  . The network model required by FROST needs nodes to be connected in
+  a point to point network.

@@ -1,0 +1,12 @@
+== Resisting Sybil Attacks
+
+When a miner sends their share to a federation member, the member
+signs the shares before broadcasting to the entire federation. This
+identifies shares with the federation members that brought the
+hashrate to the pool. The figure below shows how this works.
+
+To prevent anyone from joining the federation by bringing in capital,
+we require that federation members also bring in hashrate to the
+pool. Further, to resist sybil attacks by anyone joining the
+federation, we limit the threshold participation to the members that
+bring the top 2/3rds of the hashrate.

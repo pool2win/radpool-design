@@ -1,0 +1,17 @@
+== System Overview
+
+The diagarm below shows how the miners and federation members
+communicate. Note, there is no peer to peer communication between
+miners. Only the federation members use p2p communication for
+consistent state replication and reaching byzantine fault tolerant
+agreement.
+
+Miners register with any federation member, and then communicate with
+the federation member's stratum instance. The federation member signs
+the shares it receives from the miner before broadcasting them to the
+rest of the federation. This helps in identifying the federation
+members that are serving each of the miners. We will see later why
+this becomes important when it comes to fee distribution among the
+federation members.
+
+image::system-overview.png[alt="system overview",width="100%"]

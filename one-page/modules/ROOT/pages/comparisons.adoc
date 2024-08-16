@@ -1,0 +1,25 @@
+== Comparison With Centralised Pools
+
+.Pros
+. Diversity of block templates - Each federation member is free to choose set of transactions in a block, the only requirement is that the coinbase conforms to the requirements of fedpool contracts.
+. Transparent share accounting - miners can validate their payouts are correct.
+  . Miners (or anyone) can access the pool's data by joining the
+  federation's P2P network.
+. Transparent fee schedule - all miners can validate they are being charged a fair fee rate.
+. Resilience - as long a threshold number of members are reachable, the federation can continue to make progress.
+
+.Cons
+. Fedpool uses PPLNS instead of FPPS which is quite popular with centralised pools despite all the drawbacks.
+
+== Comparison With P2P Pools
+
+.Pros
+. Zero friction to switch from centralised pools. The process is the same as changing from one centralised pool to another.
+. Miners don't need to run any servers or run any validation - unless they want to.
+. No need for p2p communication between miners - scalability of the pool depends only on the ability to scale the federation p2p communication, which is a tractable challenge.
+. No consensus required between miners on the state of shares generated.
+
+.Cons
+. Block template generation is managed by federation members.
+  . However, anyone can join the federation and provide block
+  templates, including miners themselves.
