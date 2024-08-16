@@ -1,0 +1,12 @@
+digraph commitmenttx {
+    fontname="Helvetica,Arial,sans-serif"
+    node [fontname="Helvetica,Arial,sans-serif"]
+    edge [fontname="Helvetica,Arial,sans-serif"]    
+    node [shape=record];
+    rankdir="LR";
+
+    fundingtx [label="Funding Tx | {{Existing Federation, 10 | New Member, 1} | <o> New Federation, 11 OR Existing Federation + CSV, 11}"];
+    commitmenttx [label="Commitment Tx | {{ <i> New Federation, 11} | {New Member + CSV, 1 | Member X + CSV, _ | Member Y + CSV, _ | Miner A + CSV, _ | Miner B + CSV, _}}"]
+
+    fundingtx:o -> commitmenttx:i
+}
