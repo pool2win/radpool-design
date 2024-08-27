@@ -1,35 +1,35 @@
 = Transparent and Open Operations
 
-A mining federation results in a transparent pool where all federation
-members validate all other federation members are working correctly. If
+A mining syndicate results in a transparent pool where all syndicate
+members validate all other syndicate members are working correctly. If
 a member is not working according to the agreed upon protocols, the
-honest federation members stop rewarding the dishonest member and will
-eventually remove the dishonest member from the federation.
+honest syndicate members stop rewarding the dishonest member and will
+eventually remove the dishonest member from the syndicate.
 
 The above is made possible by point to point communication between
-federation members as well as the bitcoin contracts between the
-federation members.
+syndicate members as well as the bitcoin contracts between the
+syndicate members.
 
 // [plantuml, target=frost-overview]
 // ....
 // @startuml
 // !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Dynamic.puml
 
-// Container(new_member, "New Member", "Potential Federation member")
-// System_Boundary(federation, "Federation") {
-//     Container(federation_a, "Member A", "Federation member")
-//     Container(federation_b, "Member B", "Federation member")
-//     Container(federation_c, "Member C", "Federation member")
+// Container(new_member, "New Member", "Potential Syndicate member")
+// System_Boundary(syndicate, "Syndicate") {
+//     Container(syndicate_a, "Member A", "Syndicate member")
+//     Container(syndicate_b, "Member B", "Syndicate member")
+//     Container(syndicate_c, "Member C", "Syndicate member")
 // }    
 
-// Rel_D(new_member, federation_a, "Request to Join with capital offered", "Confidential channel")
+// Rel_D(new_member, syndicate_a, "Request to Join with capital offered", "Confidential channel")
 
-// Rel(federation_a, federation_b, "Forward join request", "Confidential channel")
-// Rel(federation_a, federation_c, "Forward join request", "Confidential channel")
+// Rel(syndicate_a, syndicate_b, "Forward join request", "Confidential channel")
+// Rel(syndicate_a, syndicate_c, "Forward join request", "Confidential channel")
 
-// Rel(federation_a, federation_b, "Run FROST protocol", "Confidential channel")
-// Rel(federation_a, federation_b, "Run FROST protocol", "Confidential channel")
-// Rel(federation_b, federation_c, "Run FROST Protocol", "Confidential channel")
+// Rel(syndicate_a, syndicate_b, "Run FROST protocol", "Confidential channel")
+// Rel(syndicate_a, syndicate_b, "Run FROST protocol", "Confidential channel")
+// Rel(syndicate_b, syndicate_c, "Run FROST Protocol", "Confidential channel")
 
 
 // @enduml

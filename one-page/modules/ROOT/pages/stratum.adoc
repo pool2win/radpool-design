@@ -1,6 +1,6 @@
-= Submit Shares to Federation: Stratum
+= Submit Shares to Syndicate: Stratum
 
-The miner signs the shares it submits to the federation members. Miners
+The miner signs the shares it submits to the syndicate members. Miners
 will use a proxy for signing their shares. The shares are signed by
 using the same public key that the miner registered for receiving
 payouts.
@@ -8,8 +8,8 @@ payouts.
 TIP: The signing of shares and using the proxy is optional.
 
 If the miner does not sign the shares, then it is trusting the
-federation member to not steal their shares. However, if the federation
+syndicate member to not steal their shares. However, if the syndicate
 member steals the shares the miners can observe this by subscribing to
-the federation p2p broadcast that replicates shares across the
-federation and observing all the shares the federation is receiving.
+the syndicate p2p broadcast that replicates shares across the
+syndicate and observing all the shares the syndicate is receiving.
 

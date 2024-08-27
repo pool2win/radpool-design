@@ -12,7 +12,7 @@ nature centralised, and full p2p pools are challenging to scale to
 limits for providing enough reduction in block discovery variance.
 
 In these pages, we present a novel design - radpool - that breaks up
-the centralised single entity into a federation running the pool. This
+the centralised single entity into a syndicate running the pool. This
 allevaites the scalability challenges faced by a fully p2p pool while
 dramatically increases mining decentralisation, thus improving the
 resilience to transaction censorship.
@@ -20,14 +20,14 @@ resilience to transaction censorship.
 The salient features of the design presented are the following and we
 describe them in detail in the rest of the pages.
 
-1. Block template construction is decentralised as each federation
+1. Block template construction is decentralised as each syndicate
 member build an independent blocktemplate.
 2. Share accounting is transparent, so the pool is fully auditable.
-3. Federation members earn a yield in exchange of locking liquidity to
+3. Syndicate members earn a yield in exchange of locking liquidity to
 fund payouts for miners.
 4. The pool provides open access to mining data so we can build
 futures contracts to help miners hedge their risks.
 5. The payout mechanism allows unilateral exits for miners and
-federation members, thus making the solution non-custodial.
+syndicate members, thus making the solution non-custodial.
 6. Switching to Radpool from current centralised pools has zero
 friction for miners.

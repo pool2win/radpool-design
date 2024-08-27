@@ -19,4 +19,5 @@ achieve, for which expanding the size of the syndicate is important.
 [INFO]
 ====
 TODO: Capital calculation.
+TODO: Add a diagram too, if possible
 ====

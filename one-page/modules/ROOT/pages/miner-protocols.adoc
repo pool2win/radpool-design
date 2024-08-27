@@ -1,44 +1,44 @@
 = Miner Protocols
 
 We describe the protocols executed when a new miners registers with a
-federation member, or wants to cash out and leave the pool.
+syndicate member, or wants to cash out and leave the pool.
 
 == New Miner Registration
 
-A miner register with any of the federation members by following the
+A miner register with any of the syndicate members by following the
 protocol to create a new authentication token. This can follow any of
 the well known protocols like OAuth. The miner submits a public key to
 which it should receive payouts.
 
 A miner can obtain a similar authentication token from multiple
-federation members. The miner should use the same public key to
-register with multiple federation members.
+syndicate members. The miner should use the same public key to
+register with multiple syndicate members.
 
 Using this authentication token, the miner can open a communication
-channel to send and receive stratum messages to the federation members.
+channel to send and receive stratum messages to the syndicate members.
 
 At the end of the miner registration, the miner is in a position to
-start sending shares to the federation.
+start sending shares to the syndicate.
 
 .New Miner Registration
 [plantuml, target=intial-setup]
 ....
 @startuml
 
-group Federation Member 1
-NewMiner --> FederationMember_1: Register using HTTP API
-NewMiner <-- FederationMember_1: Auth token 1
-NewMiner --> FederationMember_1: Submit public key
+group Syndicate Member 1
+NewMiner --> SyndicateMember_1: Register using HTTP API
+NewMiner <-- SyndicateMember_1: Auth token 1
+NewMiner --> SyndicateMember_1: Submit public key
 
-NewMiner <--> FederationMember_1: Stratum communication
+NewMiner <--> SyndicateMember_1: Stratum communication
 end
 
-group Federation Member 2
-NewMiner --> FederationMember_2: Register using HTTP API
-NewMiner <-- FederationMember_2: Auth token 2
-NewMiner --> FederationMember_2: Submit public key
+group Syndicate Member 2
+NewMiner --> SyndicateMember_2: Register using HTTP API
+NewMiner <-- SyndicateMember_2: Auth token 2
+NewMiner --> SyndicateMember_2: Submit public key
 
-NewMiner <--> FederationMember_2: Stratum communication
+NewMiner <--> SyndicateMember_2: Stratum communication
 end
 @enduml
 ....

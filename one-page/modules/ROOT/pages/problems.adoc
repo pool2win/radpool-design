@@ -80,7 +80,7 @@ network model required by FROST needs nodes to be connected in a point
 to point network, and running gossip broadcast breaks the assumptions
 made in the security proofs of threshold signature protocols.
 
-The next pages present a new design that uses a federation of
-operators to replace centralised pool operators, and avoids the above
-listed problems. First we describe our solution and then address how
-we avoid all of the above problems.
+The next pages present a new design that uses a syndicate of operators
+to replace centralised pool operators, and avoids the above listed
+problems. First we describe our solution and then address how we avoid
+all of the above problems.
