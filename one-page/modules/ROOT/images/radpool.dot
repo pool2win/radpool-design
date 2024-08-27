@@ -1,0 +1,54 @@
+graph fedpool {
+    labelloc="t"
+    pad=1
+    fontsize=45
+    label="Mining Syndicate"
+    layout=neato
+    overlap=scale    
+    // overlap_scaling=-3
+    // layout="sfdp"
+    // smoothing="spring"
+
+    subgraph federation {
+	label="Federation"
+	fontsize=25
+	color=grey
+	node [fontsize=20, style=filled, fillcolor=darkgreen, fontcolor=white]
+	"Member 1"
+	"Member 2"
+	"Member 3"
+	"Member 4"
+    }
+
+    subgraph miner {
+	node [fontsize=25]	
+	"Miner 1"
+	"Miner 2"
+	"Miner 3"
+	"Miner 4"
+	"Miner 5"
+	"Miner 6"
+	"Miner 7"
+	"Miner 8"
+    }
+
+    "Member 1" -- {
+	"Member 2"
+	"Member 3"
+	"Member 4"
+    }
+    "Member 2" -- {
+	"Member 3"
+	"Member 4"
+    }
+    "Member 3" -- "Member 4"    
+
+    "Miner 1" -- "Member 1"
+    "Miner 2" -- "Member 1"
+    "Miner 3" -- "Member 2"
+    "Miner 4" -- "Member 3"
+    "Miner 5" -- "Member 3"
+    "Miner 6" -- "Member 3"
+    "Miner 7" -- "Member 4"
+    "Miner 8" -- "Member 4"
+}

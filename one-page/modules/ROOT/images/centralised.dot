@@ -1,0 +1,24 @@
+graph happiness {
+    labelloc="t"
+    pad=0.5
+    fontsize=45
+    label="Centralised Pool Operator"
+    layout=twopi; graph [ranksep=2];
+    node [fontsize=35]
+    "Pool Operator"
+    node [fontsize=25]
+    "Miner 1"
+    "Miner 2"
+    "Miner 3"
+    "Miner 4"
+    "Miner 5"
+    "Miner 6"
+    "Pool Operator" -- {
+	"Miner 1"
+	"Miner 2"
+	"Miner 3"
+	"Miner 4"
+	"Miner 5"
+	"Miner 6"
+    }
+}
