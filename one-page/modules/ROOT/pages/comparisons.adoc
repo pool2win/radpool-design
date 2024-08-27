@@ -11,10 +11,10 @@ p2p solutions.
   . Miners (or anyone) can access the pool's data by joining the
   syndicate's P2P network.
 . Transparent fee schedule - all miners can validate they are being charged a fair fee rate.
-. Resilience - as long a threshold number of members are reachable, the syndicate can continue to make progress.
+. Resilience - as long a threshold number of members are reachable, the syndicate will continue to make progress.
 
 .Cons
-. Radpool uses PPLNS instead of FPPS which is quite popular with centralised pools despite all the drawbacks.
+. Radpool uses PPLNS instead of FPPS which is quite popular with centralised pools despite all the drawbacks. This is also addressed by the the futures contracts that will serve the same function as FPPS.
 
 == Comparison With P2P Pools
 
@@ -25,6 +25,5 @@ p2p solutions.
 . No consensus required between miners on the state of shares generated.
 
 .Cons
-. Block template generation is managed by syndicate members.
-  . However, anyone can join the syndicate and provide block
+. Block template generation is managed by syndicate members. However, anyone can join the syndicate and provide block
   templates, including miners themselves.
