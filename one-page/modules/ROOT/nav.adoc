@@ -1,6 +1,6 @@
 * xref:index.adoc[Introduction]
 * xref:problems.adoc[Problems]
-* xref:mining-federation.adoc[Mining Federation]
+* xref:radpool.adoc[Radpool]
 ** xref:system-overview.adoc[System Overview]
 ** xref:federation-operation.adoc[Federation Operation]
 ** xref:federation-membership.adoc[Federation Membership]

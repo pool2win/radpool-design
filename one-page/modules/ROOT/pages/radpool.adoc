@@ -1,0 +1,45 @@
+= Radpool - A Mining Syndicate
+
+image::radpool.png[alt="radpool",width="50%"]
+
+In Radpool, we replace a single centralised mining operator with a
+syndicate of operators. The syndicate resists mining centralisation by
+breaking up the centralised pool. The members of the syndicate build
+blocktemplates, enable miner payouts, and help reduce variance for
+miners by working together as a pool.
+
+There are two types of parties in the system.
+
+. Miners - these run mining facilities and do not need to run bitcoin node or a radpool node.
+. Syndicate members or operators - these run bitcoin nodes, generate block templates and sign miner payout transactions using threshold signatures.
+
+== Syndicate Operators
+
+Miners register with a syndicate members and communicate with the
+syndicate using stratum mining protocol. Syndicate members take on the
+complexity in this design, allowing miners to switch from centralised
+pools without running any services. Here's a list of responsibilities
+the syndicate members take on:
+
+. Build block templates.
+. Run services to let miners register with them.
+. Run stratum servers that communicate work to miners.
+. Maintain replica of all of the PoW shares generate by all miners.
+
+== Miners
+
+The miner's on the other hand simply need a service to manage their
+payouts. This can be a simple mobile application or an onsite service
+if they prefer. The important point here is that miners do not receive
+the network traffic of the entire pool and therefore do no need high
+throughput network connections.
+
+== Coinbase and Miner Payouts
+
+In radpool, the coinbase for block rewards requires a
+constant amount of disk space, so radpool scale is not limited by the
+coinbase size.
+
+The payout transaction is constructed such that neither the miner nor
+any syndicate member can steal coins or prevent the mining syndicate
+from making progress.
