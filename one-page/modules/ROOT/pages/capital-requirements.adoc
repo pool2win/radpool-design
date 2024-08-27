@@ -1,16 +1,20 @@
 = Capital Requirements and Risks Mitigation
 
 The capital required to fund the pool is distributed across the
-federation members reducing the capital risks for any individual
-federation member.
+syndicate members reducing the capital risks for any individual
+syndicate member. Each miner's payout channel is prefunded by a
+syndicate member. The terms and fees are agreed upon between the two
+parties and the syndicate does not impose any requirements on these
+terms.
 
-When a new member wants to join a federation, the existing members
-will see reduced earnings. The federation is incentivized to grow as a
-larger federation can manage payouts for larger number of miners and
-thus can provide reduced variance for all miners and thus attract more
-miners. This flywheel effect is important for any federation to try
-and achieve, for which expanding the size of the federation is
-important.
+When a new member joins a syndicate, the existing members will see
+reduced earnings because the block reward is now distributed between
+more miners and the fees are also distributed across more syndicate
+members. The syndicate however is incentivized to include a new
+syndicate members as a larger syndicate can manage payouts for larger
+number of miners and thus can provide reduced variance for all
+miners. This flywheel effect is important for any syndicate to try and
+achieve, for which expanding the size of the syndicate is important.
 
 [INFO]
 ====
