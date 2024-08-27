@@ -72,12 +72,12 @@
 
 * Comparison to Braidpool
 
-** Advantages of Fedpool
+** Advantages of Radpool
 
-1. Zero resistance to switch from a centralised pool to fedpool.
+1. Zero resistance to switch from a centralised pool to radpool.
    1. Miner's don't have to run any services or nodes - just as in
       current centralised pool setups.
-   2. Miner's simply point their workers to the fedpool's stratum
+   2. Miner's simply point their workers to the radpool's stratum
       server and start mining.
 2. Payout mechanism does not need covenants to resist a 51% attack to
    steal miner hashrate.

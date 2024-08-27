@@ -1,6 +1,6 @@
 = Mining Federation as the Solution
 
-image::fedpool.png[alt="Mining Syndicate/Federation",width="50%"]
+image::radpool.png[alt="Mining Syndicate/Federation",width="50%"]
 
 Mining syndicate resists mining centralisation by breaking up the
 centralised pool into a federation. The members of the federation
@@ -9,7 +9,7 @@ for miners.
 
 There are two types of parties in the system.
 
-. Miners - these run mining facilities and do not need to run bitcoin node or a fedpool node.
+. Miners - these run mining facilities and do not need to run bitcoin node or a radpool node.
 . Federation members - these run bitcoin nodes, generate block templates and sign miner payout transactions using threshold signatures.
 
 Miners register with a federation members and communicate with the

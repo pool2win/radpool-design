@@ -6,7 +6,7 @@ p2p solutions.
 == Comparison With Centralised Pools
 
 .Pros
-. Diversity of block templates - Each federation member is free to choose set of transactions in a block, the only requirement is that the coinbase conforms to the requirements of fedpool contracts.
+. Diversity of block templates - Each federation member is free to choose set of transactions in a block, the only requirement is that the coinbase conforms to the requirements of radpool contracts.
 . Transparent share accounting - miners can validate their payouts are correct.
   . Miners (or anyone) can access the pool's data by joining the
   federation's P2P network.
@@ -14,7 +14,7 @@ p2p solutions.
 . Resilience - as long a threshold number of members are reachable, the federation can continue to make progress.
 
 .Cons
-. Fedpool uses PPLNS instead of FPPS which is quite popular with centralised pools despite all the drawbacks.
+. Radpool uses PPLNS instead of FPPS which is quite popular with centralised pools despite all the drawbacks.
 
 == Comparison With P2P Pools
 

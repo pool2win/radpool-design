@@ -1,23 +1,33 @@
-= Fedpool - Federated Mining Pool
+= Radpool - Decentralised Mining Pool
 
-Current mining pools provide no visibility to miners on the share
-accounting or the fees charged by the pool. Further still, the current
-pools are vulnerable to attacks where they can be forced to follow
-transaction selection rules. On the other hand, P2P pools like
-Braidpool attempt to solve the transaction selection problem but their
-use requires miners to run extra services on premise. Some of these
-services are not easy to boot up and maintain. This friction can leave
-the long tail of miners out of the P2P pool. These long tail of miners
-are important to bitcoin for resisting censorship attacks.
+Current bitcoin mining pools are resulting in ever increasing
+centralisation pressure on mining pools. This centralisation pressure
+is increasing the threat of transaction censorship on bitcoin.
 
-In this document we present a mining pool solution that uses a
-federation to replace the centralised pool operator. Federation
-members generate block templates and provide stratum end points to
-miners. Since federation tracks miner's shares in an open P2P network,
-anyone, including the miners can validate the share accounting and
-reward distribution results.
+We need a solution to decentralise mining to resist transaction
+censorship. In the current efforts, the pools are still either run
+from a single central entity or are trying to be fully P2P. Both the
+approaches have challenges. Single entity pools are by their very
+nature centralised, and full p2p pools are challenging to scale to
+limits for providing enough reduction in block discovery variance.
 
-We show a construction where the federation members distribute rewards
-to miners in a way that miners can unilaterally exit from the pool
-with their coins. We also show that federation members can not steal
-miner's shares or reward.
+In these pages, we present a novel design - radpool - that breaks up
+the centralised single entity into a federation running the pool. This
+allevaites the scalability challenges faced by a fully p2p pool while
+dramatically increases mining decentralisation, thus improving the
+resilience to transaction censorship.
+
+The salient features of the design presented are the following and we
+describe them in detail in the rest of the pages.
+
+1. Block template construction is decentralised as each federation
+member build an independent blocktemplate.
+2. Share accounting is transparent, so the pool is fully auditable.
+3. Federation members earn a yield in exchange of locking liquidity to
+fund payouts for miners.
+4. The pool provides open access to mining data so we can build
+futures contracts to help miners hedge their risks.
+5. The payout mechanism allows unilateral exits for miners and
+federation members, thus making the solution non-custodial.
+6. Switching to Radpool from current centralised pools has zero
+friction for miners.
