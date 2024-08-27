@@ -1,0 +1,30 @@
+= Syndicate Operation
+
+The syndicate members run all the services that currently centralised
+pool operators need to run. The difference is the the syndicate is
+transparent and all members verify correct operations of all other
+members. Furthermore, syndicate membership is open and members can
+join and leave the syndicate using the protocols described and
+implemented in the radpool syndicate node.
+
+The joining part is permissioned and if a syndicate has reached a
+point it can't scale further, it will start rejecting join requests
+from entities who want to join the syndicate. Entities can start new
+syndicates once they can attract enough hashrate. On the other hand,
+the capital requirements that we explain below will encourage a
+syndicate to grow as much as it can to support a large hashrate pool
+and thus a pool with reduced variance.
+
+[INFO]
+====
+We provide the tools, people run the syndicates!
+====
+
+.Syndicate Member Responsibilites
+. Run a syndicate node and a bitcoin node to handle share validation at scale.
+. Run stratum interfaces for miner interaction.
+. Provide a miner registration interface.
+. Generate block templates and stratum work messages.
+. Receive shares over stratum protocol and maintain a database of received shares.
+. Contribute capital used to pay miners.
+. Provide interfaces for miners to check their balances and collect their earnings.

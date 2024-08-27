@@ -1,0 +1,48 @@
+= Syndicate Network
+
+The syndicate members open a point to point to connection with all
+other syndicate members. This channels is authenticated and
+confidential. See the diagram below that shows the network topology
+for the syndicate. We need point to point communication channels
+between syndicate members as the FROST threshold signature protocol
+makes the network requirement.
+
+Each syndicate member sends the following message types to all other
+syndicate members:
+
+. New block template it is working on
+. The stratum job it sends to miners
+. All shares received from all miners
+. Requests by new syndicate members
+. Miner public key once it is registered with the syndicate member
+. Requests received from miners to leave the pool
+
+All of the above messages are sent using **reliable, authenticated and
+secret** communication channels. Our current implementation of
+https://github.com/pool2win/frost-federation[FROST Federation]
+supports such communication channels.
+
+The replication of shares on all syndicate members is important
+because this transparent share accounting enables all the miners to
+calculate the payout distribution and validate any new payout and
+coinbase transactions before signing the syndicate update transaction.
+
+We use a highly efficient BFT reliable broadcast protocol proposed by
+https://ieeexplore.ieee.org/abstract/document/1541196[Cachin et. al.]. The
+protocol has a communication complexity of O(n|F|) for broadcasting
+data of size |F| to n nodes connected using a point to point network.
+
+== Open Access to Replicated Shares
+
+Once a miner starts sending shares to a syndicate member, the shares
+are replicated to the other syndicate members. A syndicate member that
+receives shares, verifies the shares and then broadcasting them to the
+rest of the syndicate. A miner can send their shares to multiple
+syndicates by registering with the syndicate.
+
+This results in an open database of shares that all syndicate members
+and other interested parties can run accounting on. This open access
+to verified shares will be used to build futures contracts using DLCs
+and single use seals as documented in a
+https://blog.opdup.com/2021/08/18/deliver-hashrate-to-market-makers.html[blog
+post] and also being developed by https://dlcmarkets.com/[DLCMarkets].

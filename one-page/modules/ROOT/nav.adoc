@@ -2,9 +2,9 @@
 * xref:problems.adoc[Problems]
 * xref:radpool.adoc[Radpool]
 ** xref:system-overview.adoc[System Overview]
-** xref:federation-operation.adoc[Federation Operation]
-** xref:federation-membership.adoc[Federation Membership]
-** xref:federation-network.adoc[Federation Network Communication]
+** xref:syndicate-operation.adoc[Syndicate Operation]
+** xref:syndicate-membership.adoc[Syndicate Membership]
+** xref:syndicate-network.adoc[Syndicate Network Communication]
 ** xref:capital-requirements.adoc[Capital Requirements]
 ** xref:transparent-accounting.adoc[Transparent Accounting]
 ** xref:resisting-sybil-attacks.adoc[Resist Sybil Attacks]
@@ -12,7 +12,7 @@
 * xref:payout-mechanism.adoc[Payout Mechanism]
 ** xref:bitcoin-contracts.adoc[Bitcoin Contracts]
 * Protocols
-** xref:federation-protocols.adoc[Federation Protocols]
+** xref:syndicate-protocols.adoc[Syndicate Protocols]
 ** xref:miner-protocols.adoc[Miner Protocols]
 * xref:comparisons.adoc[Comparisons]
 
