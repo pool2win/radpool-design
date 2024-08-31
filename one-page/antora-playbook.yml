@@ -1,5 +1,6 @@
 site:
   title: Radpool Design
+  start_page: ROOT::index.adoc
 content:
   sources:
   - url: ..
@@ -16,3 +17,6 @@ asciidoc:
     page-pagination: ''
   extensions:
     - asciidoctor-plantuml
+antora:
+  extensions:
+  - '@antora/lunr-extension'
