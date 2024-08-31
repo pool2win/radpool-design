@@ -17,6 +17,3 @@ asciidoc:
     page-pagination: ''
   extensions:
     - asciidoctor-plantuml
-antora:
-  extensions:
-  - '@antora/lunr-extension'
