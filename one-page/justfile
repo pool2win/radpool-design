@@ -1,8 +1,8 @@
 default:
 	@just --list
 
-build:
-	asciidoctor ./mining-syndicate.adoc -r asciidoctor-diagram
+clean:
+	rm -rf ./build/site
 
 antora:
     npx antora --fetch antora-playbook.yml
