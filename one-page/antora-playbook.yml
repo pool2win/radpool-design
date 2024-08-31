@@ -1,6 +1,6 @@
 site:
   title: Radpool Design
-  start_page: Radpool::index.adoc
+  start_page: ROOT::index.adoc
 content:
   sources:
   - url: ..

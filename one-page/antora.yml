@@ -1,4 +1,5 @@
-name: Radpool
+name: ROOT
 version: 1.0
+title: Docs
 nav:
 - modules/ROOT/nav.adoc
