@@ -1,6 +1,7 @@
 = Radpool - A Mining Syndicate
 
-image::radpool.png[alt="radpool",width="50%"]
+.Radpool - Syndicated, Decentralised Mining Pool
+image::radpool-syndicated-pool.png["syndicated pools",425,425]
 
 In Radpool, we replace a single centralised mining operator with a
 syndicate of operators. The syndicate resists mining centralisation by
@@ -11,9 +12,9 @@ miners by working together as a pool.
 There are two types of parties in the system.
 
 . Miners - these run mining facilities and do not need to run bitcoin node or a radpool node.
-. Syndicate members or operators - these run bitcoin nodes, generate block templates and sign miner payout transactions using threshold signatures.
+. Syndicate members - these run bitcoin nodes, generate block templates and sign miner payout transactions using threshold signatures.
 
-== Syndicate Operators
+== Syndicate Members
 
 Miners register with a syndicate members and communicate with the
 syndicate using stratum mining protocol. Syndicate members take on the

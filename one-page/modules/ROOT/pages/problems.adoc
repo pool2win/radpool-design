@@ -12,7 +12,7 @@ approaches.
 
 == Problems with Centralised Pool
 
-image::centralised.png[alt="centralised pools",width="50%"]
+image::centralised-pool.png["centralised pools",400,400]
 
 === Centralised Block Template Generation
 
@@ -39,7 +39,7 @@ the pool operator.
 
 == Problem With P2P Pools
 
-image::p2p.png[alt="p2p pools",width="50%"]
+image::p2p-pool.png["p2p pools",400,400]
 
 === Added Friction To Migrate
 
