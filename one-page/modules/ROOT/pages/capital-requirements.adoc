@@ -1,23 +1,58 @@
-= Capital Requirements and Risks Mitigation
+= Capital Requirements For Syndicate
 
 The capital required to fund the pool is distributed across the
 syndicate members reducing the capital risks for any individual
-syndicate member. Each miner's payout channel is prefunded by a
-syndicate member. The terms and fees are agreed upon between the two
-parties and the syndicate does not impose any requirements on these
-terms.
+syndicate member. Each miner's payout channel is funded by a syndicate
+member. The terms and fees are agreed upon between the two parties and
+the syndicate does not impose any requirements on these terms.
+
+== Match Making
+
+One miner thus chooses a syndicate that can fund their payout
+channels. This match making between syndicate member and miner happens
+on mailing lists, forums or OTC between the two parties.
+
+== Incentives to Grow The Syndicate
 
 When a new member joins a syndicate, the existing members will see
 reduced earnings because the block reward is now distributed between
 more miners and the fees are also distributed across more syndicate
-members. The syndicate however is incentivized to include a new
-syndicate members as a larger syndicate can manage payouts for larger
-number of miners and thus can provide reduced variance for all
-miners. This flywheel effect is important for any syndicate to try and
-achieve, for which expanding the size of the syndicate is important.
+members. The syndicate however is still incentivized to include a new
+syndicate members as a larger syndicate will be able to manage payouts
+for larger number of miners. A larger set of miners thus reduce
+variance even further. This flywheel effect is important for any
+syndicate to try and achieve and thus expanding the size of the
+syndicate is important for increased profits for the entire syndicate.
 
-[INFO]
-====
-TODO: Capital calculation.
-TODO: Add a diagram too, if possible
-====
+== Capital Requirements and Time Periods
+
+Each syndicate is funds payout channels for a set of miner. Therefore
+the capital requirement for each syndicate member is related to the
+hashrate the miners bring to the pool. We encourage a factor of safety
+of five, and syndicate members validate this to keep all syndicate
+members under check. If a syndicate's capital locked in channels to
+all the miners it is responsible for falls below the limit, the other
+syndicate members will trigger the eviction protocol to remove the
+syndicate member.
+
+Each syndicate member should therefore strive to have total capital
+locked for a time period that can pay five times the expected payouts
+for its miners.
+
+=== Example
+
+We take an example of capital requirements. Let's say Radpool has 1%
+of hashrate, i.e. earns 1% of the blocks, i.e. one block per 100
+blocks - or one block about 15-20 hours.
+
+Let's say a synidcate member is responsible for paying 10% of the
+Radpool hashrate. That is, the miners attached to a syndicate
+constitute 10% of total Radpool hashrate.
+
+This means, the syndicate is now responsible for paying 0.1% of the
+bitcoin miner earnings. With bitcoin reward R and factor of safety 5,
+each miner should have minimum capital of 0.005 * R locked in the
+channels.
+
+If any single channel falls below the factor of safety of five, the
+other syndicate members will initiate the eviction protocol.
