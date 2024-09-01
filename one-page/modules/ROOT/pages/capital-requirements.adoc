@@ -39,8 +39,6 @@ Each syndicate member should therefore strive to have total capital
 locked for a time period that can pay five times the expected payouts
 for its miners.
 
-=== Example
-
 We take an example of capital requirements. Let's say Radpool has 1%
 of hashrate, i.e. earns 1% of the blocks, i.e. one block per 100
 blocks - or one block about 15-20 hours.
