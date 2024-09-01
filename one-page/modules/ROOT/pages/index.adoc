@@ -1,4 +1,4 @@
-= Radpool - Decentralised Mining Pool
+= Radpool - Syndicated Mining Pool
 
 Current bitcoin mining pools are resulting in ever increasing
 centralisation pressure on mining pools. This centralisation pressure
@@ -16,6 +16,9 @@ the centralised single entity into a syndicate running the pool. This
 allevaites the scalability challenges faced by a fully p2p pool while
 dramatically increases mining decentralisation, thus improving the
 resilience to transaction censorship.
+
+.Radpool - Syndicated, Decentralised Mining Pool
+image::radpool-syndicated-pool.png["syndicated pools",425,425]
 
 The salient features of the design presented are the following and we
 describe them in detail in the rest of the pages.
