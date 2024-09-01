@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   sodipodi:docname="centralised-pool.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.57192761"
+     inkscape:cx="547.27206"
+     inkscape:cy="360.18544"
+     inkscape:window-width="1512"
+     inkscape:window-height="873"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#1abc9c;stroke:#ef2929;stroke-width:0.0984094;-inkscape-stroke:none"
+       id="path1"
+       cx="148.5"
+       cy="105"
+       r="32.140125" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+       x="148.60159"
+       y="96.617996"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="font-size:8.46667px;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094"
+         x="148.60159"
+         y="96.617996">Centralised</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094"
+         x="148.60159"
+         y="107.20133"
+         id="tspan3">Pool</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094"
+         x="148.60159"
+         y="117.78467"
+         id="tspan2">Operator</tspan></text>
+    <g
+       id="g8"
+       transform="translate(-20.900883,12.59908)">
+      <circle
+         style="fill:#f39c12;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         id="path3"
+         cx="229.4227"
+         cy="32.125668"
+         r="14.786571" />
+      <text
+         xml:space="preserve"
+         style="font-size:8.46667px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         x="229.07556"
+         y="35.2033"
+         id="text6"><tspan
+           sodipodi:role="line"
+           style="font-size:8.46667px;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094"
+           x="229.07556"
+           y="35.2033"
+           id="tspan6">Miner</tspan></text>
+    </g>
+    <g
+       id="g9"
+       transform="translate(-0.09758277,47.255586)">
+      <circle
+         style="fill:#f39c12;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         id="circle8"
+         cx="229.4227"
+         cy="32.125668"
+         r="14.786571" />
+      <text
+         xml:space="preserve"
+         style="font-size:8.46667px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         x="229.07556"
+         y="35.2033"
+         id="text8"><tspan
+           sodipodi:role="line"
+           style="font-size:8.46667px;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094"
+           x="229.07556"
+           y="35.2033"
+           id="tspan8">Miner</tspan></text>
+    </g>
+    <g
+       id="g10"
+       transform="translate(1.1981058,93.936515)">
+      <circle
+         style="fill:#f39c12;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         id="circle9"
+         cx="229.4227"
+         cy="32.125668"
+         r="14.786571" />
+      <text
+         xml:space="preserve"
+         style="font-size:8.46667px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         x="229.07556"
+         y="35.2033"
+         id="text9"><tspan
+           sodipodi:role="line"
+           style="font-size:8.46667px;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094"
+           x="229.07556"
+           y="35.2033"
+           id="tspan9">Miner</tspan></text>
+    </g>
+    <g
+       id="g11"
+       transform="translate(-20.772579,129.2255)">
+      <circle
+         style="fill:#f39c12;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         id="circle10"
+         cx="229.4227"
+         cy="32.125668"
+         r="14.786571" />
+      <text
+         xml:space="preserve"
+         style="font-size:8.46667px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         x="229.07556"
+         y="35.2033"
+         id="text10"><tspan
+           sodipodi:role="line"
+           style="font-size:8.46667px;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094"
+           x="229.07556"
+           y="35.2033"
+           id="tspan10">Miner</tspan></text>
+    </g>
+    <g
+       id="g12"
+       transform="translate(-56.023619,149.53908)">
+      <circle
+         style="fill:#f39c12;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         id="circle11"
+         cx="229.4227"
+         cy="32.125668"
+         r="14.786571" />
+      <text
+         xml:space="preserve"
+         style="font-size:8.46667px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         x="229.07556"
+         y="35.2033"
+         id="text11"><tspan
+           sodipodi:role="line"
+           style="font-size:8.46667px;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094"
+           x="229.07556"
+           y="35.2033"
+           id="tspan11">Miner</tspan></text>
+    </g>
+    <g
+       id="g13"
+       transform="translate(-100.67518,151.88108)">
+      <circle
+         style="fill:#f39c12;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         id="circle12"
+         cx="229.4227"
+         cy="32.125668"
+         r="14.786571" />
+      <text
+         xml:space="preserve"
+         style="font-size:8.46667px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         x="229.07556"
+         y="35.2033"
+         id="text12"><tspan
+           sodipodi:role="line"
+           style="font-size:8.46667px;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094"
+           x="229.07556"
+           y="35.2033"
+           id="tspan12">Miner</tspan></text>
+    </g>
+    <g
+       id="g14"
+       transform="translate(-136.45389,132.87946)">
+      <circle
+         style="fill:#f39c12;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         id="circle13"
+         cx="229.4227"
+         cy="32.125668"
+         r="14.786571" />
+      <text
+         xml:space="preserve"
+         style="font-size:8.46667px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         x="229.07556"
+         y="35.2033"
+         id="text13"><tspan
+           sodipodi:role="line"
+           style="font-size:8.46667px;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094"
+           x="229.07556"
+           y="35.2033"
+           id="tspan13">Miner</tspan></text>
+    </g>
+    <g
+       id="g15"
+       transform="translate(-159.23235,95.980347)">
+      <circle
+         style="fill:#f39c12;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         id="circle14"
+         cx="229.4227"
+         cy="32.125668"
+         r="14.786571" />
+      <text
+         xml:space="preserve"
+         style="font-size:8.46667px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         x="229.07556"
+         y="35.2033"
+         id="text14"><tspan
+           sodipodi:role="line"
+           style="font-size:8.46667px;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094"
+           x="229.07556"
+           y="35.2033"
+           id="tspan14">Miner</tspan></text>
+    </g>
+    <g
+       id="g16"
+       transform="translate(-161.99721,51.305296)">
+      <circle
+         style="fill:#f39c12;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         id="circle15"
+         cx="229.4227"
+         cy="32.125668"
+         r="14.786571" />
+      <text
+         xml:space="preserve"
+         style="font-size:8.46667px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         x="229.07556"
+         y="35.2033"
+         id="text15"><tspan
+           sodipodi:role="line"
+           style="font-size:8.46667px;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094"
+           x="229.07556"
+           y="35.2033"
+           id="tspan15">Miner</tspan></text>
+    </g>
+    <g
+       id="g17"
+       transform="translate(-138.50314,13.074353)">
+      <circle
+         style="fill:#f39c12;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         id="circle16"
+         cx="229.4227"
+         cy="32.125668"
+         r="14.786571" />
+      <text
+         xml:space="preserve"
+         style="font-size:8.46667px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         x="229.07556"
+         y="35.2033"
+         id="text16"><tspan
+           sodipodi:role="line"
+           style="font-size:8.46667px;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094"
+           x="229.07556"
+           y="35.2033"
+           id="tspan16">Miner</tspan></text>
+    </g>
+    <g
+       id="g18"
+       transform="translate(-97.357349,-8.9487377)">
+      <circle
+         style="fill:#f39c12;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         id="circle17"
+         cx="229.4227"
+         cy="32.125668"
+         r="14.786571" />
+      <text
+         xml:space="preserve"
+         style="font-size:8.46667px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         x="229.07556"
+         y="35.2033"
+         id="text17"><tspan
+           sodipodi:role="line"
+           style="font-size:8.46667px;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094"
+           x="229.07556"
+           y="35.2033"
+           id="tspan17">Miner</tspan></text>
+    </g>
+    <g
+       id="g19"
+       transform="translate(-55.689307,-6.7296226)">
+      <circle
+         style="fill:#f39c12;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         id="circle18"
+         cx="229.4227"
+         cy="32.125668"
+         r="14.786571" />
+      <text
+         xml:space="preserve"
+         style="font-size:8.46667px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094;-inkscape-stroke:none"
+         x="229.07556"
+         y="35.2033"
+         id="text18"><tspan
+           sodipodi:role="line"
+           style="font-size:8.46667px;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.0984094"
+           x="229.07556"
+           y="35.2033"
+           id="tspan18">Miner</tspan></text>
+    </g>
+    <path
+       style="fill:#c0392b;fill-rule:evenodd;stroke:#c0392b;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 142.17093,73.489518 134.97714,37.673823"
+       id="path20"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path1"
+       inkscape:connection-end="#g18" />
+    <path
+       style="fill:#c0392b;fill-rule:evenodd;stroke:#c0392b;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 158.21174,74.362316 169.26535,39.491394"
+       id="path21"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path1"
+       inkscape:connection-end="#g19" />
+    <path
+       style="fill:#c0392b;fill-rule:evenodd;stroke:#c0392b;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 171.17833,82.225915 198.08829,55.202324"
+       id="path22"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path1"
+       inkscape:connection-end="#g8" />
+    <path
+       style="fill:#c0392b;fill-rule:evenodd;stroke:#c0392b;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 179.13788,95.28886 36.0918,-11.439844"
+       id="path23"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path1"
+       inkscape:connection-end="#g9" />
+    <path
+       style="fill:#c0392b;fill-rule:evenodd;stroke:#c0392b;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 179.63189,112.98465 36.6662,9.40407"
+       id="path24"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path1"
+       inkscape:connection-end="#g10" />
+    <path
+       style="fill:#c0392b;fill-rule:evenodd;stroke:#c0392b;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 171.95472,126.97337 25.90469,24.2686"
+       id="path25"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path1"
+       inkscape:connection-end="#g11" />
+    <path
+       style="fill:#c0392b;fill-rule:evenodd;stroke:#c0392b;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 158.42777,135.56778 10.40388,32.03378"
+       id="path26"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path1"
+       inkscape:connection-end="#g12" />
+    <path
+       style="fill:#c0392b;fill-rule:evenodd;stroke:#c0392b;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 140.7046,136.18035 -8.37068,33.48139"
+       id="path27"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path1"
+       inkscape:connection-end="#g13" />
+    <path
+       style="fill:#c0392b;fill-rule:evenodd;stroke:#c0392b;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 126.67012,128.58863 -23.65813,25.56418"
+       id="path28"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path1"
+       inkscape:connection-end="#g14" />
+    <path
+       style="fill:#c0392b;fill-rule:evenodd;stroke:#c0392b;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 117.67429,114.09542 -33.302089,9.8261"
+       id="path29"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path1"
+       inkscape:connection-end="#g15" />
+    <path
+       style="fill:#c0392b;fill-rule:evenodd;stroke:#c0392b;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 117.4406,96.736968 81.714854,87.232502"
+       id="path30"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path1"
+       inkscape:connection-end="#g16" />
+    <path
+       style="fill:#c0392b;fill-rule:evenodd;stroke:#c0392b;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 126.20764,81.848337 101.17551,55.851307"
+       id="path31"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path1"
+       inkscape:connection-end="#g17" />
+  </g>
+</svg>
