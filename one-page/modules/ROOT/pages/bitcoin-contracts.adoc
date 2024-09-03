@@ -5,3 +5,9 @@
 == Payout Mechanism
 
 == Miner Exit
+
+== Syndicate Member Exit
+
+== Syndicate Memebr Eviction
+
+== Miner Eviction
