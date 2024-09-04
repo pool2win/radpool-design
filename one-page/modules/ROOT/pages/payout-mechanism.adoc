@@ -1,4 +1,23 @@
-= Coinbase, Blocktemplates and Payouts
+= Payout Mechanism
+
+The payout mechanism uses PPLNS to distribute the block reward to all
+the syndicate member liquidity providers. As described later in
+link:bitcoin-contracts[Bitcoin Contracts] the rewards are paid out in
+the coinbase transaction to the syndicate members, who can only spend
+this reward UTXO after they have paid out all the miners.
+
+The reward calculation uses Pay Per Last N Shares or PPLNS to
+distribute the block reward to all the syndicate members. Each
+syndicate member receives payout in proportion to the hashrate
+contributed by all the miners.
+
+== Reward Calculation: PPLNS
+
+
+
+== Finder's Bonus
+
+== Coinbase, Blocktemplates and Payouts
 
 The key component that validates the proposal is how coinbases and
 blocktemplates are constructed by syndicate members and how payouts
