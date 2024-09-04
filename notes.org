@@ -83,3 +83,7 @@
    steal miner hashrate.
    1. Payout distribution is committed to in the coinbase. So payout
       reward can't be stolen post-fact.
+
+* Fee Savings on Radpool
+
+Miners pay around 18 BTC daily for FPPS.
