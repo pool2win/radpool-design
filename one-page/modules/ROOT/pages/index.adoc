@@ -30,7 +30,7 @@ image::radpool-syndicated-pool.png["syndicated pools",425,425]
 The salient features of the design presented are the following:
 
 . Block template construction is decentralised as each MSP build an independent blocktemplate.
-. MSPs pay miners using a DLC futures contract.
+. MSPs pay miners with futures contract built using DLCs.
 . Radpool acts as an Oracle where a threshold number of MSPs generate the signature.
 . MSPs earn a yield in exchange of locking liquidity that fund payouts for miners.
 . Share accounting is transparent, so the pool is fully auditable.
