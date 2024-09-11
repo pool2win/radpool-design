@@ -4,7 +4,6 @@
 ** xref:system-overview.adoc[System Overview]
 ** xref:frost-federation.adoc[FROST Federation]
 ** xref:syndicate-operation.adoc[Syndicate Operation]
-** xref:syndicate-network.adoc[Syndicate Network Communication]
 ** xref:capital-requirements.adoc[Capital Requirements]
 ** xref:stratum.adoc[Submit Shares Using Stratum]
 ** xref:attacks.adoc[Attacks]
