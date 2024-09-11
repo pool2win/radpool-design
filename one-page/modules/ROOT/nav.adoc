@@ -4,7 +4,6 @@
 ** xref:system-overview.adoc[System Overview]
 ** xref:frost-federation.adoc[FROST Federation]
 ** xref:syndicate-operation.adoc[Syndicate Operation]
-** xref:syndicate-membership.adoc[Syndicate Membership]
 ** xref:syndicate-network.adoc[Syndicate Network Communication]
 ** xref:capital-requirements.adoc[Capital Requirements]
 ** xref:transparent-accounting.adoc[Transparent Accounting]

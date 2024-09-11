@@ -30,3 +30,17 @@ We provide the tools, people run the syndicates!
 . Receive shares over stratum protocol and maintain a replicated database of received shares.
 . Contribute capital used to pay miners with a DLC futures contract.
 . Provide a dashboard of miner monitoring tools.
+
+== Membership
+
+We use the bitcoin consensus mechanism to decide on the syndicate
+membership. Membership requires a consensus protocol and in our case
+this needs to be a byzantine fault tolerant consensus. We also need
+syndicates to lock in capital for payouts to miners.
+
+By requiring a bitcoin transaction to be confirmed and have certain
+minimum confirmations, we solve the syndicate's membership problem
+using bitcoin's BFT consensus.
+
+The section on link:frost-federation.adoc[FROST Federation] describes
+the transaction and the protocols required.
