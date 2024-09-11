@@ -33,7 +33,7 @@ certain MSP. By supporting verifiable ownership of shares, we can
 replicate the data across the syndicate and each MSP can then verify
 that who mined the share and for which MSP.
 
-==== Verifiable Share Ownership
+== Verifiable Share Ownership
 
 As described above mining data needs to be replicated across the
 syndicate. `mining.submit` and `mining.notify` messages are broadcast

@@ -171,7 +171,7 @@ being executed. The expiry and the miner public keys help track this
 as the pool makes payouts.
 
 .Contract Execution Transaction
-image::images/payout-mechanism/cet.png[Contract Execution Transaction, 65%]
+image::payout-mechanism/cet.png[Contract Execution Transaction, 65%]
 
 Once the syndicate has published a signature for a contract, the miner
 can spend the output at any point in time. Note, unlike DLC contracts
@@ -199,7 +199,7 @@ as the one used in LN] to invalidate old commitment transactions -
 i.e. by exchanging private keys for the old payout transaction.
 
 .Payout Roll-over
-image::images/payout-mechanism/payout-rollover.png[Funding and Refund Transactions, 65%]
+image::payout-mechanism/payout-rollover.png[Funding and Refund Transactions, 65%]
 
 == Meeting the Payout Requirements
 
