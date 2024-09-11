@@ -7,21 +7,20 @@ included in the FROST paper (called KeyGen). We have an implementation
 of a node for running a federation that uses KeyGen protocol to
 determine a shared public key. The federation then uses the FROST
 threshold signature protocol to sign bitcoin transaction used for
-miner payouts - more on that later.
+miner payouts.
 
 The https://github.com/pool2win/frost-federation:[FROST Federation
 implementation] is an independent project as other applications apart
-from Radpool will be able to use it for other purposes.
+from Radpool can use it for other purposes.
 
 == Membership
 
 The KeyGen protocol is run by all parties who want to participate in
 the federation. This acts as a point of control where existing
 federation members have to accept new members by successfully
-completing a KeyGen protocol.
-
-The syndicate membership protocol, described later, explains the rules
-used by current members to accept new members for Radpool.
+completing a KeyGen protocol. The syndicate membership protocol,
+described later, explains the rules used by current members to accept
+new members for Radpool.
 
 
 == Federation Broadcast Communication
