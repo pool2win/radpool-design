@@ -1,13 +1,13 @@
 = Syndicate Operation
 
-The syndicate members run all the services that currently centralised
-pool operators need to run. The difference is the the syndicate is
+The MSPs run all the services that currently centralised pool
+operators need to run. The difference is the the syndicate is
 transparent and all members verify correct operations of all other
 members. Furthermore, syndicate membership is open and members can
 join and leave the syndicate using the protocols described and
 implemented in the radpool syndicate node.
 
-The joining part is permissioned and if a syndicate has reached a
+The joining protocol is permissioned and if a syndicate has reached a
 point it can't scale further, it will start rejecting join requests
 from entities who want to join the syndicate. Entities can start new
 syndicates once they can attract enough hashrate. On the other hand,
@@ -20,12 +20,13 @@ and thus a pool with reduced variance.
 We provide the tools, people run the syndicates!
 ====
 
-.Syndicate Member Responsibilites
+.MSP Responsibilites
 
+. Collaboratively run DKG and TSS protocols as a syndicate member, i.e. run https://github.com/pool2win/frost-federation:[FROST Federation].
 . Run a syndicate node and a bitcoin node to handle share validation at scale.
 . Run stratum interfaces for miner interaction.
 . Provide a miner registration interface.
 . Generate block templates and stratum work messages.
-. Receive shares over stratum protocol and maintain a database of received shares.
-. Contribute capital used for paying miners.
+. Receive shares over stratum protocol and maintain a replicated database of received shares.
+. Contribute capital used to pay miners with a DLC futures contract.
 . Provide a dashboard of miner monitoring tools.
