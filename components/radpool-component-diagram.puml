@@ -1,0 +1,12 @@
+@startuml
+
+[Miner rig] -> [Syndicate Member] : Clear text
+
+[Syndicate Member] -> [Syndicate] : Unicast
+[Syndicate Member] -> [Syndicate] : Broadcast
+
+[Syndicate Member] -> [Bitcoin] : Publish block
+
+
+@enduml
+

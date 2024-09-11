@@ -1,11 +1,12 @@
 = Syndicate Network
 
-The syndicate members open a point to point to connection with all
-other syndicate members. This channels is authenticated and
+The syndicate members open a point to point connection with all other
+syndicate members. These channels are authenticated and
 confidential. See the diagram below that shows the network topology
 for the syndicate. We need point to point communication channels
 between syndicate members as the FROST threshold signature protocol
-makes the network requirement.
+requires this and we want to conform with the requirements to avoid
+any security weakness.
 
 Each syndicate member sends the following message types to all other
 syndicate members:

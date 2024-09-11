@@ -1,0 +1,44 @@
+@startuml
+
+[Socket Connection]
+
+package "Unicast Protocols" {
+	[Handshake Protocol]
+	[Heartbeat Protocol]
+	[DKG Unicast]
+	[Nonce Generator]
+}
+
+package "Broadcast Protocols" {
+	[Handshake Protocol] 
+	[Heartbeat Protocol]
+	[DKG Broadcast]
+	[TSS]
+	[Share Broadcast]
+}
+
+package "Reader" {
+	"Unicast Protocols" --> [Reliable Unicast Sender]
+	"Broadcast Protocols" --> [Echo Broadcast Sender]
+	[Reliable Unicast Sender] --> [Serialize]
+	[Echo Broadcast Sender] --> [Serialize]
+	[Serialize] --> [Wire encoder]
+	[Wire encoder] --> [Noise encrypt]
+	[Noise encrypt] --> [Socket Writer]
+	[Socket Writer] --> [Socket Connection]
+}
+
+package "Writer" {
+	[Socket Connection] --> [Socket Reader]
+	[Socket Reader] --> [Noise decrypt]
+	[Noise decrypt] --> [Wire decoder]
+	[Wire decoder] --> [Deserialize]
+	[Deserialize] --> [Reliable Unicast Receiver]
+	[Reliable Unicast Receiver] --> "Unicast Protocols"
+	[Deserialize] --> [Echo Broadcast Receiver]
+	[Echo Broadcast Receiver] --> "Broadcast Protocols"
+}
+
+
+@enduml
+

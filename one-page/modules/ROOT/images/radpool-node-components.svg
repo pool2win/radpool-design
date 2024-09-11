@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 1122.5197 793.70081"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   sodipodi:docname="radpool-node-components.svg"
+   inkscape:export-filename="radpool-node-components.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.96549814"
+     inkscape:cx="628.17314"
+     inkscape:cy="387.36481"
+     inkscape:window-width="2556"
+     inkscape:window-height="1381"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:export-bgcolor="#ffffffff"
+     showgrid="false" />
+  <defs
+     id="defs1">
+    <rect
+       x="-450.75398"
+       y="887.0836"
+       width="1382.6727"
+       height="230.13171"
+       id="rect17" />
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     style="display:inline">
+    <rect
+       style="display:inline;fill:#bdc3c7;fill-opacity:0.221474;stroke:#bdc3c7;stroke-width:1.13386"
+       id="rect14"
+       width="981.10803"
+       height="622.17554"
+       x="70.705841"
+       y="118.75278" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:37.3333px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#34495e;stroke:#34495e;stroke-width:1.00492;stroke-dasharray:none"
+       x="560.28918"
+       y="89.935226"
+       id="text42"><tspan
+         sodipodi:role="line"
+         id="tspan42"
+         x="560.28918"
+         y="89.935226"
+         style="font-size:37.3333px;fill:#34495e;stroke:#34495e;stroke-width:1.00492">Radpool Node Components</tspan></text>
+    <g
+       id="g2"
+       transform="translate(-12.881971,-485.23366)">
+      <rect
+         style="fill:#1abc9c;fill-opacity:1;stroke:#000000;stroke-width:0.736621;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3"
+         width="393.87119"
+         height="69.051422"
+         x="133.84901"
+         y="639.14362" />
+      <text
+         xml:space="preserve"
+         style="font-size:25.7828px;font-family:Sans;-inkscape-font-specification:Sans;fill:#34495e;stroke:#34495e;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         x="279.15213"
+         y="682.87378"
+         id="text4"><tspan
+           sodipodi:role="line"
+           id="tspan4"
+           x="279.15213"
+           y="682.87378"
+           style="font-size:25.7828px;fill:#ecf0f1;fill-opacity:1;stroke:#34495e;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">Stratum</tspan></text>
+    </g>
+    <g
+       id="g11"
+       transform="translate(26.386928,-485.23366)">
+      <rect
+         style="fill:#1abc9c;fill-opacity:1;stroke:#000000;stroke-width:0.736621;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4"
+         width="393.87119"
+         height="69.051422"
+         x="581.29456"
+         y="638.89636" />
+      <text
+         xml:space="preserve"
+         style="font-size:25.7828px;font-family:Sans;-inkscape-font-specification:Sans;fill:#34495e;stroke:#34495e;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         x="672.40466"
+         y="683.09058"
+         id="text5"><tspan
+           sodipodi:role="line"
+           id="tspan5"
+           x="672.40466"
+           y="683.09058"
+           style="font-size:25.7828px;fill:#ecf0f1;fill-opacity:1;stroke:#34495e;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">Miner Dashboard</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       id="text17"
+       style="font-size:37.3333px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;white-space:pre;shape-inside:url(#rect17);display:inline;fill:#34495e;fill-opacity:0.221474;stroke:#34495e;stroke-width:1.13386" />
+    <path
+       style="fill:#bdc3c7;fill-opacity:0.221474;stroke:#bdc3c7;stroke-width:1.13386;stroke-dasharray:1.13386, 1.13386;stroke-dashoffset:0"
+       d="M 70.164332,269.18492 H 1052.3769"
+       id="path17"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g18"
+       transform="translate(2.357029,71.419424)">
+      <text
+         xml:space="preserve"
+         style="font-size:25.7828px;font-family:Sans;-inkscape-font-specification:Sans;fill:#34495e;stroke:#34495e;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         x="679.50677"
+         y="262.61771"
+         id="text18"><tspan
+           sodipodi:role="line"
+           id="tspan18"
+           x="679.50677"
+           y="262.61771"
+           style="font-size:25.7828px;fill:#ecf0f1;fill-opacity:1;stroke:#34495e;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">Miner Dashboard</tspan></text>
+    </g>
+    <g
+       id="g10"
+       transform="translate(9.5664811,152.10737)">
+      <rect
+         style="fill:#f39c12;fill-opacity:1;stroke:#000000;stroke-width:0.736621;stroke-dasharray:none;stroke-opacity:1"
+         id="rect32"
+         width="393.87119"
+         height="69.051422"
+         x="354.75778"
+         y="482.07672" />
+      <text
+         xml:space="preserve"
+         style="font-size:25.7828px;font-family:Sans;-inkscape-font-specification:Sans;fill:#34495e;stroke:#34495e;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         x="411.60635"
+         y="523.30597"
+         id="text2"><tspan
+           sodipodi:role="line"
+           id="tspan2"
+           x="411.60635"
+           y="523.30597"
+           style="font-size:25.7828px;fill:#ecf0f1;fill-opacity:1;stroke:#34495e;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">FROST Syndicate Node</tspan></text>
+    </g>
+    <g
+       id="g8"
+       transform="translate(-9.5664959,192.56679)">
+      <rect
+         style="fill:#3498db;fill-opacity:1;stroke:#000000;stroke-width:0.736621;stroke-dasharray:none;stroke-opacity:1"
+         id="rect2"
+         width="393.87119"
+         height="69.051422"
+         x="130.53354"
+         y="311.75876" />
+      <text
+         xml:space="preserve"
+         style="font-size:25.7828px;font-family:Sans;-inkscape-font-specification:Sans;fill:#34495e;stroke:#34495e;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         x="260.31784"
+         y="355.95303"
+         id="text3"><tspan
+           sodipodi:role="line"
+           id="tspan3"
+           x="260.31784"
+           y="355.95303"
+           style="font-size:25.7828px;fill:#ecf0f1;fill-opacity:1;stroke:#34495e;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">DLC Oracle</tspan></text>
+    </g>
+    <g
+       id="g6"
+       transform="translate(9.5664931,181.54894)">
+      <rect
+         style="fill:#3498db;fill-opacity:1;stroke:#000000;stroke-width:0.736621;stroke-dasharray:none;stroke-opacity:1"
+         id="rect9"
+         width="393.87119"
+         height="69.051422"
+         x="598.11499"
+         y="160.80763" />
+      <text
+         xml:space="preserve"
+         style="font-size:25.7828px;font-family:Sans;-inkscape-font-specification:Sans;fill:#34495e;stroke:#34495e;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         x="646.12915"
+         y="202.03688"
+         id="text9"><tspan
+           sodipodi:role="line"
+           id="tspan9"
+           x="646.12915"
+           y="202.03688"
+           style="font-size:25.7828px;fill:#ecf0f1;fill-opacity:1;stroke:#34495e;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">PPLNS Share Accounting</tspan></text>
+    </g>
+    <g
+       id="g4"
+       transform="translate(-477.14795,-120.3533)">
+      <rect
+         style="fill:#3498db;fill-opacity:1;stroke:#000000;stroke-width:0.736621;stroke-dasharray:none;stroke-opacity:1"
+         id="rect10"
+         width="393.87119"
+         height="69.051422"
+         x="598.11499"
+         y="462.70987" />
+      <text
+         xml:space="preserve"
+         style="font-size:25.7828px;font-family:Sans;-inkscape-font-specification:Sans;fill:#34495e;stroke:#34495e;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         x="660.15503"
+         y="503.93912"
+         id="text11"><tspan
+           sodipodi:role="line"
+           id="tspan11"
+           x="660.15503"
+           y="503.93912"
+           style="font-size:25.7828px;fill:#ecf0f1;fill-opacity:1;stroke:#34495e;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">Blocktemplate Builder</tspan></text>
+    </g>
+    <g
+       id="g5"
+       transform="translate(9.5664931,192.56679)">
+      <rect
+         style="fill:#3498db;fill-opacity:1;stroke:#000000;stroke-width:0.736621;stroke-dasharray:none;stroke-opacity:1"
+         id="rect18"
+         width="393.87119"
+         height="69.051422"
+         x="598.11499"
+         y="311.75876" />
+      <text
+         xml:space="preserve"
+         style="font-size:25.7828px;font-family:Sans;-inkscape-font-specification:Sans;fill:#34495e;stroke:#34495e;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         x="691.73895"
+         y="355.953"
+         id="text19"><tspan
+           sodipodi:role="line"
+           id="tspan19"
+           x="691.73895"
+           y="355.953"
+           style="font-size:25.7828px;fill:#ecf0f1;fill-opacity:1;stroke:#34495e;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">Coinbase Builder</tspan></text>
+    </g>
+  </g>
+</svg>

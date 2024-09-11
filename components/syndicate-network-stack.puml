@@ -1,0 +1,55 @@
+@startuml
+
+package "Network" {
+	[Broadcast Channel]
+	[Unicast Channel]
+	[Noise]
+}
+
+package "FROST" {
+	[TSS] --> [Broadcast Channel]
+	[DKG] --> [Agreement]
+	[DKG] --> [Unicast Channel]
+	[Unicast Channel] --> [Noise]
+        [Agreement] -->	[Broadcast Channel]
+}
+
+package "Block" {
+	[Block Generator] --> [Bitcoind]: Get block template
+	[Block Generator] --> [Coinbase Builder]
+	[Coinbase Builder] --> [DKG] : reads
+	[Block Broadcast] --> [Bitcoind]
+}
+
+package "Shares" {
+	Miner --> [Share Receiver]
+	[Share Receiver] --> [Share Validator] 
+	[Share Validator] --> [Share Accounting DB]
+	[Share Validator] --> [Share Signer]
+	[Share Validator] --> [Bitcoind]
+	[Share Signer] --> [Share Publisher]
+	[Share Publisher] --> [Broadcast Channel]
+	[Prune Task] --> [Share Accounting DB]
+}
+
+package "DLC Oracle" {
+	[DLC Contract Generator] --> [Share Accounting DB]	
+	[DLC Publisher] --> [DLC Contract Generator]
+}
+
+package "Payout" {
+	[Transaction Generator] --> [Share Accounting DB]
+	[Transaction Signer] --> [TSS]
+	[Transaction Signer] --> [DKG]: precompute nonces
+	[Publiser] --> [DLC Publisher]
+}
+
+package "Syndicate Network" {
+	[Membership Join/Leave Request] --> [Agreement]
+	[Membership Join/Leave Request] --> [Syndicate Transaction Generator]
+	[Syndicate Transaction Generator] --> [DKG]
+	[Syndicate Transaction Generator] --> [TSS]
+}
+
+@enduml
+

@@ -1,27 +1,23 @@
 = Syndicate Membership
 
-Group membership has a reduction to consensus. In our trust model, we
-require this consensus to have byzantine fault tolerant
-properties. This makes it hard to track who are the current members of
-the syndicate. To solve the problem, we turn to using Bitcoin
-consensus for maintaining the syndicate membership.
+We use the bitcoin consensus mechanism to decide on the syndicate
+membership and the FROST DKG to reach a consensus on the current
+syndicate membership.
 
-Syndicate members provide inputs into a membership transaction. The
-outputs of the membership transaction require the syndicate threshold
-signature to spend and carry a dust amount. The outputs of the
-membership transaction are used as inputs into funding transactions
-that manage the payouts made to miners.
+Membership requires a consensus protocol and in our case this needs to
+be a byzantine fault tolerant consensus. We also need syndicates to
+lock in capital for payouts to miners.
+
+We use a confirmed bitcoin transasction to determine the current
+syndicate membership. Syndicate members provide inputs into a
+membership transaction. The outputs of the membership transaction
+require the syndicate threshold signature to spend and carry a dust
+amount. The outputs of the membership transaction are used as inputs
+into funding transactions that manage the payouts made to miners.
 
 By requiring a bitcoin transaction to be confirmed and have certain
 minimum confirmations, we solve the syndicate's membership problem
 using bitcoin's BFT consensus.
 
-
-== Syndicate Membership Transaction
-
-The diagram below shows three syndicate members, each with two
-miners. The transaction construction shows that syndicates lock in
-their capital and generate UTXOs that are used to fund payout channels
-to miners.
-
-TODO: Add diagram and an explanation
+The section on link:frost-federation.adoc[FROST Federation] describes
+the transaction and the protocols required.

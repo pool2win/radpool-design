@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 1122.5197 793.70081"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   sodipodi:docname="radpool-cloud.svg"
+   inkscape:export-filename="radpool-components.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.85207215"
+     inkscape:cx="532.81873"
+     inkscape:cy="424.25985"
+     inkscape:window-width="1508"
+     inkscape:window-height="886"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:export-bgcolor="#ffffffff" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker48"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide, rounded arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:round"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path48" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ArrowWideRounded"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide, rounded arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:round"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path2" />
+    </marker>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     style="display:inline" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#1abc9c;fill-opacity:1;stroke:#1abc9c;stroke-width:0.457124;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8"
+       width="225.55647"
+       height="63.270721"
+       x="453.0488"
+       y="207.13177" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.4813px;font-family:Sans;-inkscape-font-specification:Sans;fill:#ecf0f1;fill-opacity:1;stroke:#ecf0f1;stroke-width:0.18285;stroke-dasharray:none;stroke-opacity:1"
+       x="497.63205"
+       y="242.79227"
+       id="text8"><tspan
+         sodipodi:role="line"
+         x="497.63205"
+         y="242.79227"
+         id="tspan8"
+         style="stroke-width:0.18285;fill:#ecf0f1;stroke:#ecf0f1">Syndicate Member</tspan></text>
+    <rect
+       style="fill:#1abc9c;fill-opacity:1;stroke:#1abc9c;stroke-width:0.457124;stroke-dasharray:none;stroke-opacity:1"
+       id="rect27"
+       width="225.55647"
+       height="63.270721"
+       x="453.0488"
+       y="495.81744" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.4813px;font-family:Sans;-inkscape-font-specification:Sans;fill:#ecf0f1;fill-opacity:1;stroke:#ecf0f1;stroke-width:0.18285;stroke-dasharray:none;stroke-opacity:1"
+       x="497.63205"
+       y="531.47797"
+       id="text27"><tspan
+         sodipodi:role="line"
+         x="497.63205"
+         y="531.47797"
+         id="tspan27"
+         style="stroke-width:0.18285;fill:#ecf0f1;stroke:#ecf0f1">Syndicate Member</tspan></text>
+    <rect
+       style="fill:#1abc9c;fill-opacity:1;stroke:#1abc9c;stroke-width:0.457124;stroke-dasharray:none;stroke-opacity:1"
+       id="rect9"
+       width="225.55647"
+       height="63.270721"
+       x="813.38647"
+       y="342.69485" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.4813px;font-family:Sans;-inkscape-font-specification:Sans;fill:#ecf0f1;fill-opacity:1;stroke:#ecf0f1;stroke-width:0.18285;stroke-dasharray:none;stroke-opacity:1"
+       x="857.96973"
+       y="378.35535"
+       id="text9"><tspan
+         sodipodi:role="line"
+         x="857.96973"
+         y="378.35535"
+         id="tspan9"
+         style="stroke-width:0.18285;fill:#ecf0f1;stroke:#ecf0f1">Syndicate Member</tspan></text>
+    <rect
+       style="fill:#1abc9c;fill-opacity:1;stroke:#000000;stroke-width:0.457124;stroke-dasharray:none;stroke-opacity:1"
+       id="rect32"
+       width="225.55647"
+       height="63.270721"
+       x="92.711159"
+       y="342.69485" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.4813px;font-family:Sans;-inkscape-font-specification:Sans;fill:#ecf0f1;fill-opacity:1;stroke:#ecf0f1;stroke-width:0.18285;stroke-dasharray:none;stroke-opacity:1"
+       x="137.29442"
+       y="378.35535"
+       id="text32"><tspan
+         sodipodi:role="line"
+         x="137.29442"
+         y="378.35535"
+         id="tspan32"
+         style="stroke-width:0.18285;fill:#ecf0f1;stroke:#ecf0f1">Syndicate Member</tspan></text>
+    <rect
+       style="fill:none;stroke:#bdc3c7;stroke-width:0.371941;stroke-dasharray:none;stroke-opacity:1"
+       id="rect101"
+       width="97.350128"
+       height="29.841759"
+       x="218.55338"
+       y="537.78894" />
+    <rect
+       style="fill:none;stroke:#bdc3c7;stroke-width:0.371941;stroke-dasharray:none;stroke-opacity:1"
+       id="rect100"
+       width="97.350128"
+       height="29.841759"
+       x="224.64146"
+       y="533.20294" />
+    <rect
+       style="fill:#f39c12;fill-opacity:1;stroke:#f39c12;stroke-width:0.371941;stroke-dasharray:none;stroke-opacity:1"
+       id="rect33"
+       width="97.350128"
+       height="29.841759"
+       x="230.66403"
+       y="527.99854" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.7455px;font-family:Sans;-inkscape-font-specification:Sans;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+       x="253.42989"
+       y="548.64294"
+       id="text33"><tspan
+         sodipodi:role="line"
+         id="tspan33"
+         x="253.42989"
+         y="548.64294"
+         style="fill:#ecf0f1;fill-opacity:1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">Miners</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-family:Sans;-inkscape-font-specification:Sans;fill:#7f8c8d;fill-opacity:1;stroke:#7f8c8d;stroke-width:0.377953;stroke-dasharray:none;stroke-opacity:1"
+       x="-646.46124"
+       y="633.59399"
+       id="text37"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan37"
+         x="-646.46124"
+         y="633.59399"
+         style="font-size:16px;fill:#7f8c8d;stroke:#7f8c8d">Stratum</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-family:Sans;-inkscape-font-specification:Sans;fill:#7f8c8d;fill-opacity:1;stroke:#7f8c8d;stroke-width:0.377953;stroke-dasharray:none;stroke-opacity:1"
+       x="-499.2637"
+       y="259.88409"
+       id="text38"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan38"
+         x="-499.2637"
+         y="259.88409"
+         style="font-size:16px;fill:#7f8c8d;stroke:#7f8c8d">Stratum</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-family:Sans;-inkscape-font-specification:Sans;fill:#7f8c8d;fill-opacity:1;stroke:#7f8c8d;stroke-width:0.377953;stroke-dasharray:none;stroke-opacity:1"
+       x="-505.1123"
+       y="988.06366"
+       id="text39"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan39"
+         x="-505.1123"
+         y="988.06366"
+         style="font-size:16px;fill:#7f8c8d;stroke:#7f8c8d">Stratum</tspan></text>
+    <path
+       style="fill:#7f8c8d;fill-rule:evenodd;stroke:#7f8c8d;stroke-width:2.13543;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.06772, 1.06772;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#ArrowWideRounded);marker-end:url(#marker48)"
+       d="M 289.57875,342.69485 481.73768,270.4025"
+       id="path42"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#7f8c8d;fill-rule:evenodd;stroke:#7f8c8d;stroke-width:2.13543;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.06772, 1.06772;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#ArrowWideRounded);marker-end:url(#marker48)"
+       d="m 649.91639,270.4025 192.15893,72.29235"
+       id="path43"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#7f8c8d;fill-rule:evenodd;stroke:#7f8c8d;stroke-width:2.13543;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.06772, 1.06772;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#ArrowWideRounded);marker-end:url(#marker48)"
+       d="M 851.71838,405.96557 640.27333,495.81745"
+       id="path44"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#7f8c8d;fill-rule:evenodd;stroke:#7f8c8d;stroke-width:2.13543;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.06772, 1.06772;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#ArrowWideRounded);marker-end:url(#marker48)"
+       d="M 491.38073,495.81745 279.93569,405.96557"
+       id="path45"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#7f8c8d;fill-rule:evenodd;stroke:#7f8c8d;stroke-width:2.13543;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.06772, 1.06772;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#ArrowWideRounded);marker-end:url(#marker48)"
+       d="M 565.82703,495.81745 V 270.4025"
+       id="path46"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#7f8c8d;fill-rule:evenodd;stroke:#7f8c8d;stroke-width:2.13543;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.06772, 1.06772;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#ArrowWideRounded);marker-end:url(#marker48)"
+       d="M 318.26763,374.33021 H 813.38645"
+       id="path47"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-family:Sans;-inkscape-font-specification:Sans;fill:#000000;fill-opacity:1;stroke:#7f8c8d;stroke-width:0.377953;stroke-dasharray:none;stroke-opacity:1"
+       x="464.02704"
+       y="367.55389"
+       id="text48"><tspan
+         sodipodi:role="line"
+         id="tspan48"
+         x="464.02704"
+         y="367.55389"
+         style="font-size:16px;stroke:#7f8c8d">Broadcast  Communication</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-family:Sans;-inkscape-font-specification:Sans;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+       x="532.62708"
+       y="548.30365"
+       id="text49"><tspan
+         sodipodi:role="line"
+         x="532.62708"
+         y="548.30365"
+         style="font-size:8px;fill:#ecf0f1;fill-opacity:1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         id="tspan50">Liquidity Provider</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-family:Sans;-inkscape-font-specification:Sans;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+       x="171.43817"
+       y="391.09015"
+       id="text51"><tspan
+         sodipodi:role="line"
+         x="171.43817"
+         y="391.09015"
+         style="font-size:8px;fill:#ecf0f1;fill-opacity:1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         id="tspan51">Liquidity Provider</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-family:Sans;-inkscape-font-specification:Sans;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+       x="525.43365"
+       y="257.27246"
+       id="text52"><tspan
+         sodipodi:role="line"
+         x="525.43365"
+         y="257.27246"
+         style="font-size:8px;fill:#ecf0f1;fill-opacity:1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         id="tspan52">Liquidity Provider</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-family:Sans;-inkscape-font-specification:Sans;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+       x="898.20203"
+       y="393.70505"
+       id="text53"><tspan
+         sodipodi:role="line"
+         x="898.20203"
+         y="393.70505"
+         style="font-size:8px;fill:#ecf0f1;fill-opacity:1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         id="tspan53">Liquidity Provider</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 657.73096,550.97657 v 0"
+       id="path101"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-family:Sans;-inkscape-font-specification:Sans;fill:#7f8c8d;fill-opacity:1;stroke:#7f8c8d;stroke-width:0.377953;stroke-dasharray:none;stroke-opacity:1"
+       x="-187.71512"
+       y="653.97699"
+       id="text108"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan108"
+         x="-187.71512"
+         y="653.97699"
+         style="font-size:16px;fill:#7f8c8d;stroke:#7f8c8d">Stratum</tspan></text>
+    <rect
+       style="fill:none;stroke:#bdc3c7;stroke-width:0.371941;stroke-dasharray:none;stroke-opacity:1"
+       id="rect109"
+       width="97.350128"
+       height="29.841759"
+       x="583.25098"
+       y="684.00836" />
+    <rect
+       style="fill:none;stroke:#bdc3c7;stroke-width:0.371941;stroke-dasharray:none;stroke-opacity:1"
+       id="rect110"
+       width="97.350128"
+       height="29.841759"
+       x="589.33911"
+       y="679.42236" />
+    <rect
+       style="fill:#f39c12;fill-opacity:1;stroke:#bdc3c7;stroke-width:0.371941;stroke-dasharray:none;stroke-opacity:1"
+       id="rect111"
+       width="97.350128"
+       height="29.841759"
+       x="595.36163"
+       y="674.21796" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.7455px;font-family:Sans;-inkscape-font-specification:Sans;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+       x="618.1275"
+       y="694.86237"
+       id="text111"><tspan
+         sodipodi:role="line"
+         id="tspan111"
+         x="618.1275"
+         y="694.86237"
+         style="fill:#ecf0f1;fill-opacity:1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">Miners</tspan></text>
+    <rect
+       style="fill:none;stroke:#bdc3c7;stroke-width:0.371941;stroke-dasharray:none;stroke-opacity:1"
+       id="rect112"
+       width="97.350128"
+       height="29.841759"
+       x="937.16125"
+       y="541.65662" />
+    <rect
+       style="fill:none;stroke:#bdc3c7;stroke-width:0.371941;stroke-dasharray:none;stroke-opacity:1"
+       id="rect113"
+       width="97.350128"
+       height="29.841759"
+       x="943.24933"
+       y="537.07062" />
+    <rect
+       style="fill:#f39c12;fill-opacity:1;stroke:#f39c12;stroke-width:0.371941;stroke-dasharray:none;stroke-opacity:1"
+       id="rect114"
+       width="97.350128"
+       height="29.841759"
+       x="949.27191"
+       y="531.86621" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.7455px;font-family:Sans;-inkscape-font-specification:Sans;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+       x="972.03778"
+       y="552.51062"
+       id="text114"><tspan
+         sodipodi:role="line"
+         id="tspan114"
+         x="972.03778"
+         y="552.51062"
+         style="fill:#ecf0f1;fill-opacity:1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">Miners</tspan></text>
+    <rect
+       style="fill:none;stroke:#bdc3c7;stroke-width:0.371941;stroke-dasharray:none;stroke-opacity:1"
+       id="rect115"
+       width="97.350128"
+       height="29.841759"
+       x="604.12524"
+       y="89.249458" />
+    <rect
+       style="fill:none;stroke:#bdc3c7;stroke-width:0.371941;stroke-dasharray:none;stroke-opacity:1"
+       id="rect116"
+       width="97.350128"
+       height="29.841759"
+       x="610.21332"
+       y="84.66346" />
+    <rect
+       style="fill:#f39c12;fill-opacity:1;stroke:#f39c12;stroke-width:0.371941;stroke-dasharray:none;stroke-opacity:1"
+       id="rect117"
+       width="97.350128"
+       height="29.841759"
+       x="616.2359"
+       y="79.459053" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.7455px;font-family:Sans;-inkscape-font-specification:Sans;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+       x="639.00171"
+       y="100.10346"
+       id="text117"><tspan
+         sodipodi:role="line"
+         id="tspan117"
+         x="639.00171"
+         y="100.10346"
+         style="fill:#ecf0f1;fill-opacity:1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">Miners</tspan></text>
+    <path
+       style="fill:#7f8c8d;fill-rule:evenodd;stroke:#7f8c8d;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker48);marker-end:url(#marker48)"
+       d="M 279.3391,527.99854 V 405.96558"
+       id="path3"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect33"
+       inkscape:connection-end="#rect32" />
+    <path
+       style="fill:#7f8c8d;fill-rule:evenodd;stroke:#7f8c8d;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker48);marker-end:url(#marker48)"
+       d="m 997.94698,531.86621 0,-125.90063"
+       id="path4"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect114"
+       inkscape:connection-end="#rect9" />
+    <path
+       style="fill:#7f8c8d;fill-rule:evenodd;stroke:#7f8c8d;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker48);marker-end:url(#marker48)"
+       d="m 664.91096,109.30081 v 97.83096"
+       id="path5"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect117"
+       inkscape:connection-end="#rect8" />
+    <path
+       style="fill:#7f8c8d;fill-rule:evenodd;stroke:#7f8c8d;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker48);marker-end:url(#marker48)"
+       d="M 644.0367,674.21796 V 559.08817"
+       id="path6"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect111"
+       inkscape:connection-end="#rect27" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 843.74945,645.6876 0.11476,0.11018"
+       id="path7"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

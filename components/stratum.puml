@@ -1,0 +1,20 @@
+@startuml
+
+[Work Builder] -right-> [User DB]
+
+[Work Builder] -up-> [bitcoind]
+
+[Writer] --> [Socket Connection]
+
+[Socket Connection] -up-> [Reader]
+
+[Reader] -up-> [Validator]
+
+[Validator] -up-> [Share DB]
+
+[Validator] -right-> [Work Builder] : adjust diff
+
+[Work Builder] --> [Writer]
+
+@enduml
+

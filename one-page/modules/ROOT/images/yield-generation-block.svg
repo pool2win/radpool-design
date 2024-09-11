@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 1122.5197 793.70081"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   sodipodi:docname="yield-generation-block.svg"
+   inkscape:export-filename="yield-generation-block.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.68271028"
+     inkscape:cx="551.47844"
+     inkscape:cy="395.48255"
+     inkscape:window-width="2556"
+     inkscape:window-height="1381"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:export-bgcolor="#ffffffff" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     style="display:inline" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#1abc9c;fill-opacity:1;stroke:#000000;stroke-width:0.736621;stroke-dasharray:none;stroke-opacity:1"
+       id="rect32"
+       width="207.04684"
+       height="69.051422"
+       x="40.088032"
+       y="95.990929" />
+    <text
+       xml:space="preserve"
+       style="font-size:25.7828px;font-family:Sans;-inkscape-font-specification:Sans;fill:#34495e;fill-opacity:1;stroke:#34495e;stroke-width:0.294649;stroke-dasharray:none;stroke-opacity:1"
+       x="30.824661"
+       y="84.572975"
+       id="text32"><tspan
+         sodipodi:role="line"
+         x="30.824661"
+         y="84.572975"
+         id="tspan32"
+         style="font-size:25.7828px;fill:#34495e;stroke:#34495e;stroke-width:0.294649">Liquidity Providers</tspan></text>
+    <ellipse
+       style="fill:#c0392b;stroke:#c0392b;stroke-width:18.2713"
+       id="path1"
+       ry="194.51558"
+       rx="112.61645"
+       cy="327.68674"
+       cx="553.88416" />
+    <text
+       xml:space="preserve"
+       style="font-size:25.7828px;font-family:Sans;-inkscape-font-specification:Sans;fill:#ecf0f1;fill-opacity:1;stroke:#ecf0f1;stroke-width:0.294649;stroke-dasharray:none;stroke-opacity:1"
+       x="553.72943"
+       y="334.39026"
+       id="text1"><tspan
+         sodipodi:role="line"
+         x="553.72943"
+         y="334.39026"
+         style="font-size:25.7828px;text-align:center;text-anchor:middle;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.294649"
+         id="tspan23">Radpool</tspan><tspan
+         sodipodi:role="line"
+         x="553.72943"
+         y="366.61877"
+         style="font-size:25.7828px;text-align:center;text-anchor:middle;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.294649"
+         id="tspan1">Syndicate</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:25.7828px;font-family:Sans;-inkscape-font-specification:Sans;fill:#34495e;stroke:#34495e;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+       x="935.72833"
+       y="87.241493"
+       id="text33"><tspan
+         sodipodi:role="line"
+         id="tspan33"
+         x="935.72833"
+         y="87.241493"
+         style="font-size:25.7828px;fill:#34495e;fill-opacity:1;stroke:#34495e;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">Miners</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.1886px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#95a5a6;stroke:#95a5a6;stroke-width:1.00492;stroke-dasharray:none"
+       x="344.58197"
+       y="174.43726"
+       id="text10"><tspan
+         sodipodi:role="line"
+         id="tspan10"
+         x="344.58197"
+         y="174.43726"
+         style="fill:#2c3e50;stroke:#2c3e50;stroke-width:1.00492">Lock liquidity</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.1886px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#95a5a6;stroke:#95a5a6;stroke-width:1.00492;stroke-dasharray:none"
+       x="768.74255"
+       y="287.11316"
+       id="text16"><tspan
+         sodipodi:role="line"
+         x="768.74255"
+         y="287.11316"
+         style="fill:#2c3e50;stroke:#2c3e50;stroke-width:1.00492"
+         id="tspan43">Pay miners </tspan><tspan
+         sodipodi:role="line"
+         x="768.74255"
+         y="308.59891"
+         style="fill:#2c3e50;stroke:#2c3e50;stroke-width:1.00492"
+         id="tspan44">from liquidity</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.1886px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#95a5a6;stroke:#95a5a6;stroke-width:1.00492;stroke-dasharray:none"
+       x="348.86874"
+       y="399.62122"
+       id="text18"><tspan
+         sodipodi:role="line"
+         id="tspan18"
+         x="348.86874"
+         y="399.62122"
+         style="fill:#2c3e50;stroke:#2c3e50;stroke-width:1.00492">Pay block</tspan><tspan
+         sodipodi:role="line"
+         x="348.86874"
+         y="421.10696"
+         style="fill:#2c3e50;stroke:#2c3e50;stroke-width:1.00492"
+         id="tspan19">reward</tspan></text>
+    <rect
+       style="fill:#1abc9c;fill-opacity:1;stroke:#000000;stroke-width:0.736621;stroke-dasharray:none;stroke-opacity:1"
+       id="rect7"
+       width="207.04684"
+       height="69.051422"
+       x="40.088032"
+       y="187.81502" />
+    <rect
+       style="fill:#1abc9c;fill-opacity:1;stroke:#000000;stroke-width:0.736621;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8"
+       width="207.04684"
+       height="69.051422"
+       x="40.088032"
+       y="290.75125" />
+    <rect
+       style="fill:#1abc9c;fill-opacity:1;stroke:#000000;stroke-width:0.736621;stroke-dasharray:none;stroke-opacity:1"
+       id="rect9"
+       width="207.04684"
+       height="69.051422"
+       x="40.088032"
+       y="383.35004" />
+    <rect
+       style="fill:#1abc9c;fill-opacity:1;stroke:#000000;stroke-width:0.736621;stroke-dasharray:none;stroke-opacity:1"
+       id="rect10"
+       width="207.04684"
+       height="69.051422"
+       x="40.088032"
+       y="484.99088" />
+    <rect
+       style="fill:#1abc9c;fill-opacity:1;stroke:#000000;stroke-width:0.736621;stroke-dasharray:none;stroke-opacity:1"
+       id="rect11"
+       width="207.04684"
+       height="69.051422"
+       x="40.088032"
+       y="484.99088" />
+    <rect
+       style="fill:#f39c12;fill-opacity:1;stroke:#f39c12;stroke-width:0.736621;stroke-dasharray:none;stroke-opacity:1"
+       id="rect13"
+       width="207.04684"
+       height="69.051422"
+       x="881.92865"
+       y="95.990929" />
+    <rect
+       style="fill:#f39c12;fill-opacity:1;stroke:#f39c12;stroke-width:0.736621;stroke-dasharray:none;stroke-opacity:1"
+       id="rect14"
+       width="207.04684"
+       height="69.051422"
+       x="881.92865"
+       y="187.81502" />
+    <rect
+       style="fill:#f39c12;fill-opacity:1;stroke:#f39c12;stroke-width:0.736621;stroke-dasharray:none;stroke-opacity:1"
+       id="rect15"
+       width="207.04684"
+       height="69.051422"
+       x="881.92865"
+       y="290.75125" />
+    <rect
+       style="fill:#f39c12;fill-opacity:1;stroke:#f39c12;stroke-width:0.736621;stroke-dasharray:none;stroke-opacity:1"
+       id="rect16"
+       width="207.04684"
+       height="69.051422"
+       x="881.92865"
+       y="383.35004" />
+    <rect
+       style="fill:#f39c12;fill-opacity:1;stroke:#f39c12;stroke-width:0.736621;stroke-dasharray:none;stroke-opacity:1"
+       id="rect17"
+       width="207.04684"
+       height="69.051422"
+       x="881.92865"
+       y="484.99088" />
+    <rect
+       style="fill:#f39c12;fill-opacity:1;stroke:#f39c12;stroke-width:0.736621;stroke-dasharray:none;stroke-opacity:1"
+       id="rect18"
+       width="207.04684"
+       height="69.051422"
+       x="881.92865"
+       y="484.99088" />
+    <g
+       id="g24"
+       transform="matrix(0.6453151,0,0,0.6453151,5.7937315,131.69064)"
+       style="fill:#1abc9c;stroke:#1abc9c">
+      <path
+         style="color:#000000;fill:#1abc9c;stroke:#1abc9c;stroke-width:1.81161;stroke-dasharray:none;stroke-opacity:1"
+         d="M 403.50311,96.878169 V 110.46673 H 607.53126 V 96.878169 Z"
+         id="path24" />
+      <path
+         style="color:#000000;fill:#1abc9c;fill-rule:evenodd;stroke:#1abc9c;stroke-width:2.51717;stroke-dasharray:none;stroke-opacity:1"
+         d="m 607.21865,80.407848 v 46.529292 l 40.2461,-23.26367 z"
+         id="path22"
+         sodipodi:nodetypes="cccccc" />
+    </g>
+    <path
+       style="color:#000000;fill:#3498db;stroke:#3498db;stroke-width:1.16906;stroke-dasharray:none;stroke-opacity:1"
+       d="m 415.45626,434.44952 v 8.7689 H 283.79381 v -8.7689 z"
+       id="path26" />
+    <path
+       style="color:#000000;fill:#3498db;fill-rule:evenodd;stroke:#3498db;stroke-width:1.62437;stroke-dasharray:none;stroke-opacity:1"
+       d="m 283.99555,423.82097 v 30.02605 l -25.97142,-15.01239 z"
+       id="path27"
+       sodipodi:nodetypes="cccccc" />
+    <g
+       id="g30"
+       transform="matrix(0.6453151,0,0,0.6453151,441.30517,262.04769)"
+       style="fill:#1abc9c;stroke:#1abc9c">
+      <path
+         style="color:#000000;fill:#1abc9c;stroke:#1abc9c;stroke-width:1.81161;stroke-dasharray:none;stroke-opacity:1"
+         d="M 403.50311,96.878169 V 110.46673 H 607.53126 V 96.878169 Z"
+         id="path29" />
+      <path
+         style="color:#000000;fill:#1abc9c;fill-rule:evenodd;stroke:#1abc9c;stroke-width:2.51717;stroke-dasharray:none;stroke-opacity:1"
+         d="m 607.21865,80.407848 v 46.529292 l 40.2461,-23.26367 z"
+         id="path30"
+         sodipodi:nodetypes="cccccc" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:17.1886px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#1abc9c;stroke:#1abc9c;stroke-width:1.00492;stroke-dasharray:none"
+       x="344.91714"
+       y="229.21663"
+       id="text31"><tspan
+         sodipodi:role="line"
+         id="tspan31"
+         x="344.91714"
+         y="229.21663"
+         style="fill:#1abc9c;stroke:#1abc9c;stroke-width:1.00492">10 BTC</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.1886px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#3498db;stroke:#3498db;stroke-width:1.00492;stroke-dasharray:none"
+       x="349.72818"
+       y="472.74854"
+       id="text34"><tspan
+         sodipodi:role="line"
+         id="tspan34"
+         x="349.72818"
+         y="472.74854"
+         style="fill:#3498db;stroke:#3498db;stroke-width:1.00492">3.125</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.1886px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#1abc9c;stroke:#1abc9c;stroke-width:1.00492;stroke-dasharray:none"
+       x="768.75116"
+       y="358.41788"
+       id="text35"><tspan
+         sodipodi:role="line"
+         id="tspan35"
+         x="768.75116"
+         y="358.41788"
+         style="fill:#1abc9c;stroke:#1abc9c;stroke-width:1.00492">3 BTC</tspan></text>
+    <rect
+       style="fill:#3498db;fill-opacity:1;stroke:#3498db;stroke-width:0.983741;stroke-dasharray:none;stroke-opacity:1"
+       id="rect36"
+       width="370.59427"
+       height="68.804306"
+       x="368.58701"
+       y="672.50665" />
+    <text
+       xml:space="preserve"
+       style="font-size:25.7828px;font-family:Sans;-inkscape-font-specification:Sans;fill:#ecf0f1;fill-opacity:1;stroke:#ecf0f1;stroke-width:0.294649;stroke-dasharray:none;stroke-opacity:1"
+       x="512.0387"
+       y="716.28088"
+       id="text36"><tspan
+         sodipodi:role="line"
+         x="512.0387"
+         y="716.28088"
+         id="tspan36"
+         style="font-size:25.7828px;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.294649">Bitcoin</tspan></text>
+    <g
+       id="g38"
+       transform="matrix(0,-0.40610971,0.65592744,0,489.61357,816.95496)"
+       style="fill:#3498db;stroke:#3498db">
+      <path
+         style="color:#000000;fill:#3498db;stroke:#3498db;stroke-width:1.81161;stroke-dasharray:none;stroke-opacity:1"
+         d="M 403.50311,96.878169 V 110.46673 H 607.53126 V 96.878169 Z"
+         id="path37" />
+      <path
+         style="color:#000000;fill:#3498db;fill-rule:evenodd;stroke:#3498db;stroke-width:2.51717;stroke-dasharray:none;stroke-opacity:1"
+         d="m 607.21865,80.407848 v 46.529292 l 40.2461,-23.26367 z"
+         id="path38"
+         sodipodi:nodetypes="cccccc" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:17.1886px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#95a5a6;stroke:#95a5a6;stroke-width:1.00492;stroke-dasharray:none"
+       x="623.59344"
+       y="598.927"
+       id="text39"><tspan
+         sodipodi:role="line"
+         id="tspan39"
+         x="623.59344"
+         y="598.927"
+         style="fill:#2c3e50;stroke:#2c3e50;stroke-width:1.00492">Earn block</tspan><tspan
+         sodipodi:role="line"
+         x="623.59344"
+         y="620.41278"
+         style="fill:#2c3e50;stroke:#2c3e50;stroke-width:1.00492"
+         id="tspan40">reward</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.1886px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#3498db;stroke:#3498db;stroke-width:1.00492;stroke-dasharray:none"
+       x="503.47821"
+       y="609.32605"
+       id="text41"><tspan
+         sodipodi:role="line"
+         id="tspan41"
+         x="503.47821"
+         y="609.32605"
+         style="fill:#3498db;stroke:#3498db;stroke-width:1.00492">3.125</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.1886px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#95a5a6;stroke:#95a5a6;stroke-width:1.00492;stroke-dasharray:none"
+       x="344.58197"
+       y="174.43726"
+       id="text42"><tspan
+         sodipodi:role="line"
+         id="tspan42"
+         x="344.58197"
+         y="174.43726"
+         style="fill:#2c3e50;stroke:#2c3e50;stroke-width:1.00492">Lock liquidity</tspan></text>
+  </g>
+</svg>

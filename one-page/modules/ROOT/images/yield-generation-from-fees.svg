@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 1122.5197 793.70081"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   sodipodi:docname="yield-generation-from-fees.svg"
+   inkscape:export-filename="yield-generation-from-fees.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.6151792"
+     inkscape:cx="553.49726"
+     inkscape:cy="379.5642"
+     inkscape:window-width="1508"
+     inkscape:window-height="886"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:export-bgcolor="#ffffffff" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path9" />
+    </marker>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     style="display:inline" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g1"
+       transform="matrix(1.6114246,0,0,1.6114246,-166.02987,-239.98632)">
+      <rect
+         style="fill:#1abc9c;fill-opacity:1;stroke:#000000;stroke-width:0.457124;stroke-dasharray:none;stroke-opacity:1"
+         id="rect32"
+         width="225.55647"
+         height="63.270721"
+         x="116.82975"
+         y="478.06796" />
+      <text
+         xml:space="preserve"
+         style="font-size:16px;font-family:Sans;-inkscape-font-specification:Sans;fill:#ecf0f1;fill-opacity:1;stroke:#ecf0f1;stroke-width:0.18285;stroke-dasharray:none;stroke-opacity:1"
+         x="159.12802"
+         y="513.86334"
+         id="text32"><tspan
+           sodipodi:role="line"
+           x="159.12802"
+           y="513.86334"
+           id="tspan32"
+           style="font-size:16px;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.18285">Syndicate Member</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:10.6667px;font-family:Sans;-inkscape-font-specification:Sans;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         x="185.3412"
+         y="529.36902"
+         id="text51"><tspan
+           sodipodi:role="line"
+           x="185.3412"
+           y="529.36902"
+           style="font-size:10.6667px;fill:#ecf0f1;fill-opacity:1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+           id="tspan51">Liquidity Provider</tspan></text>
+    </g>
+    <ellipse
+       style="fill:#c0392b;stroke:#c0392b;stroke-width:18.2713"
+       id="path1"
+       ry="47.645256"
+       rx="125.58269"
+       cy="217.77324"
+       cx="562.78656" />
+    <text
+       xml:space="preserve"
+       style="font-size:25.7828px;font-family:Sans;-inkscape-font-specification:Sans;fill:#ecf0f1;fill-opacity:1;stroke:#ecf0f1;stroke-width:0.294649;stroke-dasharray:none;stroke-opacity:1"
+       x="562.78656"
+       y="208.36253"
+       id="text1"><tspan
+         sodipodi:role="line"
+         x="562.78656"
+         y="208.36253"
+         id="tspan1"
+         style="font-size:25.7828px;text-align:center;text-anchor:middle;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.294649">Radpool</tspan><tspan
+         sodipodi:role="line"
+         x="562.78656"
+         y="240.59103"
+         style="font-size:25.7828px;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0.294649"
+         id="tspan23"><tspan
+   style="text-align:center;text-anchor:middle;stroke-width:0.294649"
+   id="tspan24">Syndicat</tspan>e</tspan></text>
+    <g
+       id="g2"
+       transform="matrix(1.6114246,0,0,1.6114246,-166.02987,-233.28874)">
+      <rect
+         style="fill:#f39c12;fill-opacity:1;stroke:#f39c12;stroke-width:0.457124;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1"
+         width="225.55647"
+         height="63.270721"
+         x="551.82007"
+         y="473.91165" />
+      <text
+         xml:space="preserve"
+         style="font-size:16px;font-family:Sans;-inkscape-font-specification:Sans;fill:#ecf0f1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         x="638.68909"
+         y="511.27051"
+         id="text33"><tspan
+           sodipodi:role="line"
+           id="tspan33"
+           x="638.68909"
+           y="511.27051"
+           style="font-size:16px;fill:#ecf0f1;fill-opacity:1;stroke:#ecf0f1;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">Miners</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#95a5a6;stroke-width:2.83205;stroke-dasharray:none;marker-start:url(#marker9);marker-end:url(#marker9)"
+       d="m 414.67841,219.32682 c -72.89034,22.89545 -87.53039,29.21806 -133.10899,74.11193 -59.63634,62.78464 -66.32255,162.3566 -63.21437,226.80066"
+       id="path8"
+       sodipodi:nodetypes="ccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:17.1886px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#95a5a6;stroke:#95a5a6;stroke-width:1.00492;stroke-dasharray:none"
+       x="174.48616"
+       y="262.07028"
+       id="text10"><tspan
+         sodipodi:role="line"
+         id="tspan10"
+         x="174.48616"
+         y="262.07028"
+         style="fill:#2c3e50;stroke:#2c3e50;stroke-width:1.00492">01 - Lock in liquidity</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.1886px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#95a5a6;stroke:#95a5a6;stroke-width:1.00492;stroke-dasharray:none"
+       x="954.59601"
+       y="253.30411"
+       id="text11"><tspan
+         sodipodi:role="line"
+         id="tspan11"
+         x="954.59601"
+         y="253.30411"
+         style="fill:#2c3e50;stroke:#2c3e50;stroke-width:1.00492">02 - Syndicate and miner</tspan><tspan
+         sodipodi:role="line"
+         x="954.59601"
+         y="274.78986"
+         style="fill:#2c3e50;stroke:#2c3e50;stroke-width:1.00492"
+         id="tspan12">find a block</tspan></text>
+    <path
+       style="fill:none;stroke:#95a5a6;stroke-width:2.83205;stroke-dasharray:none;marker-start:url(#marker9);marker-end:url(#marker9)"
+       d="m 707.83027,215.84217 c 70.52079,2.00313 100.8546,17.54582 146.4332,62.43969 59.63634,62.78465 52.5079,181.37498 49.39972,245.81904"
+       id="path12"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#95a5a6;stroke-width:2.83205;stroke-dasharray:none;marker-start:url(#marker9)"
+       d="m 720.55456,580.46405 -337.5244,-0.51623"
+       id="path13"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:17.1886px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#95a5a6;stroke:#95a5a6;stroke-width:1.00492;stroke-dasharray:none"
+       x="554.40881"
+       y="607.05042"
+       id="text16"><tspan
+         sodipodi:role="line"
+         id="tspan16"
+         x="554.40881"
+         y="607.05042"
+         style="fill:#2c3e50;stroke:#2c3e50;stroke-width:1.00492">03 - Payout miners</tspan><tspan
+         sodipodi:role="line"
+         x="554.40881"
+         y="628.53613"
+         style="fill:#2c3e50;stroke:#2c3e50;stroke-width:1.00492"
+         id="tspan17">minus the fees</tspan></text>
+    <path
+       style="fill:none;stroke:#95a5a6;stroke-width:2.83205;stroke-dasharray:none;marker-end:url(#marker9)"
+       d="m 552.77687,292.11698 c 2.18269,54.06321 -1.52246,92.03524 -26.82803,160.60835 -29.19347,63.7242 -66.32595,96.76284 -129.90158,101.0337"
+       id="path17"
+       sodipodi:nodetypes="ccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:17.1886px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#95a5a6;stroke:#95a5a6;stroke-width:1.00492;stroke-dasharray:none"
+       x="587.18475"
+       y="483.81659"
+       id="text18"><tspan
+         sodipodi:role="line"
+         id="tspan18"
+         x="587.18475"
+         y="483.81659"
+         style="fill:#2c3e50;stroke:#2c3e50;stroke-width:1.00492">04 - Payout block</tspan><tspan
+         sodipodi:role="line"
+         x="587.18475"
+         y="505.30234"
+         style="fill:#2c3e50;stroke:#2c3e50;stroke-width:1.00492"
+         id="tspan19">reward</tspan></text>
+  </g>
+</svg>
