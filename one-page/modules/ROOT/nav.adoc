@@ -6,7 +6,6 @@
 ** xref:syndicate-operation.adoc[Syndicate Operation]
 ** xref:syndicate-network.adoc[Syndicate Network Communication]
 ** xref:capital-requirements.adoc[Capital Requirements]
-** xref:transparent-accounting.adoc[Transparent Accounting]
 ** xref:stratum.adoc[Submit Shares Using Stratum]
 ** xref:attacks.adoc[Attacks]
 * xref:payout-mechanism.adoc[Payout Mechanism]

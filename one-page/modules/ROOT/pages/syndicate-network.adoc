@@ -43,3 +43,15 @@ their shares to multiple syndicates by registering with the syndicate.
 This results in an open database of shares that all MSPs and other
 interested parties can run accounting on. This open access to verified
 shares is used to build futures contracts using DLCs to pay miners.
+
+== Transparent and Open Operations
+
+A mining syndicate results in a transparent pool where all syndicate
+members validate all other MSPs are working correctly. If
+a member is not working according to the agreed upon protocols, the
+honest MSPs stop rewarding the dishonest member and will
+eventually remove the dishonest member from the syndicate.
+
+The above is made possible by point to point communication between
+MSPs as well as the bitcoin contracts between the
+MSPs.
