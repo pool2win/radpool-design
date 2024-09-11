@@ -26,7 +26,7 @@ the shares before broadcasting to the entire syndicate. This
 identifies shares with the syndicate members that brought the hashrate
 to the pool. The figure below shows how this works.
 
-TODO: Add diagram about shares being signed
+[TODO] Add diagram about shares being signed
 
 To prevent anyone from joining the syndicate by bringing in capital,
 we require that syndicate members also bring in hashrate to the
