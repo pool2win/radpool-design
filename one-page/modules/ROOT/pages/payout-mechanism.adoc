@@ -323,26 +323,41 @@ to move miner payout DLCs into LN contracts, but we leave that
 optimisation out from this initial proposal.
 
 In the same way as miners roll-over their payouts, the MSPs can also
-signal to the syndicate to not sign their payouts until a minimum
+signal to the syndicate to aggregate their payout until a minimum
 balance is reached. This is a choice the MSP can make to lower on
 chain transaction fees. Again, we leave such optimisations out of the
 current proposal.
 
 == Capital Requirements and Fees
 
-All MSPs need to lock in capital to fund miner payouts. We propose
-that each MSP keeps at least a 5x margin. Depending on how many miners
-an MSP registers and the hashrate those miners have, the MSP will have
-to lock in even more capital. We will provide MSPs with tools to
-compute the safe amount of liquidity required based on the hashrate
-their miners have.
+All MSPs lock in capital to fund miner payouts. We propose that each
+MSP keeps at least a 5x margin. Depending on how many miners an MSP
+registers and the hashrate those miners have, the MSP will have to
+lock in even more capital. We will provide MSPs with tools to compute
+the safe amount of liquidity required based on the hashrate their
+miners have.
 
 The fee rates that the MSPs charge will be subject to open market
 competition. Miners can look up various MSPs and decide on the MSP
 based on the contract terms and the fees charged.
 
+== Payout Reward Distrbution
 
-[TODO] Make sure we are covering the PPLNS computation. Normalisation
-of shares. Computation from shares to hashrate in the DLC
-contracts. Should the DLC contracts have hashrate or number of shares
-as the contract trigger.
+It is important to note that the reward distribution mechanism is
+different for MSPs and miners. The MSPs rewards are distributed using
+PPLNS whenever the pool finds a block. Meanwhile, miners are paid when
+their DLC contracts expire.
+
+This means the two payouts happen at different times. Note that using
+DLCs, an MSP can not withdraw from the contract, as the syndicate will
+release the signature to settle the DLC contract. Therefore the risk
+of a mismatch between the MSP payout and the miner payout is
+completely on the MSP. The miner gets a fixed payout on contract
+expiry. For taking on the risk, the MSP will charge the miner a fee.
+
+.Timeline for Payouts to MSP and miner
+image::payout-mechanism/cet-timeline.png["Timeline for Payouts to MSP and miner"]
+
+
+The image shows an exaple situation where the pool finds blocks more
+often than DLC contract expiry selected by the miner and the MSP.
