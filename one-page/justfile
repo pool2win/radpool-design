@@ -4,5 +4,10 @@ default:
 clean:
 	rm -rf ./build/site
 
+# Install dependencies like plantuml and mathjax
+# We are using https://gitlab.com/djencks/asciidoctor-mathjax.js for latexmath support at server side rendering
+deps:
+	npm i
+
 antora:
     npx antora --fetch antora-playbook.yml

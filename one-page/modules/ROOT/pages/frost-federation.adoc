@@ -15,18 +15,49 @@ from Radpool can use it for other purposes.
 
 == Membership
 
-The KeyGen protocol is run by all parties who want to participate in
-the federation. This acts as a point of control where existing
-federation members have to accept new members by successfully
-completing a KeyGen protocol. The syndicate membership protocol,
-described later, explains the rules used by current members to accept
-new members for Radpool.
+An easy way to agree upon the syndicate membership is by running a DKG
+protocol. The DKG protocol provides a BFT consensus between the
+parties to agree on the membership. Every fixed interval all connected
+nodes can run a DKG instance to obtain the **syndicate public key**
+stem:[$S_{pk}$]. However, as we will see later, the syndicate signs
+DLC contracts that pay miners. This means that we can't simply depend
+on a BFT agreement to decide on who gets to sign the DLC
+contracts.
+
+Recall that all MSP broadcast mining shares mined by their miners. We
+depend on this information to support the membership with verifiable
+PoW information. We require that the membership of the syndicate is
+limited to the MSPs whose miners make the top 60% of hashrate.
+
+The membership is therefore determined using the following protocol.
+
+.Protocol for Determining Membership
+. Consider only the shares submitted to the network since the last bitcoin block was found.
+. Group all miner shares received from all miners into groups keyed by the MSP that sent the corresponding mining message.
+. Compute the total hashrate for each MSP in their group.
+. Order the MSPs by their aggregate hashrate - use the MSP lexicographical ordering on the public key to break ties.
+. Select the MSPs from the top of the list and add their hashrate. Stop when the total hashrate adds up to 60% of the total network hashrate.
+
+The above protocol uses PoW to prevent sybil attacks on the syndicate
+membership. By limiting the hashrate to 60% of the network hashrate we
+discourage parties from purposely running low hashrate MSPs to obtain
+more shares in the DKG and TSS protocols. At the same time we require
+60% of the Radpool hashrate to decide on the payouts. The approach
+dis-incentivises MSPs to retain smaller share of the Radpool
+hashrate. If their hashrate is small, larger MSPs will add up to the
+60% threshold hashrate and the smaller MSPs will have no shares
+in TSS.
 
 
 == Federation Broadcast Communication
 
 Once the membership is confirmed, FROST federation also provides a
-reliable broadcast within the federation. We later use this broadcast
-primitive to replicate shares received by a MSP to all other MSPs.
+byzantine fault tolerant reliable broadcast within the federation. We
+later use this broadcast primitive to replicate shares received by a
+MSP to all other MSPs. We use the
+https://homes.cs.washington.edu/~tessaro/papers/dds.pdf[Asynchronous
+Verifiable Information Dispersal] protocol to provide the BFT reliable
+broadcast. The protocol replicates data across point to point nodes
+with low communication complexity while tolerating byzantine failures.
 
 image::federation-broadcast.png[""]

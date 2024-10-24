@@ -26,9 +26,10 @@ reduced earnings because the block reward is now distributed between
 more miners and the fees are also distributed across more syndicate
 members. The syndicate however is still incentivized to include a new
 MSPs as a larger syndicate will be able to manage payouts for larger
-number of miners. A larger set of miners thus reduce variance even
-further. This flywheel effect is important for any syndicate to try
-and achieve and thus expanding the size of the syndicate is important
-for increased profits for the entire syndicate.
+number of miners. **A larger set of miners thus reduce variance even
+further and increase the aggregate earning for the pool**. This
+flywheel effect is important for any syndicate to try and achieve and
+thus expanding the size of the syndicate is important for increased
+profits for the entire syndicate.
 
-[TODO] Add the "grow the pie" chart.
+image::syndicate-pie.png["Syndicate - growing the pie"]

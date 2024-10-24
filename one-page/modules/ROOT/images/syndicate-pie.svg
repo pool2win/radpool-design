@@ -28,7 +28,7 @@
      inkscape:document-units="mm"
      inkscape:zoom="0.43814624"
      inkscape:cx="678.99704"
-     inkscape:cy="402.83354"
+     inkscape:cy="405.11588"
      inkscape:window-width="1508"
      inkscape:window-height="886"
      inkscape:window-x="0"
@@ -413,13 +413,13 @@
        xml:space="preserve"
        style="font-size:31.7062px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#2c3e50;fill-opacity:1;stroke:#2c3e50;stroke-width:1.12344;stroke-dasharray:none"
        x="106.6525"
-       y="783.98047"
+       y="785.68384"
        id="text25"
        transform="scale(1.0162905,0.98397062)"><tspan
          sodipodi:role="line"
          id="tspan25"
          x="106.6525"
-         y="783.98047"
+         y="785.68384"
          style="stroke-width:1.12344">Miners</tspan></text>
     <g
        id="g30">
@@ -469,15 +469,15 @@
     <text
        xml:space="preserve"
        style="font-size:31.7062px;font-family:Sans;-inkscape-font-specification:Sans;text-align:center;text-anchor:middle;fill:#2c3e50;fill-opacity:1;stroke:#2c3e50;stroke-width:1.12344;stroke-dasharray:none"
-       x="346.79315"
-       y="780.69885"
+       x="394.61502"
+       y="782.40222"
        id="text30"
        transform="scale(1.0162905,0.98397062)"><tspan
          sodipodi:role="line"
          id="tspan30"
-         x="346.79315"
-         y="780.69885"
-         style="stroke-width:1.12344">Liquidity Providers</tspan></text>
+         x="394.61502"
+         y="782.40222"
+         style="stroke-width:1.12344">Mining Service Providers</tspan></text>
     <circle
        style="fill:#f39c12;fill-opacity:0.446162;stroke:#f39c12;stroke-width:0;stroke-dasharray:none"
        id="circle61"

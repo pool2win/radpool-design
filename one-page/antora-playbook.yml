@@ -17,3 +17,4 @@ asciidoc:
     page-pagination: ''
   extensions:
     - asciidoctor-plantuml
+    - '@djencks/asciidoctor-mathjax'

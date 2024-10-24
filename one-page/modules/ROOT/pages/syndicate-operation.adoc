@@ -1,4 +1,5 @@
 = Syndicate Operation
+:stem: latexmath
 
 The MSPs run all the services that currently centralised pool
 operators need to run. The difference is the the syndicate is
@@ -76,8 +77,8 @@ transactions before signing the syndicate update transaction.
 
 We use a highly efficient BFT reliable broadcast protocol proposed by
 https://ieeexplore.ieee.org/abstract/document/1541196[Cachin et. al.]. The
-protocol has a communication complexity of stem:[$O(n|F|)$] for
-broadcasting data of size stem:[$|F|$] to n nodes connected using a point to
+protocol has a communication complexity of stem:[O(n|F|)] for
+broadcasting data of size stem:[|F|] to n nodes connected using a point to
 point network.
 
 == Open Access to Replicated Shares
