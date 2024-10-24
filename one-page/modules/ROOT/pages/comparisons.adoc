@@ -25,5 +25,4 @@ p2p solutions.
 . No consensus required between miners on the state of shares generated.
 
 .Cons
-. Block template generation is managed by syndicate members. However, anyone can join the syndicate and provide block
-  templates, including miners themselves.
+. Block template generation is managed by syndicate members. However, anyone can join the syndicate and provide block templates, including miners themselves.
