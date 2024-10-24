@@ -1,5 +1,7 @@
 = Syndicate Protocols
 
+[TODO] Update this page
+
 The syndicate and miners follow a number of separate protocols to
 enable the system to work together.
 

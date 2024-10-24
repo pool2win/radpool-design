@@ -11,8 +11,8 @@ tens of thousands of miners.
 Unilateral Exit:: The miner doesn't need permission from the syndicate to spend their reward.
 No Centralised Coordinator:: The payout mechanism must not depend on a
 central entity to co-ordinate payouts to miners.
-Futures Contract:: Miner and the MSP enter into a futures contract for
-exchange hashrate with BTC which is settled by Radpool's syndicate
+Futures Contract:: The Miner and the MSP enter into a futures contract
+exchanging hashrate with BTC which is settled by Radpool's syndicate
 without knowing the details of the contract.
 
 === Scalabale Use of Block Space
@@ -44,7 +44,7 @@ member. There are solutions, for example
 https://gist.github.com/pool2win/77bb9b98f9f3b8c0f90963343c3c840f[Braidpool's
 UHPO model] where miners need to send a request to the pool to obtain
 their payout. With unilateral exits, a miner can leave any time and if
-the syndicate becomes unreachable, the miner's payout firmly is in
+the syndicate becomes unreachable, the miner's payout is firmly within
 their control.
 
 === No Centralised Coordinator
@@ -54,7 +54,7 @@ decentralised mining pool. Often there are arguments that a mining
 pool can make payouts over lightning network, however, all the designs
 in operation today require a centralised lightning node operator to
 make the payouts. Which means, that if the lightning node misbehaves
-due to any reason, the miners are directly impacted by it. In Radpool,
+for any reason, the miners are directly impacted. In Radpool,
 we make payouts in a way that does not depend on a single entity. As
 long as a threshold of parties are behaving correctly, miner payouts
 are updated and the miner can later unilaterally exit at any time.
@@ -62,17 +62,17 @@ are updated and the miner can later unilaterally exit at any time.
 === Futures Contract
 
 With increasing adoption of PPS instead of PPLNS, Radpool should
-support an equivalent reward payout scheme where miner and a capital
+support an equivalent reward payout scheme where a miner and a capital
 provider can agree on the exchange rate and expiry. Once the contract
-is agreed upon, Radpool's syndicate acts should act oracle to settle
+is agreed upon, Radpool's syndicate should act as an oracle to settle
 the contract and neither the miner nor the MSP should be able to block
 the contract execution.
 
 == Radpool Payout Mechanism
 
-The Radpool payout mechanism uses DLCs for enabling PPS like payout
+The Radpool payout mechanism uses DLCs for enabling a PPS like payout
 mechanism. Miners enter into a contract with MSPs with agreed upon
-exchange rate and a expiry, with Radpool acting as the oracle for the
+exchange rate and an expiry, with Radpool acting as the oracle for the
 payout contracts. We describe the contract transactions that make up
 the Radpool payout mechanism and describe the protocol run by the
 Radpool MSPs and miners.
@@ -104,7 +104,7 @@ they have the same values. This is possible because all MSPs allow
 connections and serve the public mining information.
 
 With the public values now available, the syndicate can sign the
-exchange rate to settle miner payout DLC contract.
+exchange rate to settle that miner's DLC contract payout.
 
 === Contract Terms
 
@@ -158,12 +158,12 @@ the contract payout.
 
 Contract execution transactions (CETs) spend MSP UTXOs with the amount
 stem:[$T$] BTC. The outputs of the CETs have two outputs, one for the
-miner where the miner's public key is tweaked by stem:[$s_iG = R_m -
+miner (labelled m) where the miner's public key is tweaked by stem:[$s_iG = R_m -
 h(i,R_m)Y_m$]. The values stem:[$R_m$] and stem:[$Y_m$] were published
 earlier by the syndicate as explained earlier in the section <<Radpool as the Oracle>>.
 
 Once a payout has to be made, the Syndicate calculates the
-stem:[$Balance$] that has to be paid to the miner $m$, and runs a TSS
+stem:[$Balance$] that has to be paid to the miner, and runs a TSS
 instance to sign the message. The Syndicate has to be sure to use the
 correct set of values when publishing the signature. The values
 stem:[$(R_m,Y_m, i)$] have to be tracked for the current contract
@@ -176,7 +176,7 @@ image::payout-mechanism/cet.png[Contract Execution Transaction, 65%]
 Once the syndicate has published a signature for a contract, the miner
 can spend the output at any point in time. Note, unlike DLC contracts
 described in the seminal paper the miner does not need to spend the
-output within a time period as the MSP. It always have access to the
+output within a time period as the MSP. It always has access to the
 "change" from the contract.
 
 .Roll-over Contract Transactions
@@ -232,7 +232,7 @@ here. First, given that the syndicate has to publish as many oracle
 signatures as there are number of miners, we want to remove the need
 to produce a nonce from the path when generating the
 signatures. Instead, we use the approach that every time a miner payout
-is rolled over or initially generate, the MSP broadcasts a nonce to
+is rolled over or initially generated, the MSP broadcasts a nonce to
 the syndicate.
 
 .MSP publishes Nonce for miners
@@ -241,7 +241,7 @@ the syndicate.
 . MSP sends the same signed message to the miner.
 . Miner validates syndicate members have received `R` via a reliable BFT broadcast.
 
-Once the `R` value for the published for each CET, the syndicate then
+Once the `R` value is published for each CET, the syndicate then
 runs a TSS at contract expiry time. This make it possible to scale the
 payout mechanism as we eliminate the time consuming nonce generation
 phase and instead use the nonce supplied by the MSP.
@@ -252,8 +252,8 @@ Recall that payouts to MSPs are made once the pool finds a block,
 while the payouts to miners are made by MSPs on contract expiry. We
 now describe how the payouts to miners and MSPs are handled by an
 interactive protocol such that neither MSPs nor miners can steal any
-coins. The following protocol is execute as soon as the pool finds a
-block and the coinbase becomes spendable after a 100 blocks.
+coins. The following protocol is executed as soon as the pool finds a
+block and the coinbase becomes spendable after 100 blocks.
 
 . When the pool finds a block the MSPs compute the fraction of the coinbase each of them are due by using the validated ownership of  `mining.submit` messages broadcast by each MSP.
 . The above reward distribution algorithm uses the PPLNS approach to distribute rewards between MSPs.
@@ -280,7 +280,7 @@ reduce the on chain fees they need to pay. There is a possibility here
 to move miner payout DLCs into LN contracts, but we leave that
 optimisation out from this initial proposal.
 
-In the same was as miners roll-over their payouts, the MSPs can also
+In the same way as miners roll-over their payouts, the MSPs can also
 signal to the syndicate to not sign their payouts until a minimum
 balance is reached. This is a choice the MSP can make to lower on
 chain transaction fees. Again, we leave such optimisations out of the
@@ -298,3 +298,9 @@ their miners have.
 The fee rates that the MSPs charge will be subject to open market
 competition. Miners can look up various MSPs and decide on the MSP
 based on the contract terms and the fees charged.
+
+
+[TODO] Make sure we are covering the PPLNS computation. Normalisation
+of shares. Computation from shares to hashrate in the DLC
+contracts. Should the DLC contracts have hashrate or number of shares
+as the contract trigger.

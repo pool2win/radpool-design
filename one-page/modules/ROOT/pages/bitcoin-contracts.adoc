@@ -1,13 +1,17 @@
 = Bitcoin Contracts
 
-== Blocktemplate Generation
+== Coinbase
 
-== Payout Mechanism
+== DLC Contracts Between Miner and MSP
 
-== Miner Exit
+=== Public R and P values
 
-== Syndicate Member Exit
+=== Contract Execution Transaction
 
-== Syndicate Memebr Eviction
+=== Oracle Signature
 
-== Miner Eviction
+=== Spending Miner Output
+
+=== Rollover Miner Payout
+
+
