@@ -1,6 +1,11 @@
 = Bitcoin Contracts
 
+These page shows the various bitcoin contracts used by the Radpool
+payout mechanism and the conditions under which they can be spent.
+
 == Coinbase
+
+
 
 == DLC Contracts Between Miner and MSP
 

@@ -5,7 +5,6 @@ there is no peer to peer communication between miners. The MSPs use
 point to point communication for replicating state across each other
 and to to run distributed key generation and FROST signing protocol.
 
-TODO: Use improved image, or improve this.
 image::radpool-components-without-market-makers.png[alt="system overview",width="100%"]
 
 Miners register with any MSP, and then communicate with the MSP's

@@ -2,49 +2,49 @@
 
 [TODO] Update this page
 
-We describe the protocols executed when a new miners registers with a
-syndicate member, or wants to cash out and leave the pool.
+// We describe the protocols executed when a new miners registers with a
+// syndicate member, or wants to cash out and leave the pool.
 
-== New Miner Registration
+// == New Miner Registration
 
-A miner register with any of the syndicate members by following the
-protocol to create a new authentication token. This can follow any of
-the well known protocols like OAuth. The miner submits a public key to
-which it should receive payouts.
+// A miner register with any of the syndicate members by following the
+// protocol to create a new authentication token. This can follow any of
+// the well known protocols like OAuth. The miner submits a public key to
+// which it should receive payouts.
 
-A miner can obtain a similar authentication token from multiple
-syndicate members. The miner should use the same public key to
-register with multiple syndicate members.
+// A miner can obtain a similar authentication token from multiple
+// syndicate members. The miner should use the same public key to
+// register with multiple syndicate members.
 
-Using this authentication token, the miner can open a communication
-channel to send and receive stratum messages to the syndicate members.
+// Using this authentication token, the miner can open a communication
+// channel to send and receive stratum messages to the syndicate members.
 
-At the end of the miner registration, the miner is in a position to
-start sending shares to the syndicate.
+// At the end of the miner registration, the miner is in a position to
+// start sending shares to the syndicate.
 
-.New Miner Registration
-[plantuml, target=intial-setup]
-....
-@startuml
+// .New Miner Registration
+// [plantuml, target=intial-setup]
+// ....
+// @startuml
 
-group Syndicate Member 1
-NewMiner --> SyndicateMember_1: Register using HTTP API
-NewMiner <-- SyndicateMember_1: Auth token 1
-NewMiner --> SyndicateMember_1: Submit public key
+// group Syndicate Member 1
+// NewMiner --> SyndicateMember_1: Register using HTTP API
+// NewMiner <-- SyndicateMember_1: Auth token 1
+// NewMiner --> SyndicateMember_1: Submit public key
 
-NewMiner <--> SyndicateMember_1: Stratum communication
-end
+// NewMiner <--> SyndicateMember_1: Stratum communication
+// end
 
-group Syndicate Member 2
-NewMiner --> SyndicateMember_2: Register using HTTP API
-NewMiner <-- SyndicateMember_2: Auth token 2
-NewMiner --> SyndicateMember_2: Submit public key
+// group Syndicate Member 2
+// NewMiner --> SyndicateMember_2: Register using HTTP API
+// NewMiner <-- SyndicateMember_2: Auth token 2
+// NewMiner --> SyndicateMember_2: Submit public key
 
-NewMiner <--> SyndicateMember_2: Stratum communication
-end
-@enduml
-....
+// NewMiner <--> SyndicateMember_2: Stratum communication
+// end
+// @enduml
+// ....
 
-== Miner Cash Out And Leave the Pool
+// == Miner Cash Out And Leave the Pool
 
-TODO
+

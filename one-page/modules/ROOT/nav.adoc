@@ -4,13 +4,13 @@
 ** xref:system-overview.adoc[System Overview]
 ** xref:frost-federation.adoc[FROST Federation]
 ** xref:syndicate-operation.adoc[Syndicate Operation]
-** xref:capital-requirements.adoc[Capital Requirements]
+** xref:capital-requirements.adoc[Capital Requirements and Fees]
 ** xref:stratum.adoc[Submit Shares Using Stratum]
 ** xref:attacks.adoc[Attacks]
 * xref:payout-mechanism.adoc[Payout Mechanism]
 ** xref:bitcoin-contracts.adoc[Bitcoin Contracts]
 * Protocols
-** xref:syndicate-protocols.adoc[Syndicate Protocols]
+** xref:msp-protocols.adoc[MSP Protocols]
 ** xref:miner-protocols.adoc[Miner Protocols]
 * xref:comparisons.adoc[Comparisons]
 

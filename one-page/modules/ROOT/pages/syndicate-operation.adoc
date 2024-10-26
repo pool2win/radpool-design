@@ -48,8 +48,6 @@ the transaction and the protocols required.
 
 == Syndicate Network
 
-[TODO] Add network diagem showing unicast and broadcast channels.
-
 The MSPs open a point to point connection with all other MSPs. These
 channels are authenticated and confidential. We need point to point
 communication channels between MSPs as the FROST threshold signature

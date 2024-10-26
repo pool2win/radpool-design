@@ -1,6 +1,5 @@
 = Radpool - A Mining Syndicate
 
-TODO: Change to MSP
 .Radpool - Syndicated, Decentralised Mining Pool
 image::radpool-syndicated-pool.png["syndicated pools",425,425]
 

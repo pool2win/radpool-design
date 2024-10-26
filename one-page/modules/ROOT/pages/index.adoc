@@ -23,7 +23,6 @@ registration process is the same as miners currently use to register
 with centralised pools. MSPs then provide services to miners like
 building blocktemplates, running stratum servers and funding payouts.
 
-TODO: Change "Syndicate Member" to "Mining Service Provider".
 .Radpool - Syndicated, Decentralised Mining Pool
 image::radpool-syndicated-pool.png["syndicated pools",425,425]
 
