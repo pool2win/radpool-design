@@ -153,4 +153,7 @@ the miner earns a payout will not scale. We will need to use up block
 space per miner for each expiry period. Instead, we propose that
 miners and MSPs rollover ther balance into the next DLC contract for
 the next payout period. The roll-over will work similar to the way LN
-contract state is expired to be replace with a new one.
+contract state is expired to be replace with a new one, as describe in
+the
+xref:payout-mechanism.adoc#_roll_over_contract_transactions[Roll-Over
+Contract Transaction] section.

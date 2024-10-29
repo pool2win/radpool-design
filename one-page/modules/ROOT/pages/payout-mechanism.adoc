@@ -199,8 +199,7 @@ miner. The amount needs to have a margin of safety and we discuss that
 later in the <<Capital Requirements and Fees>> section.
 
 The outputs of the CETs have two outputs, one for the miner
-(labelled m) where the miner's public key is tweaked by stem:[s_iG =
-R_m - h(i,R_m)Y_m]. The values stem:[R_m] and stem:[Y_m] were
+(labelled m) where the miner's public key is tweaked by stem:[s_iG = R_m - h(i,R_m)Y_m]. The values stem:[R_m] and stem:[Y_m] were
 published earlier by the syndicate as explained earlier in the section
 <<Radpool as the Oracle>>.
 
@@ -221,7 +220,7 @@ described in the seminal paper the miner does not need to spend the
 output within a time period as the MSP. It always has access to the
 "change" from the contract.
 
-.Roll-over Contract Transactions
+==== Roll-over Contract Transactions
 
 The DLC contract mechanism described up to now requires two
 transactions to make a single payout to a miner. One to create a
