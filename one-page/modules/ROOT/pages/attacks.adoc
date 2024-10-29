@@ -30,3 +30,29 @@ we require that MSPs also bring in hashrate to the pool. Further, to
 resist sybil attacks by anyone joining the syndicate, we limit the
 threshold participation to the members that bring the top 65% of the
 hashrate as explained in <<Membership>>.
+
+== DDoS Attacks by MSP
+
+== MSP Attacking Each Other
+
+=== Fluctuating Hashrate
+
+An MSP can bring a lot of hashrate to Radpool and then quickly take it
+away suddenly. Such an MSP can be another pool on bitcoin that wants
+to attach Radpool.
+
+The attack works because an increase in the hashrate will result in
+all the MSPs increasing the amount of capital locked into DLC
+contracts. MSPs need to increase the locked in capital as they need to
+make higher aggregate payouts to their miners.
+
+However, this attack is countered by letting MSPs release their
+locked in liquidity as soon as they can.
+
+.Liquidity Attack by Another Pool
+image::payout-mechanism/liquidity-attack.png["Liquidity Attack",400,400]
+
+=== Attacks Addressed By BFT MPC
+
+. Refuse To Forward Miner Shares
+. Refuse To Run DKG
