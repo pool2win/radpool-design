@@ -19,10 +19,9 @@ An easy way to agree upon the syndicate membership is by running a DKG
 protocol. The DKG protocol provides a BFT consensus between the
 parties to agree on the membership. Every fixed interval all connected
 nodes can run a DKG instance to obtain the **syndicate public key**
-stem:[$S_{pk}$]. However, as we will see later, the syndicate signs
-DLC contracts that pay miners. This means that we can't simply depend
-on a BFT agreement to decide on who gets to sign the DLC
-contracts.
+stem:[S_{pk}]. However, as we will see later, the syndicate signs DLC
+contracts that pay miners. This means that we can't simply depend on a
+BFT agreement to decide on who gets to sign the DLC contracts.
 
 Recall that all MSP broadcast mining shares mined by their miners. We
 depend on this information to support the membership with verifiable
@@ -61,3 +60,23 @@ broadcast. The protocol replicates data across point to point nodes
 with low communication complexity while tolerating byzantine failures.
 
 image::federation-broadcast.png[""]
+
+
+== Federation Signature in Single Round
+
+The FROST threshold signature requires that all parties broadcast
+their share of the threshold signature. The Radpool payout mechanism
+requires payouts for all miners to be made at fixed intervals
+corresponding to the range of expiry times for DLC contracts. We
+discuss the expiry times in the xref:bitcoin-contracts.adoc[Bitcoin
+Contracts] page.
+
+Since all parties know when a signature has to be created, say at
+every block, they look at their locally available hashrate date and
+immediately broadcast their signature share. The broadcast has a
+message complexity of stem:[O^2], but all the messages are exchaged in
+a single round. If we generate nonces a priori, the threshold
+signature can be generated in a single round. We first proposed this
+solution in the blog post:
+https://blog.opdup.com/development-updates/2024/07/09/frost-signing-for-channel-updates.html[FROST
+Threshold Signatures for Multiple Channel Updates].
