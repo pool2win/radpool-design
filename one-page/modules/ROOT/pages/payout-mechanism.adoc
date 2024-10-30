@@ -224,27 +224,54 @@ described in the seminal paper the miner does not need to spend the
 output within a time period as the MSP. It always has access to the
 "change" from the contract.
 
+=== Series of DLCs For Each Expiry Period
+
+The miner and the MSP enter a contract for each expiry period. For
+example, if a miner wants to be paid on a weekly basis, they enter
+into a DLC contract at the start of each week. So a sequence of
+contracts can look like the table below. Each of the contract will
+have the full range of CETs that pay the miner a set amount of BTC for
+the various values of hashrate it generates.
+
+.Sequence of contracts between a miner and MSP
+[cols="1,1,1"]
+|===
+| Week | Hashrate (PH/s) | Amount (sats)
+
+| Aug 1 | 1 | 1,000,000
+
+| Aug 8 | 1 | 1,000,000
+
+| Aug 15 | 1 | 1,000,000
+|===
+
+Each week's contract is created just before the expiry of the previous
+week's contract. The MSP calculates the BTC amount to pay for the
+hashrate and offers a contract. The miner can provide configuration
+options to set the minimum payout it is willing to accept for the
+hashrate. How the MSP calculates the BTC to pay for hashrate is not
+addressed here. We expect there will be plugins that offer various
+means and models to compute this exchange rate.
+
 ==== Roll-over Contract Transactions
 
-The DLC contract mechanism described up to now requires two
-transactions to make a single payout to a miner. One to create a
-funding transaction and one to settle the DLC contract. However, the
-DLC paper proposes a simple solution to the problem, which we adopt
-here. Instead of settling the payout transaction on chain, the MSP and
-the miner, roll over the payout into a new contract.
+The DLC contract mechanism described up to now requires that the miner
+broadcasts two transactions when it wants to settle a DLC
+contrat. However, as we saw in the previous section the miner wants to
+keep getting paid by the MSP on a regular basis as it keeps producing
+hashrate. https://github.com/p2pderivatives/offchain-dlc-paper/blob/master/offchaindlc.pdf[Kuwahara et. al. 2020]
+and
+https://ieeexplore.ieee.org/document/9805512[Kuwahara et. al. 2022]
+have shown that DLCs can be aggregated off-chain as parties enter
+contracts repeatedly. They also note that off-chain scaling for the LN
+like use case, where one party pays the other can be scaled off-chain
+by the transaction revocation technique used in
+https://github.com/lightning/bolts/blob/master/03-transactions.md#revocationpubkey-derivation[Bolt #3].
 
-Payout roll-over is a two step protocol.
-
-. A new refund transaction is created with the new balance paying the miner.
-. The old CET is invalidated by the MSP handing over the revocation key for older CET's revocation transaction.
-
-This scheme is
-https://github.com/lightning/bolts/blob/master/03-transactions.md#commitment-transaction-outputs[same
-as the one used in LN] to invalidate old commitment transactions -
-i.e. by exchanging private keys for the old payout transaction.
-
-.Payout Roll-over
-image::payout-mechanism/payout-rollover.png[Funding and Refund Transactions, 65%]
+In our case, the MSP is always paying the miner. In other words, the
+MSP is the only one that can benefit from broadcasting an old
+state. This makes the transaction revocation technique simpler to
+apply than even in Lightning Network.
 
 == Meeting the Payout Requirements
 
@@ -322,8 +349,9 @@ Miner collects payout:: When a miner collects their payout.
 The payout mechanism allows for roll-over of both the transaction
 types. As discussed earlier, miners can roll-over the their payouts to
 reduce the on chain fees they need to pay. There is a possibility here
-to move miner payout DLCs into LN contracts, but we leave that
-optimisation out from this initial proposal.
+to move miner payout DLCs into LN contracts. We leave this
+optimisation out from this initial proposal as it is a well understood
+technique, mentioned in the initial DLC paper.
 
 In the same way as miners roll-over their payouts, the MSPs can also
 signal to the syndicate to aggregate their payout until a minimum

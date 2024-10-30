@@ -107,7 +107,7 @@ as soon as Radpool signs the hashrate on the pool.
 [%autowidth]
 |===
 | Inputs | Outputs
-| stem:[F_{m,msp}] | MSP:: stem:[Pub_{i,msp} \lor (Pub_{m} \wedge TimeDelay)]
+| stem:[F_{m,msp}] | stem:[Pub_{i,msp} \lor (Pub_{m} \wedge TimeDelay)]
 |===
 
 
@@ -145,45 +145,41 @@ any single party holding the private key, and requiring a minimum
 threshold number of parties to co-operate.
 
 
-=== Series of DLCs For Each Expiry Period
-
-The miner and the MSP enter a contract for each expiry period. For
-example, if a miner wants to be paid on a weekly basis, they enter
-into a DLC contract at the start of each week. So a sequence of
-contracts can look like the table below. Each of the contract will
-have the full range of CETs that pay the miner a set amount of BTC for
-the various values of hashrate it generates.
-
-.Sequence of contracts between a miner and MSP
-[cols="1,1,1"]
-|===
-| Week | Hashrate (PH/s) | Amount (sats)
-
-| Aug 1 | 1 | 1,000,000
-
-| Aug 8 | 1 | 1,000,000
-
-| Aug 15 | 1 | 1,000,000
-|===
-
-Each week's contract is created just before the expiry of the previous
-week's contract. The MSP calculates the BTC amount to pay for the
-hashrate and offers a contract. The miner can provide configuration
-options to set the minimum payout it is willing to accept for the
-hashrate. How the MSP calculates the BTC to pay for hashrate is not
-addressed here. We expect there will be plugins that offer various
-means and models to compute this exchange rate.
-
 === Rollover Miner Payout
 
 The miner can spend the contract output without asking the MSP or the
 syndicate to sign the transaction. However, spending a CET and then
 another transaction to spend the non-custodial UTXO on chain each time
-the miner earns a payout will not scale. We will need to use up block
-space per miner for each expiry period. Instead, we propose that
-miners and MSPs rollover ther balance into the next DLC contract for
-the next payout period. The roll-over will work similar to the way LN
-contract state is expired to be replace with a new one, as describe in
-the
+the miner earns a payout does not scale. Such a construction will use
+up block space per miner for each expiry period.
+
+Instead, we propose that miners and MSPs rollover ther balance into
+the next DLC contract for the next payout period. The roll-over will
+work similar to the way LN contract state is expired to be replace
+with a new one, as describe in the
 xref:payout-mechanism.adoc#_roll_over_contract_transactions[Roll-Over
 Contract Transaction] section.
+
+We modify the CET transactions such that the miner and the MSP can
+agree to revoke an older state as they build CETs for the new state.
+
+Note that the miner is paid by the MSP and therefore has no incentives
+to broadcast an older CET that pays it less than the
+latest CET. Therefore the Miner's CET transaction doesn't need to be
+revoked. We only need to add the condition in the MSP's CET to allow
+for revocation.
+
+.Contract Exection Transaction for MSP With Revocation
+[%autowidth]
+|===
+| Inputs | Outputs
+| stem:[F_{m,msp}] | stem:[\texttt{IF RevocationKey ELSE} \quad Pub_{i,msp} \lor (Pub_{m} \wedge TimeDelay) \quad \texttt{END_IF}]
+|===
+
+When the MSP sees the oracle's signature to settle a CET, it
+immediately creates a new DLC contract for the next epoch, and reveals
+the revocation key to the miner for the older CET. The miner continues
+to work with the MSP under the new DLC contract if it knows the
+revocation key for the older state. The revocation key is published
+using the semantics of the per commitment secret and the revocation
+base point just as used in Bolt #3.
