@@ -31,8 +31,6 @@ resist sybil attacks by anyone joining the syndicate, we limit the
 threshold participation to the members that bring the top 65% of the
 hashrate as explained in <<Membership>>.
 
-== DDoS Attacks by MSP
-
 == Fluctuating Hashrate Attack
 
 An MSP can bring a lot of hashrate to Radpool and then quickly take it
@@ -45,3 +43,29 @@ total amount earned by Radpool increases due to an increase in the
 hashrate, the amount paid to individual miner is only related to the
 individual miner's hashrate. When Radpool's hashrate increases, the
 variance in the payouts to miners reduces, not the amounts paid.
+
+== Denial of Service Attack By MSP
+
+An MSP can stop sending stratum work messages to a miner, disabling a
+a miner's ability to submit work to the pool. The MSP could be another
+pool trying to attack Radpool by trying to hurt the miners on the
+pool, or it could be an MSP that realises it is going to make a loss
+when the latesrt DLC contract with the miner is settled. Remember, the
+DLC contract is settled by the Radpool syndicate acting as an oracle.
+
+The most robust way to avoid this attack is to ask miners to run a
+proxy, that sends the hashrate to _all_ MSPs in the syndicate, and to
+allow the proxy to change the stratum server. However, such an
+approach has two drawbacks, 1) we want to avoid requiring miners to
+run a proxy, 2) sending stratum `submit` messages to all MSPs will
+result in a linear increase in the bandwidht required. Both these
+problems affect the long tail miners who Radpool wants to make sure
+are served by Radpool.
+
+Instead, to avoid the attack, we allow a miner to submit work to the
+pool using another MSP. ASICs machine allow adding multiple stratum
+URLs, and our solution is that the miner is given the list of all of
+these along with attributes that allow a miner to choose backup MSPs
+in case of a downtime. The backup MSPs have a vested interest in
+keeping the hashrate on Radpool and therefore can step in to
+facilitate work for a miner. 

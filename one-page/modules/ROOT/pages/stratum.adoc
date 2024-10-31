@@ -53,3 +53,38 @@ ownership. To prove the ownership of `mining.submit` messages the MSP
 provides the `username`, `sequence_no` with each broadcast. The
 receiver knows the MSP public key and therefore can validate the
 ownership of `mining.submit`.
+
+The miner username should be unique across the network and for the
+same, we recommend using a random number seeded with current time to
+be the miner's username. The username is generated once by the Radpool
+miner dashboard for the miner to use across registrations to MSPs.
+
+== Back Up MSPs
+
+We note in the next section on
+xref:attacks.adoc#_denial_of_service_attack_by_msp[Denial of Service
+Attacks] that miners should configure their systems to submit shares
+to backup MSPs. Miners can push their configuration to their ASICs
+machines or can use a proxy - if they are using one. The proxy is not
+a requirement to participate in Radpool.
+
+When the primary MSP is unavailable, the miner can switch to the next
+MSP in their list because they have registered with two additional
+MSPs acting as a backup. These MSPs are configured in their setup to
+interact with the alternative MSP.
+
+The ownership verfication still allows Radpool oracle to compute the
+hashrate posted by a miner. As shown earlier, each share broadcast to
+the syndicate has enough information to verify the share is generated
+by a miner.
+
+=== Why Will MSPs Step Up?
+
+The back up MSPs step up for an MSP that is unavailable as it is in
+their favour to make sure the Radpool hashrate doesn't go down. Backup
+MSPs don't need to expend too much compute here. They are building
+block templates and sending stratum work messages to other
+miners. They are also validating all the shares being broadcast to the
+Radpool syndicate, so there is no additional work to step up and act
+as a backup for an MSP temporarily unavailable or trying to attack
+Radpool.
