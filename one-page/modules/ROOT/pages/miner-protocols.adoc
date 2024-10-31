@@ -22,4 +22,15 @@ syndicate.
 .New Miner Registration And Share Submissions
 image::protocols/miner-registration.png[Miner Registration With MSP]
 
-== Miner Cash Out And Leave the Pool
+== Miner Leaves the Pool
+
+No interactive protocol is requried for the miner to take their money
+and leave the pool. The miner has custody of the DLC outputs paying
+the miner at all times.
+
+== Miner Uses Backup MSP
+
+A miner can use the backup MSP at any point by changing their stratum
+URLs. The miner registers with an MSP as per the
+<<_new_miner_registration>> protocol and starts exchanging stratum
+messages with the MSP.
