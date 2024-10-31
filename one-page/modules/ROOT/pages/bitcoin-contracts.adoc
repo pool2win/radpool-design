@@ -169,17 +169,29 @@ latest CET. Therefore the Miner's CET transaction doesn't need to be
 revoked. We only need to add the condition in the MSP's CET to allow
 for revocation.
 
+When the MSP sees the oracle's signature to settle a CET, it
+immediately creates a new DLC contract for the next epoch, and reveals
+the revocation key to the miner for the older CET. The miner continues
+to work with the MSP under the new DLC contract since it knows the
+revocation key for the older state. The revocation key is published
+using the semantics of the per commitment secret and the revocation
+base point just as used in Bolt #3.
+
+We show the MSP CET transaction next where the branch controlled by
+stem:[Pub_{i,msp}] now has a time delay. This allows a miner to claim
+the CET in case the MSP tries to broadcast an older CET. This solution
+is might seem problematic, as the MSP can force the miner to broadcast
+an older state and thus has a underhanded way to get out of the latest
+DLC contract. However, we avoid that by requiring that the
+stem:[self\_delay] is longer than the expiry of the DLC expiry. This
+allows a miner to keep submitting hashrate to Radpool and get a valid
+signture from the Radpool Oracle to settle the latest contract.
+
 .Contract Exection Transaction for MSP With Revocation
 [%autowidth]
 |===
 | Inputs | Outputs
-| stem:[F_{m,msp}] | stem:[\texttt{IF RevocationKey ELSE} \quad Pub_{i,msp} \lor (Pub_{m} \wedge TimeDelay) \quad \texttt{END_IF}]
+| stem:[F_{m,msp}]
+| stem:[\texttt{IF RevocationKey ELSE} \quad (TimeDelay_{self\_delay} \wedge Pub_{i,msp}) \lor (Pub_{m} \wedge TimeDelay) \quad \texttt{END_IF}]
 |===
 
-When the MSP sees the oracle's signature to settle a CET, it
-immediately creates a new DLC contract for the next epoch, and reveals
-the revocation key to the miner for the older CET. The miner continues
-to work with the MSP under the new DLC contract if it knows the
-revocation key for the older state. The revocation key is published
-using the semantics of the per commitment secret and the revocation
-base point just as used in Bolt #3.
