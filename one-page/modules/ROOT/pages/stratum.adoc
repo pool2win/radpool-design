@@ -59,7 +59,7 @@ same, we recommend using a random number seeded with current time to
 be the miner's username. The username is generated once by the Radpool
 miner dashboard for the miner to use across registrations to MSPs.
 
-== Back Up MSPs
+== Backup MSPs
 
 We note in the next section on
 xref:attacks.adoc#_denial_of_service_attack_by_msp[Denial of Service

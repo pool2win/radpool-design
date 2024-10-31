@@ -1,0 +1,8 @@
+@startuml
+
+"New MSP" -> "MSP": JOIN
+"MSP" -> "All other MSPs": Broadcast JOIN
+"MSP" <- "All other MSPs": ACK
+"New MSP" <- "MSP": CONFIRM
+
+@enduml

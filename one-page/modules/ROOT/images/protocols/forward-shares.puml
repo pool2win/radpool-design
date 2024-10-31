@@ -1,0 +1,6 @@
+@startuml
+
+Miner -> MSP:SUBMIT share
+MSP -> "All other MSPs": Broadcast received share
+
+@enduml

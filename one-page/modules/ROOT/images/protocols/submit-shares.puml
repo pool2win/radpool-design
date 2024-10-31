@@ -1,8 +1,0 @@
-@startuml
-
-Miner --> SyndicateMember:Register using HTTP API
-Miner <-- SyndicateMember: Auth token 1
-Miner --> SyndicateMember: Submit public key
-
-
-@enduml
