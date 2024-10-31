@@ -1,0 +1,13 @@
+@startuml
+
+loop For Selected MSPs
+	Miner -> "Primary MSP":Register using HTTP API
+	Miner <- "Primary MSP": Auth token 1
+	Miner -> "Primary MSP": Submit public key
+end
+
+Miner <-> "Primary MSP": Stratum communication
+Miner <-> "Backup MSP A": Stratum communication
+Miner <-> "Backup MSP B": Stratum communication
+
+@enduml

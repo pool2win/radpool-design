@@ -10,7 +10,7 @@
 * xref:payout-mechanism.adoc[Payout Mechanism]
 ** xref:bitcoin-contracts.adoc[Bitcoin Contracts]
 * Protocols
-** xref:msp-protocols.adoc[MSP Protocols]
 ** xref:miner-protocols.adoc[Miner Protocols]
+** xref:msp-protocols.adoc[MSP Protocols]
 * xref:comparisons.adoc[Comparisons]
 
