@@ -10,20 +10,8 @@ address. The threshold for the FROST threshold signature and syndicate
 size is set to one.
 
 Miners that want to join the syndicate initiate their registration
-with the seed MSP and set their stratum end point to the MSP.
-
-.New syndicate with single member
-[plantuml, target=intial-setup]
-....
-@startuml
-Miner -> SyndicateMember: Register
-SyndicateMember -> Miner: Auth token
-Miner <-> SyndicateMember: Stratum auth, notify, submit
-"Miner/Validtor" <- SyndicateMember: Share broadcasts
-@enduml
-....
-
-At this point, the sole syndicate member acts like a centralised pool
+with the seed MSP and set their stratum end point to the MSP. At this
+point, the sole syndicate member acts like a centralised pool
 operator, with transparent share accounting.
 
 == New MSP
