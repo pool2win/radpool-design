@@ -2,12 +2,20 @@
 
 Radpool depends on a federation of nodes that run the
 https://eprint.iacr.org/2020/852.pdf[FROST threshold signature
-protocol] as well as a proven distributed key generation protocol
-included in the FROST paper (called KeyGen). We have an implementation
-of a node for running a federation that uses KeyGen protocol to
-determine a shared public key. The federation then uses the FROST
-threshold signature protocol to sign bitcoin transaction used for
-miner payouts.
+protocol] as well as a distributed key generation protocol included in
+the same paper (called KeyGen). We have an implementation of a node
+for running a federation that uses KeyGen protocol to determine a
+shared public key. The federation then uses the FROST threshold
+signature protocol to sign messages that settle futures contracts
+paying miners from the liquidity provided by the federation members.
+
+The FROST Federation is a Strong Federation as per the definition
+implied in https://arxiv.org/abs/1612.05491:[Strong Federations: An
+Interoperable Blockchain Solution to Centralized Third-Party Risks]
+and used in
+https://blockstream.com/assets/downloads/pdf/liquid-whitepaper.pdf:[Liquid:
+A Bitcoin Sidechain]. FROST Federation is both publicly verifiable and
+and makes progress in the presence of Byzantine failures.
 
 The https://github.com/pool2win/frost-federation:[FROST Federation
 implementation] is an independent project as other applications apart
@@ -15,10 +23,9 @@ from Radpool can use it for other purposes.
 
 == Membership
 
-An easy way to agree upon the syndicate membership is by running a DKG
-protocol. The DKG protocol provides a BFT consensus between the
-parties to agree on the membership. Every fixed interval all connected
-nodes can run a DKG instance to obtain the **syndicate public key**
+The DKG protocol provides a BFT consensus between the parties to agree
+on the membership. Every fixed interval all connected nodes can run a
+DKG instance to obtain the **syndicate public key**
 stem:[S_{pk}]. However, as we will see later, the syndicate signs DLC
 contracts that pay miners. This means that we can't simply depend on a
 BFT agreement to decide on who gets to sign the DLC contracts.
@@ -26,16 +33,18 @@ BFT agreement to decide on who gets to sign the DLC contracts.
 Recall that all MSP broadcast mining shares mined by their miners. We
 depend on this information to support the membership with verifiable
 PoW information. We require that the membership of the syndicate is
-limited to the MSPs whose miners make the top 60% of hashrate.
+limited to the MSPs whose miners make the top 60% of hashrate but
+including at least 2/3rd of the network at the same time.
 
 The membership is therefore determined using the following protocol.
 
 .Protocol for Determining Membership
-. Consider only the shares submitted to the network since the last bitcoin block was found.
+. Consider only the shares submitted to the network since the last bitcoin block was found by the pool.
 . Group all miner shares received from all miners into groups keyed by the MSP that sent the corresponding mining message.
 . Compute the total hashrate for each MSP in their group.
 . Order the MSPs by their aggregate hashrate - use the MSP lexicographical ordering on the public key to break ties.
 . Select the MSPs from the top of the list and add their hashrate. Stop when the total hashrate adds up to 60% of the total network hashrate.
+. If we have reached 60% of the network hashrate, but haven't included 2/3rds of the MSP, we continue adding MSPs to the list till the required number is reached.
 
 The above protocol uses PoW to prevent sybil attacks on the syndicate
 membership. By limiting the hashrate to 60% of the network hashrate we
@@ -46,6 +55,11 @@ dis-incentivises MSPs to retain smaller share of the Radpool
 hashrate. If their hashrate is small, larger MSPs will add up to the
 60% threshold hashrate and the smaller MSPs will have no shares
 in TSS.
+
+At the same time, by also requiring that we atleast include 2/3rd of
+the network in the syndicate, we avoid the situation where a single
+MSP has 60% of the network hashrate and can control the payout
+mechanism.
 
 
 == Federation Broadcast Communication
@@ -74,9 +88,23 @@ Contracts] page.
 Since all parties know when a signature has to be created, say at
 every block, they look at their locally available hashrate date and
 immediately broadcast their signature share. The broadcast has a
-message complexity of stem:[O^2], but all the messages are exchaged in
-a single round. If we generate nonces a priori, the threshold
-signature can be generated in a single round. We first proposed this
-solution in the blog post:
+message complexity of stem:[O(n^2)], but all the messages are exchaged
+in a single round. If we generate nonces a priori, the threshold
+signature can be generated in a single round. We noted this in the
+blog post:
 https://blog.opdup.com/development-updates/2024/07/09/frost-signing-for-channel-updates.html[FROST
 Threshold Signatures for Multiple Channel Updates].
+
+=== Signing Multiple Messages
+
+As we will explain later, in Radpool the federation has consistent
+local views. With consistent views each federation member generates
+the same message to sign without the need to run an agreement
+protocol. The federation needs to sign a message for each of the
+miners. We run an optimistic protocol to sign these messages using
+FROST threshold signatures. In case of failures, we run the signature
+scheme again with the members that failed removed from the signing
+party. Such an approach can delay the signing process for payouts to
+miners, however the signing is not in a critical path for the pool to
+make progress. We explain the details in the
+xref:scalability.adoc[Scalability] section.

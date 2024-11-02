@@ -1,0 +1,19 @@
+= Scalability
+
+The scalability of Radpool in terms of handling more miners and MSPs
+as the pool's hashrate grows is dependent on the scalability of the
+threshold signing scheme.
+
+We plan to roll out various solutions, from the least development
+effort to more. Our first release will use the FROST threshold
+signature scheme along with the KeyGen protocol described in the FROST
+paper. This will give us a non-robust solution and we will re-reun
+both KeyGen and TSS in case of failures by removing the failed
+parties. After we have built all the services around this scheme that
+makes Radpool work, we will extend KeyGen with scheme described in
+https://link.springer.com/article/10.1007/s00145-006-0347-3[Gennaro et. al.]
+to make it robust in the presence of failures. Finally, to scale
+threshold signatures we are considering replacing FROST TSS with
+https://eprint.iacr.org/2022/374.pdf[Lindell's scheme] that required
+three rounds but is robust in the presence of failures.
+

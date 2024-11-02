@@ -12,5 +12,5 @@
 * Protocols
 ** xref:miner-protocols.adoc[Miner Protocols]
 ** xref:msp-protocols.adoc[MSP Protocols]
+* xref:scalability.adoc[Scalability]
 * xref:comparisons.adoc[Comparisons]
-

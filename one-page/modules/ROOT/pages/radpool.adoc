@@ -12,15 +12,16 @@ pool.
 
 There are two types of parties in the system.
 
-. Miners - these run mining facilities and do not need to run bitcoin node or a radpool node.
-. Mining Service Providers - these run bitcoin nodes, generate block templates and collaborate to publish signatures that pay miners and the MSPs
+Miners:: these run mining facilities and do not need to run bitcoin node or a radpool node.
+Mining Service Providers:: these run bitcoin nodes, generate block templates and collaborate to publish signatures that pay miners and the MSPs
 
 == Mining Service Providers
 
 Miners register with an MSP and communicate with the syndicate using
-stratum mining protocol. MSP take on the complexity in this design,
-allowing miners to switch from centralised pools without running any
-services. Here's a list of responsibilities the MSPs take on:
+the stratum mining protocol. MSP take on the complexity in this
+design, allowing miners to switch from centralised pools without
+running any services. Here's a list of responsibilities the MSPs take
+on:
 
 . Build block templates.
 . Run services to let miners register with them.
@@ -31,38 +32,52 @@ services. Here's a list of responsibilities the MSPs take on:
 == Miners
 
 The miner's on the other hand simply need a service to manage their
-payouts. This can be a simple mobile application or an onsite service
-if they prefer. The important point here is that miners do not receive
-the network traffic of the entire pool and therefore do no need high
-throughput network connections.
+payouts. This can be a simple mobile application or an online
+dashboard. The important point here is that miners do not receive the
+network traffic of the entire pool and therefore do no need high
+throughput network connections. The are not real-time message delivery
+guarantees required from this service.
 
 == Coinbase and Miner Payouts
 
-In radpool, the coinbase for block rewards requires a
-constant amount of disk space, so radpool scale is not limited by the
-coinbase size.
+In radpool, the coinbase for block rewards requires a constant amount
+of disk space, so radpool's network size and thus the hashrate is not
+limited by the coinbase size. The payout transaction is constructed
+such that neither the miner nor any syndicate member can steal coins
+or prevent the mining syndicate from making progress.
 
-The payout transaction is constructed such that neither the miner nor
-any syndicate member can steal coins or prevent the mining syndicate
-from making progress.
+== Payout Variance For Miners
+
+Miners are paid out using a futures contract between the miner and
+its MSP. The miner is paid whenever the DLC contract expires and since
+this is independent of the pool's luck, the miner is always paid out
+at the agreed upon expiry.
+
+Any variance in payout is experienced by the MSPs who take on the risk
+of pool's luck, and they charge miners a fees for this service of
+absorbing the variance in the payouts. The
+xref:payout-mechanism.adoc[Payout Mechanism] section describes this in
+detail.
 
 === Futures Contracts using DLCs
 
 DLCs, https://github.com/discreetlogcontracts/dlcspecs:[Discrete Log
 Contracts], enable futures contracts between two parties with a third
 party acting as an oracle to settle the contract on expiry. In our
-case, the two parties are MSP and the miner. The oracle is the Radpool
-syndicate.
+case, the two parties are MSP and the miner. The Radpool syndicate is
+the Oracle for the DLC contracts between all miners and MSPs.
 
 All miners are paid by MSPs using DLC contracts. The miners and MSPs
 generate contracts where MSPs pay miners an agreed upon amount of BTC
 on contract expiry, if and only if Radpool can confirm that the miner
 generated the given amount of hashrate over the contract period.
 
-Such a payout mechanism has the following features:
+The Radpool payout mechanism has the following features:
 
 . MSPs pay miners with futures contract built using DLCs.
 . Radpool acts as an Oracle where a threshold number of MSPs generate the signature.
 . MSPs earn a yield in exchange of locking liquidity that fund payouts for miners.
 . The payout mechanism allows unilateral exits for miners and MSPs, thus making the solution non-custodial.
 
+The xref:payout-mechanism.adoc[Payout Mechanism] section describes
+this in detail.

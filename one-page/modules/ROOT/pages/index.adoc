@@ -1,21 +1,25 @@
 = Radpool - Syndicated Mining Pool
 
+[sidebar]
+Mission: Build a Decentralised, Scalabale, Open Source Mining Pool
+
 Current bitcoin mining pools are resulting in ever increasing
 centralisation pressure on mining pools. This centralisation pressure
-is increasing the threat of transaction censorship on bitcoin.
+is increasing the threat of transaction censorship in bitcoin.
 
 We need a solution to decentralise mining to resist transaction
 censorship. In the current efforts, the pools are still either run
 from a single central entity or are trying to be fully P2P. Both the
 approaches have challenges. Single entity pools are by their very
-nature centralised, and full p2p pools are challenging to scale to
-limits for providing enough reduction in block discovery variance.
+nature centralised, and full p2p pools are challenging to scale to a
+point where they can provide enough reduction in block discovery
+variance.
 
-In these pages, we present a novel design - radpool - that breaks up
-the centralised single entity into a syndicate that runs the
-pool. This allevaites the scalability challenges faced by a fully p2p
-pool while dramatically increases mining decentralisation, thus
-improving the resilience to transaction censorship.
+In these pages, we present a novel design - Radpool - that breaks up
+the centralised single entity into a syndicate running the pool. This
+allevaites the scalability challenges faced by a fully p2p pool while
+increasing mining decentralisation, thus improving the resilience to
+transaction censorship.
 
 The syndicate is run by a network of Mining Service Providers
 (MSPs). Each MSP serves the miners that register with them. This
@@ -28,13 +32,14 @@ image::radpool-syndicated-pool.png["syndicated pools",425,425]
 
 The salient features of the design presented are the following:
 
-. Block template construction is decentralised as each MSP build an independent blocktemplate.
-. MSPs pay miners with futures contract built using DLCs.
-. Radpool acts as an Oracle where a threshold number of MSPs generate the signature.
+. Block template construction is decentralised as each MSP builds an independent blocktemplate.
+. MSPs pay miners over futures contract built using DLCs.
+. Radpool acts as an Oracle where a threshold number of MSPs generate the signature required to settle DLCs.
 . MSPs earn a yield in exchange of locking liquidity that fund payouts for miners.
-. Share accounting is transparent, so the pool is fully auditable.
-. The payout mechanism allows unilateral exits for miners and MSPs, thus making the solution non-custodial.
+. Share accounting is transparent, making the pool fully auditable.
+. The payout mechanism allows unilateral exits for miners and MSPs, providing non-custodial payouts to miners.
 . Switching to Radpool from current centralised pools has zero friction for miners.
 
 In the rest of the document we explain how the MSPs operate the mining
-syndicate and the payout mechanism that provides the above listed features.
+syndicate and the payout mechanism that provides the above listed
+features.

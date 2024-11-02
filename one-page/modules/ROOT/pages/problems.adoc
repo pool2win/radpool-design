@@ -1,11 +1,11 @@
 = Problems
 
-Current efforts to build mining pools can be split into two types -
-centralised pools with a single entity running the pool services or
-p2p pools. Centralised pools carry out share validation, accounting
-and reward distribution using a single entity. In contrast, P2P pools
-push these operational responsibilities to the edges of the network -
-i.e. the miners.
+Current efforts to build mining pools can be split into two
+approaches - centralised pools with a single entity running the pool
+services or P2P pools. Centralised pools carry out share validation,
+accounting and reward distribution using a single entity. In contrast,
+P2P pools push these operational responsibilities to the edges of the
+network - i.e. the miners.
 
 In this section, we describe the problems faced by both these
 approaches.
@@ -16,7 +16,7 @@ image::centralised-pool.png["centralised pools",400,400]
 
 === Vulnerable to Attacks
 
-Centralised pools remain vulnerable to attacks that force them to
+Centralised pools remain vulnerable to attacks that can force them to
 censor transactions. Given all centralised pools currently run
 proprietary stacks run in the cloud, it is not easy to spawn new pools
 when such attacks come in the future.
@@ -27,22 +27,24 @@ All pool operators use a single block template that they generate and
 distribute work to miners based on that block template. Stratum V2
 attempts to solve this problem, however, the centralised pool can
 still censor a miner by refusing to accept the proposed block template
-or refusing to pay the miner after the fact.
+or refusing to pay the miner after the fact, as the centralised pool
+retains the control on their payout mechanism.
 
 === Opaque Share and Fee Accounting
 
 The collection of shares is opaque in all centralised pools, so miners
 can't verify that they are being paid fairly. Ocean's approach with
 https://ocean.xyz/docs/tides[TIDES] enables verification of each
-miner's shares, however, miners still don't see the fees charged by
-the pool is uniform across all miners. It is possible that larger
-miners get a discounted fees on centralised pools.
+miner's shares, however, miners still can't verify the fees charged by
+the pool is uniform across all miners. It is quiet possible that
+larger miners get a discounted fees on centralised pools.
 
 === Custodial Miner Payouts
 
 All centralised pools pay miner's in a custodial manner and therefore
-can hold miner hostage into following any arbitrary rules imposed by
-the pool operator.
+can hold miner hostage into following arbitrary rules imposed by the
+pool operator. The only choice a miner has to move to another
+centralised pool.
 
 == Problem With P2P Pools
 
@@ -52,11 +54,12 @@ image::p2p-pool.png["p2p pools",400,400]
 
 Peer to peer pools require that miners run additional services next to
 their mining rigs. These services are required to build block
-templates and to reach consensus on the p2p mining pool on the share
-and reward distribution. We believe this added friction will reduce
-the adoption of p2p pools for the long tail of miners. Given that the
-long tail of miners are critical to resist mining centralisation
-pressure, we aim to reduce the friction required to move to Radpool.
+templates and to reach consensus on the share and reward
+distribution. We believe this added friction will reduce the adoption
+of P2P pools for miners who don't want to run additional services
+along with their miners. Given that the long tail of miners can be
+critical to resisting mining centralisation pressure, our goal is to
+eliminate any friction in moving to Radpool.
 
 === Custodial Payouts
 
@@ -79,11 +82,16 @@ i.e. they didn't earn a reward for the work done. This problem can be
 solved by using a DAG instead of a linear chain, however, reaching
 consensus on the scale of 10,000 nodes is still an unsolved
 problem. There are some protocols from academia, but none of those
-have reached production scale of tens of thousands of nodes.
+have reached production scale of tens of thousands of nodes. Kaspa
+uses a https://eprint.iacr.org/2018/104.pdf[DAG based PoW backed
+consensus algorithm], but Kaspa's network is https://kas.fyi/[still
+less than 500 nodes]. If we need to scale to tens of thousands of
+miners, we don't yet have a proven consensus protocol that can scale
+to such a large network.
 
 === Threshold Signature In P2P Network Model
 
-Running Threshold Signatures on a P2P model is still not solved. The
+Running Threshold Signatures on a P2P model also has challenges. The
 network model required by FROST needs nodes to be connected in a point
 to point network, and running gossip broadcast breaks the assumptions
 made in the security proofs of threshold signature protocols.

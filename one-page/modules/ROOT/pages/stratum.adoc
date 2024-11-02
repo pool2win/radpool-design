@@ -1,10 +1,10 @@
 = Replicate Share Data Across Syndicate
 
-We need to replicate PoW shares from all miners at all MSPs. This
-provides all MSPs with a consistent view of the shares which in-turn
-enables all MSPs to compute the exact same reward payouts for
-miners. Replicated data also helps miners and other interested parties
-to verify the functioning of the mining pool.
+We need to replicate PoW shares from all miners at all other
+MSPs. This provides all MSPs with a consistent view of the shares
+which in-turn enables all MSPs to compute the exact same reward
+payouts for miners. Replicated data also helps miners and other
+interested parties to verify the functioning of the mining pool.
 
 The following data is broadcast by an MSP to all other MSPs
 
