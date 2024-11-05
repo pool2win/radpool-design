@@ -5,18 +5,19 @@ MSP, or wants to cash out and leave the pool.
 
 == New Miner Registration
 
-A miner register with any of the MSP by following the protocol to
-create a new authentication token. This can follow any of the well
-known protocols like OAuth. The miner submits a public key to which it
-should receive payouts.
+A miner can register with any of the MSP by following the protocol to
+create a new authentication token. The authentication token is used to
+submit stratum messages to the MSP. The miner submits a public key
+to which it should receive payouts.
 
 A miner will obtain a similar authentication token from multiple MSPs,
 at least two backup MSPs. The miner should use the same public key to
-register with multiple syndicate members.
+register with multiple syndicate members, so that the all MSPs cant
+track the miner's hashrate in case of the miner switching MSPs.
 
 Using this authentication token, the miner can open a communication
 channel to send and receive stratum messages to the MSP. At the end of
-the miner registration, the miner is can start sending shares to the
+the miner registration, the miner can start sending shares to the
 syndicate.
 
 .New Miner Registration And Share Submissions

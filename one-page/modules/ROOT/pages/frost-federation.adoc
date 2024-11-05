@@ -4,8 +4,8 @@ Radpool depends on a federation of nodes that run the
 https://eprint.iacr.org/2020/852.pdf[FROST threshold signature
 protocol] as well as a distributed key generation protocol included in
 the same paper (called KeyGen). We have an implementation of a node
-for running a federation that uses KeyGen protocol to determine a
-shared public key. The federation then uses the FROST threshold
+for running a syndicate that uses KeyGen protocol to determine a
+shared public key. The syndicate then uses the FROST threshold
 signature protocol to sign messages that settle futures contracts
 paying miners from the liquidity provided by the federation members.
 
@@ -62,10 +62,10 @@ MSP has 60% of the network hashrate and can control the payout
 mechanism.
 
 
-== Federation Broadcast Communication
+== Syndicate Broadcast Communication
 
-Once the membership is confirmed, FROST federation also provides a
-byzantine fault tolerant reliable broadcast within the federation. We
+Once the membership is confirmed, the syndicate also provides a
+byzantine fault tolerant reliable broadcast within the syndicate. We
 later use this broadcast primitive to replicate shares received by a
 MSP to all other MSPs. We use the
 https://homes.cs.washington.edu/~tessaro/papers/dds.pdf[Asynchronous
@@ -76,7 +76,7 @@ with low communication complexity while tolerating byzantine failures.
 image::federation-broadcast.png[""]
 
 
-== Federation Signature in Single Round
+== Syndicate Signature in Single Round
 
 The FROST threshold signature requires that all parties broadcast
 their share of the threshold signature. The Radpool payout mechanism
@@ -97,10 +97,10 @@ Threshold Signatures for Multiple Channel Updates].
 
 === Signing Multiple Messages
 
-As we will explain later, in Radpool the federation has consistent
-local views. With consistent views each federation member generates
-the same message to sign without the need to run an agreement
-protocol. The federation needs to sign a message for each of the
+As we will explain later, in Radpool the syndicate has consistent
+local views. With consistent views each syndicate member generates the
+same message to sign without the need to run an agreement
+protocol. The syndicate needs to sign a message for each of the
 miners. We run an optimistic protocol to sign these messages using
 FROST threshold signatures. In case of failures, we run the signature
 scheme again with the members that failed removed from the signing

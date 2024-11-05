@@ -6,8 +6,8 @@ enable the system to work together.
 == Initial Setup - First MSP
 
 To start a new syndicate, any node announces their network
-address. The threshold for the FROST threshold signature and syndicate
-size is set to one.
+address. The threshold for the threshold signature and syndicate size
+is set to one.
 
 Miners that want to join the syndicate initiate their registration
 with the seed MSP and set their stratum end point to the MSP. At this
@@ -19,12 +19,17 @@ operator, with transparent share accounting.
 To join the syndicate an MSP sends a JOIN request to one of the
 existing MSPs who forward the request to all MSPs on the network. From
 then on, the MSP can start forwarding shares from their miners to the
-syndicate. The new member does not become a member of the FROST
-Federation when it joins the syndicate. Instead, once the MSP has been
-forwarding hashrate from its miners for 2000 blocks, its hashrate is
-considered valid to join the FROST Federation according to the
-xref:frost-federation.adoc#_membership[FROST Federation Membership
-protocol].
+syndicate. The new member does not become a member of the signing
+syndicate when it joins the syndicate. Instead, the new member's
+hashrate is considered valid to join the syndicate membership
+according to the xref:frost-federation.adoc#_membership[Membership
+protocol] only after it has forwarded hashrate from its miners for
+2000 blocks.
+
+This discourages attacks by MSPs that join the network obtain signing
+priviliges in the syndicate without having any pending payouts for its
+miners awaiting the syndicate's signature. The following object
+interaction diagram shows the protocol used.
 
 .New syndicate member
 image::protocols/new-msp.png[New MSP Joins Syndicate]
@@ -53,6 +58,8 @@ section.
 == MSP Failures
 
 If an MSP fails or is unresponsive, the syndicate continues to operate
-as normal. If more than a threshold number of syndicate members fail,
-the pool reaches end of life and all syndicate members along with
-miners can claim their outputs after the timeout expiry.
+as normal due to the robustness property of the threshold signing
+protocol used that allows for a third of the members to fail and still
+make progress. If more than a threshold number of syndicate members
+fail, the pool reaches end of life and all syndicate members along
+with miners can claim their outputs after the timeout expiry.
