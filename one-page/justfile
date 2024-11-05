@@ -11,3 +11,6 @@ deps:
 
 antora:
     npx antora --fetch antora-playbook.yml
+
+local-antora:
+    npx antora antora-playbook.yml

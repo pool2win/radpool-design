@@ -85,8 +85,12 @@ the the exchange range as:
 . stem:[Pub_{i,m} = Pub_m + s_{i,m,msp}G] and
 . stem:[Pub_{i,msp} = Pub_{msp} + s_{i,m,msp}G]
 
-Using the above public keys two CETs are generated that spend the
-funding output stem:[F_{m,msp}] - one for each party.
+where stem:[s_{i,m,msp}] is derived from stem:[E_{i,m,msp}] as shown
+in the section <<Radpool Syndicate Generates Oracle Signature>> below.
+
+Using the above public keys, two CETs are generated that spend the
+funding output stem:[F_{m,msp}] - one for each party - for each
+exchange rate.
 
 The miner and the MSP have a CET each with the spending conditions:
 
@@ -94,7 +98,7 @@ Miner:: stem:[Pub_{i,m} \lor (Pub_{msp} \wedge TimeDelay)]
 MSP:: stem:[Pub_{i,msp} \lor (Pub_{m} \wedge TimeDelay)]
 
 Both the miner and MSP thus have a non-custodial UTXO they can spend
-as soon as Radpool signs the hashrate on the pool.
+as soon as Radpool signs the hashrate for the miner on the pool.
 
 .Contract Exection Transaction for Miner
 [%autowidth]
@@ -175,7 +179,33 @@ the revocation key to the miner for the older CET. The miner continues
 to work with the MSP under the new DLC contract since it knows the
 revocation key for the older state. The revocation key is published
 using the semantics of the per commitment secret and the revocation
-base point just as used in Bolt #3.
+base point just as used in
+https://github.com/lightning/bolts/blob/master/03-transactions.md#revocationpubkey-derivation[Bolt
+#3's key revocation section]. In our case, only the MSP exchanges the
+`per_commitment_secret` with the miner to allow the miner to sign a
+revoked transaction if it sees an old commitment transaction has been
+broadcast.
+
+In the following, the miner provides the `revocation_base_point` and
+`revocation_base_secret`, while the MSP provides the
+`per_commitment_point` and the `per_commitment_secret`. The
+`per_commitment_secret` is handed to the miner by the MSP when the MSP
+revokes and older CET.
+
+[code]
+----
+revocationpubkey =
+  revocation_basepoint * SHA256(revocation_basepoint || per_commitment_point) +
+  per_commitment_point * SHA256(per_commitment_point || revocation_basepoint)
+----
+
+[code]
+----
+revocationprivkey =
+  revocation_basepoint_secret * SHA256(revocation_basepoint || per_commitment_point) +
+  per_commitment_secret * SHA256(per_commitment_point || revocation_basepoint)
+----
+
 
 We show the MSP CET transaction next where the branch controlled by
 stem:[Pub_{i,msp}] now has a time delay. This allows a miner to claim
@@ -183,7 +213,7 @@ the CET in case the MSP tries to broadcast an older CET. This solution
 is might seem problematic, as the MSP can force the miner to broadcast
 an older state and thus has a underhanded way to get out of the latest
 DLC contract. However, we avoid that by requiring that the
-stem:[self\_delay] is longer than the expiry of the DLC expiry. This
+stem:[msp\_delay] is longer than the expiry of the DLC expiry. This
 allows a miner to keep submitting hashrate to Radpool and get a valid
 signture from the Radpool Oracle to settle the latest contract.
 
@@ -192,6 +222,6 @@ signture from the Radpool Oracle to settle the latest contract.
 |===
 | Inputs | Outputs
 | stem:[F_{m,msp}]
-| stem:[\texttt{IF RevocationKey ELSE} \quad (TimeDelay_{self\_delay} \wedge Pub_{i,msp}) \lor (Pub_{m} \wedge TimeDelay) \quad \texttt{END_IF}]
+| stem:[\texttt{IF RevocationKey ELSE} \quad (TimeDelay_{msp\_delay} \wedge Pub_{i,msp}) \lor (Pub_{m} \wedge TimeDelay) \quad \texttt{END_IF}]
 |===
 
