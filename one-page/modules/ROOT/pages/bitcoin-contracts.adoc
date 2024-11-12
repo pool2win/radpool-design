@@ -18,7 +18,7 @@ syndicate. The interactive protocol is described in the
 xref:msp-protocols.adoc[MSP Protocols] page.
 
 .Coinbase
-[%autowidth]
+[%header]
 |===
 | Inputs | Outputs
 | | stem:[S_{pk}]
@@ -37,7 +37,7 @@ MSP's UTXO into a 2 of 2 multisig. The funding output between the
 miner stem:[m] and the stem:[msp] is refered to as stem:[F_{m,msp}].
 
 .Funding Transaction
-[%autowidth]
+[%header]
 |===
 | Inputs | Outputs
 | MSP | 2 of 2 MSP and Miner, stem:[F_{m,msp}]
@@ -77,45 +77,33 @@ and the MSP stem:[msp].
 
 DLC requires that the miner and the MSP generate a number of CETs
 corresponding to a range over the exchange rate. We write the
-stem:[i^{th}] exchange rate as stem:[E_{i,m,msp}].
+stem:[i^{th}] exchange rate as stem:[E_{i,m,msp}]. The CETs are signed
+by miner and MSPs with adaptor signatures that require an attestation
+from Radpool syndicate. The adaptor signatures use anticipated points
+generated using stem:[E_{i,m,msp}] as the attestation.
 
-The public keys of miner stem:[m] and MSP stem:[msp] are tweaked using
-the the exchange range as:
+The MSP generates CETs that it signs using the exchange rate as an
+anticipated point. CET is then sent to the miner who also adds its
+adaptor signature. Both the miner and MSP thus have a non-custodial
+UTXOs they can spend as soon as Radpool publishes an attestation for
+the miner's hashrate.
 
-. stem:[Pub_{i,m} = Pub_m + s_{i,m,msp}G] and
-. stem:[Pub_{i,msp} = Pub_{msp} + s_{i,m,msp}G]
-
-where stem:[s_{i,m,msp}] is derived from stem:[E_{i,m,msp}] as shown
-in the section <<Radpool Syndicate Generates Oracle Signature>> below.
-
-Using the above public keys, two CETs are generated that spend the
-funding output stem:[F_{m,msp}] - one for each party - for each
-exchange rate.
-
-The miner and the MSP have a CET each with the spending conditions:
-
-Miner:: stem:[Pub_{i,m} \lor (Pub_{msp} \wedge TimeDelay)]
-MSP:: stem:[Pub_{i,msp} \lor (Pub_{m} \wedge TimeDelay)]
-
-Both the miner and MSP thus have a non-custodial UTXO they can spend
-as soon as Radpool signs the hashrate for the miner on the pool.
-
-.Contract Exection Transaction for Miner
-[%autowidth]
+.Contract Exection Transactions
+[%header]
 |===
 | Inputs | Outputs
-| stem:[F_{m,msp}] | stem:[Pub_{i,m} \lor (Pub_{msp} \wedge TimeDelay)]
+
+a|
+* stem:[F_{m,msp}, \texttt{Miner Adaptor Signature}]
+* stem:[F_{m,msp}, \texttt{MSP Adaptor Signature}]
+a|
+* stem:[Pub_{i,m}]
+* stem:[Pub_{i,msp}]
+
 |===
 
-.Contract Exection Transaction for MSP
-[%autowidth]
-|===
-| Inputs | Outputs
-| stem:[F_{m,msp}] | stem:[Pub_{i,msp} \lor (Pub_{m} \wedge TimeDelay)]
-|===
 
-
-=== Radpool Syndicate Generates Oracle Signature
+=== Radpool Syndicate Publishes Attestations
 
 The Radpool syndicate acts as the oracle for paying out miners and
 signs a message that corresponds to each miner's hashrate over the
@@ -157,7 +145,7 @@ another transaction to spend the non-custodial UTXO on chain each time
 the miner earns a payout does not scale. Such a construction will use
 up block space per miner for each expiry period.
 
-Instead, we propose that miners and MSPs rollover ther balance into
+Instead, we propose that miners and MSPs rollover their balance into
 the next DLC contract for the next payout period. The roll-over will
 work similar to the way LN contract state is expired to be replace
 with a new one, as describe in the
@@ -207,21 +195,29 @@ revocationprivkey =
 ----
 
 
-We show the MSP CET transaction next where the branch controlled by
-stem:[Pub_{i,msp}] now has a time delay. This allows a miner to claim
-the CET in case the MSP tries to broadcast an older CET. This solution
-is might seem problematic, as the MSP can force the miner to broadcast
-an older state and thus has a underhanded way to get out of the latest
-DLC contract. However, we avoid that by requiring that the
-stem:[msp\_delay] is longer than the expiry of the DLC expiry. This
-allows a miner to keep submitting hashrate to Radpool and get a valid
-signture from the Radpool Oracle to settle the latest contract.
+We show the MSP CET transaction next where the MSP output has a time
+delay. This allows a miner to claim the CET in case the MSP tries to
+broadcast an older CET. This solution is might seem problematic, as
+the MSP can force the miner to broadcast an older state and thus has a
+underhanded way to get out of the latest DLC contract. However, we
+avoid that by requiring that the stem:[msp\_delay] is longer than the
+expiry of the DLC expiry. This allows a miner to keep submitting
+hashrate to Radpool and get a valid signture from the Radpool Oracle
+to settle the latest contract.
 
 .Contract Exection Transaction for MSP With Revocation
-[%autowidth]
+[%header]
 |===
 | Inputs | Outputs
-| stem:[F_{m,msp}]
-| stem:[\texttt{IF RevocationKey ELSE} \quad (TimeDelay_{msp\_delay} \wedge Pub_{i,msp}) \lor (Pub_{m} \wedge TimeDelay) \quad \texttt{END_IF}]
+
+a|
+* stem:[F_{m,msp}, \texttt{Miner Adaptor Signature}]
+* stem:[F_{m,msp}, \texttt{MSP Adaptor Signature}]
+
+a|
+* stem:[Pub_{i,m}]
+* stem:[\texttt{IF RevocationKey ELSE} \quad (TimeDelay_{msp\_delay} \wedge Pub_{i,msp}) \quad \texttt{END_IF}]
 |===
 
+With the updated CET construction, if an MSP broadcasts a revoked CET,
+the miner will be able to take all the amount in the MSP's output.
