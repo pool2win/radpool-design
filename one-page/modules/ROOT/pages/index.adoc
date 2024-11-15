@@ -1,7 +1,7 @@
 = Radpool - Syndicated Mining Pool
 
 [sidebar]
-Mission: Build a Decentralised, Scalabale, Open Source Mining Pool
+Mission: Build a Decentralised, Scalable, Open Source Mining Pool
 
 Current bitcoin mining pools are resulting in ever increasing
 centralisation pressure on mining pools. This centralisation pressure
@@ -17,7 +17,7 @@ variance.
 
 In these pages, we present a novel design - Radpool - that breaks up
 the centralised single entity into a syndicate running the pool. This
-allevaites the scalability challenges faced by a fully p2p pool while
+alleviates the scalability challenges faced by a fully p2p pool while
 increasing mining decentralisation, thus improving the resilience to
 transaction censorship.
 
