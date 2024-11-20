@@ -34,17 +34,17 @@ Recall that all MSP broadcast mining shares mined by their miners. We
 depend on this information to support the membership with verifiable
 PoW information. We require that the membership of the syndicate is
 limited to the MSPs whose miners make the top 60% of hashrate but
-including at least 2/3rd of the network at the same time.
+including at least 2/3rd of the syndicated network at the same time.
 
 The membership is therefore determined using the following protocol.
 
 .Protocol for Determining Membership
-. Consider only the shares submitted to the network since the last bitcoin block was found by the pool.
+. Consider only the shares submitted to the syndicated network since the last bitcoin block was found by the pool.
 . Group all miner shares received from all miners into groups keyed by the MSP that sent the corresponding mining message.
 . Compute the total hashrate for each MSP in their group.
 . Order the MSPs by their aggregate hashrate - use the MSP lexicographical ordering on the public key to break ties.
-. Select the MSPs from the top of the list and add their hashrate. Stop when the total hashrate adds up to 60% of the total network hashrate.
-. If we have reached 60% of the network hashrate, but haven't included 2/3rds of the MSP, we continue adding MSPs to the list till the required number is reached.
+. Select the MSPs from the top of the list and add their hashrate. Stop when the total hashrate adds up to 60% of the total syndicated network hashrate.
+. If we have reached 60% of the syndicated network hashrate, but haven't included 2/3rds of the MSP, we continue adding MSPs to the list till the required number is reached.
 
 The above protocol uses PoW to prevent sybil attacks on the syndicate
 membership. By limiting the hashrate to 60% of the network hashrate we
