@@ -17,7 +17,7 @@ https://blockstream.com/assets/downloads/pdf/liquid-whitepaper.pdf:[Liquid:
 A Bitcoin Sidechain]. FROST Federation is both publicly verifiable and
 and makes progress in the presence of Byzantine failures.
 
-The https://github.com/pool2win/frost-federation:[FROST Federation
+The https://github.com/pool2win/frost-federation[FROST Federation
 implementation] is an independent project as other applications apart
 from Radpool can use it for other purposes.
 

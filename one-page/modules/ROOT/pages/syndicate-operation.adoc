@@ -21,7 +21,7 @@ We provide the tools, people run the syndicates!
 
 .MSP Responsibilites
 
-. Collaboratively run DKG and TSS protocols as a syndicate member, i.e. run https://github.com/pool2win/frost-federation:[FROST Federation].
+. Collaboratively run DKG and TSS protocols as a syndicate member, i.e. run https://github.com/pool2win/frost-federation[FROST Federation].
 . Run a syndicate node and a bitcoin node to handle share validation at scale.
 . Run stratum interfaces for miner interaction.
 . Provide a miner enrollment interface.
