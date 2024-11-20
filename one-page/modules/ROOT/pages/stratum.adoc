@@ -19,7 +19,7 @@ Verifiable Information Dispersal]. The protocol replicates data across
 point to point nodes with low communication complexity requirements
 while tolerating byzantine failures.
 
-At this point, any nodes that connects to the network can receive the
+At this point, any nodes that connect to the network can receive the
 replicated data. However, an MSP MUST replicate all data with other
 MSPs that are part of the syndicate member, replication to the other
 nodes is optional. If an MSP fails to participate in the BFT reliable broadcast, the
