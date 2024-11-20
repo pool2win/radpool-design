@@ -1,8 +1,9 @@
 
-== Build
+Radpool design documents. We use antora here and all files are in
+asciidoc.
 
-`./run_dot.sh` to build all dot files in figures.
+To build the website locally run `cd one-page; just antora`
 
-`make` and `make watch` to use the amazing
-link:https://github.com/tueda/makefile4latex/wiki[LaTeX Makefile].
-
+Before building you need to install just, npm and asciidoc. Painful, I
+know. Just send a PR if you see problems and have edits, I'll do the
+rest to make sure it renders fine.
