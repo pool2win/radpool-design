@@ -78,7 +78,7 @@ image::federation-broadcast.png[""]
 
 == Syndicate Signature in Single Round
 
-The FROST threshold signature requires that all parties broadcast
+The FROST signature requires that all parties broadcast
 their share of the threshold signature. The Radpool payout mechanism
 requires payouts for all miners to be made at fixed intervals
 corresponding to the range of expiry times for DLC contracts. We
