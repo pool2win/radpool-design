@@ -78,7 +78,7 @@ hashrate posted by a miner. As shown earlier, each share broadcast to
 the syndicate has enough information to verify the share is generated
 by a miner.
 
-=== Why Will MSPs Step Up?
+=== Why Will Backup MSPs Step Up?
 
 The back up MSPs step up for an unavailable MSP as their incentive is 
 to make sure the Radpool hashrate doesn't go down. Backup
