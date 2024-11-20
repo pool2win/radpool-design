@@ -80,8 +80,8 @@ by a miner.
 
 === Why Will MSPs Step Up?
 
-The back up MSPs step up for an MSP that is unavailable as it is in
-their favour to make sure the Radpool hashrate doesn't go down. Backup
+The back up MSPs step up for an unavailable MSP as their incentive is 
+to make sure the Radpool hashrate doesn't go down. Backup
 MSPs don't need to expend too much compute here. They are building
 block templates and sending stratum work messages to other
 miners. They are also validating all the shares being broadcast to the
