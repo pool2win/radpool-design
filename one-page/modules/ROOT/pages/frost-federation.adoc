@@ -10,10 +10,10 @@ signature protocol to sign messages that settle futures contracts
 paying miners from the liquidity provided by the federation members.
 
 The FROST Federation is a Strong Federation as per the definition
-implied in https://arxiv.org/abs/1612.05491:[Strong Federations: An
+implied in https://arxiv.org/abs/1612.05491[Strong Federations: An
 Interoperable Blockchain Solution to Centralized Third-Party Risks]
 and used in
-https://blockstream.com/assets/downloads/pdf/liquid-whitepaper.pdf:[Liquid:
+https://blockstream.com/assets/downloads/pdf/liquid-whitepaper.pdf[Liquid:
 A Bitcoin Sidechain]. FROST Federation is both publicly verifiable and
 and makes progress in the presence of Byzantine failures.
 
@@ -56,7 +56,7 @@ hashrate. If their hashrate is small, larger MSPs will add up to the
 60% threshold hashrate and the smaller MSPs will have no shares
 in TSS.
 
-At the same time, by also requiring that we atleast include 2/3rd of
+At the same time, by also requiring that we at least include 2/3rd of
 the network in the syndicate, we avoid the situation where a single
 MSP has 60% of the network hashrate and can control the payout
 mechanism.
@@ -88,7 +88,7 @@ Contracts] page.
 Since all parties know when a signature has to be created, say at
 every block, they look at their locally available hashrate date and
 immediately broadcast their signature share. The broadcast has a
-message complexity of stem:[O(n^2)], but all the messages are exchaged
+message complexity of stem:[O(n^2)], but all the messages are exchanged
 in a single round. If we generate nonces a priori, the threshold
 signature can be generated in a single round. We noted this in the
 blog post:
@@ -97,7 +97,7 @@ Threshold Signatures for Multiple Channel Updates].
 
 === Signing Multiple Messages
 
-As we will explain later, in Radpool the syndicate has consistent
+As xref:syndicate-operation.adoc[we will explain later], in Radpool the syndicate has consistent
 local views. With consistent views each syndicate member generates the
 same message to sign without the need to run an agreement
 protocol. The syndicate needs to sign a message for each of the
