@@ -14,3 +14,4 @@
 ** xref:msp-protocols.adoc[MSP Protocols]
 * xref:scalability.adoc[Scalability]
 * xref:comparisons.adoc[Comparisons]
+** xref:fedipool-comparison.adoc[Fedipool]
