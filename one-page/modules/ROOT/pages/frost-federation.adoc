@@ -61,6 +61,24 @@ the network in the syndicate, we avoid the situation where a single
 MSP has 60% of the network hashrate and can control the payout
 mechanism.
 
+== Resisting Centralisation
+
+Radpool syndicate therefore uses two criteria to determine the set of
+MSPs that contribute to the threshold signature for signing DLC
+attestations. The criteria combined together help Radpool resist
+centralisation pressures.
+
+.Threshold Signature Membership
+. At least 2/3rd of the MSPs are included in the membership
+. The membership should atleast include 60% of the total hashrate on Radpool
+
+The image below shows the larger subset is chosen to contribute to the
+threshold signature.
+
+.Choosing the larger subset
+image::federation-membership-set.png[Federation Membership Set]
+
+
 
 == Syndicate Broadcast Communication
 
