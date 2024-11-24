@@ -78,6 +78,38 @@ threshold signature.
 .Choosing the larger subset
 image::federation-membership-set.png[Federation Membership Set]
 
+=== Miner's Delegate To MSPs
+
+In the Radpool syndicated federation design, MSPs are able to
+participate in the threshold signature only if there are enough miners
+who choose to participate in Radpool through the MSP. In a way, MSPs
+are the delegates of miners in making sure the federation works
+honestly. If an MSP chooses to misbehave, the miners will switch to a
+different MSP and thus the MSP will lose it's ability to participate
+in the threshold signature. Thus *an MSP can not take control or
+decide how the federation works*. If the miners don't back up an MSP,
+it loses its ability to participate in the threshold signature.
+
+In the case where a large miner splits it's hashrate into multiple
+MSPs, enough to take control of the federation and starts to censor
+transactions, we have a situation similar to 51% attack on
+Bitcoin. The attacker needs to get 60% of the miner's hashrate to back
+it up and then split its hashrate into stem:[(n = 2/3 * |N|)] MSPs. An
+attacker can censor transactions only if it can replace
+stem:[(2/3 * n + 1)] MSPs.
+
+Here is an example situation explaining how miners back MSPs and then
+the MSPs form the threshold signature party. In the images below a
+large miner moves from MSP A to MSP C. The threshold party federation
+then is then composed of MSP B and MSP C, this is because the
+aggregate hashrate on MSP A is now lower then aggregate hashrate on
+MSP B.
+
+.MSP A and MSP B form threshold signature federation
+image::msp-delegation.png["Miners delegate MSPs"]
+
+.MSP B and MSP C form threshold signature federation
+image::msp-delegation-a.png["Miners delegate MSPs. Large miner moved to MSP C"]
 
 
 == Syndicate Broadcast Communication
