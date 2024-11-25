@@ -19,12 +19,12 @@ and thus a pool with reduced variance.
 [sidebar]
 We provide the tools, people run the syndicates!
 
-.MSP Responsibilites
+.MSP Responsibilities
 
-. Collaboratively run DKG and TSS protocols as a syndicate member, i.e. run https://github.com/pool2win/frost-federation:[FROST Federation].
+. Collaboratively run DKG and TSS protocols as a syndicate member, i.e. run https://github.com/pool2win/frost-federation[FROST Federation].
 . Run a syndicate node and a bitcoin node to handle share validation at scale.
 . Run stratum interfaces for miner interaction.
-. Provide a miner registration interface.
+. Provide a miner enrollment interface.
 . Generate block templates and stratum work messages.
 . Receive shares over stratum protocol and maintain a replicated database of received shares.
 . Contribute capital used to pay miners with a DLC futures contract.
@@ -44,7 +44,7 @@ Each MSP sends the following message types to all other MSPs:
 . The stratum job it sends to miners.
 . All shares received from all miners.
 . Requests by new MSPs.
-. Miner public key once it is registered with the MSP.
+. Miner public key once it is enrolled with the MSP.
 . Requests received from miners to leave the pool.
 
 All of the above messages are sent using reliable, authenticated and
@@ -68,7 +68,7 @@ point network.
 Once a miner starts sending shares to a MSP, the shares are replicated
 to the other MSPs. A MSP that receives shares, verifies the shares and
 then broadcasting them to the rest of the syndicate. A miner can send
-their shares to multiple syndicates by registering with the syndicate.
+their shares to multiple syndicates by enrolling with the syndicate.
 
 This results in an open database of shares that all MSPs and other
 interested parties can run accounting on. This open access to verified

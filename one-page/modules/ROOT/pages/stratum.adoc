@@ -19,7 +19,7 @@ Verifiable Information Dispersal]. The protocol replicates data across
 point to point nodes with low communication complexity requirements
 while tolerating byzantine failures.
 
-At this point, any nodes that connects to the network can receive the
+At this point, any nodes that connect to the network can receive the
 replicated data. However, an MSP MUST replicate all data with other
 MSPs that are part of the syndicate member, replication to the other
 nodes is optional. If an MSP fails to participate in the BFT reliable broadcast, the
@@ -78,10 +78,10 @@ hashrate posted by a miner. As shown earlier, each share broadcast to
 the syndicate has enough information to verify the share is generated
 by a miner.
 
-=== Why Will MSPs Step Up?
+=== Why Will Backup MSPs Step Up?
 
-The back up MSPs step up for an MSP that is unavailable as it is in
-their favour to make sure the Radpool hashrate doesn't go down. Backup
+The back up MSPs step up for an unavailable MSP as their incentive is 
+to make sure the Radpool hashrate doesn't go down. Backup
 MSPs don't need to expend too much compute here. They are building
 block templates and sending stratum work messages to other
 miners. They are also validating all the shares being broadcast to the
