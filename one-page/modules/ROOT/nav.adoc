@@ -6,11 +6,12 @@
 ** xref:syndicate-operation.adoc[Syndicate Operation]
 ** xref:capital-requirements.adoc[Capital Requirements and Fees]
 ** xref:stratum.adoc[Submit Shares Using Stratum]
-** xref:attacks.adoc[Attacks]
 * xref:payout-mechanism.adoc[Payout Mechanism]
 ** xref:bitcoin-contracts.adoc[Bitcoin Contracts]
 * Protocols
 ** xref:miner-protocols.adoc[Miner Protocols]
 ** xref:msp-protocols.adoc[MSP Protocols]
 * xref:scalability.adoc[Scalability]
+* xref:attacks.adoc[Attacks]
 * xref:comparisons.adoc[Comparisons]
+** xref:fedipool-comparison.adoc[Fedipool]
