@@ -41,7 +41,8 @@ total amount earned by Radpool increases due to an increase in the
 hashrate, the amount paid to individual miner is only related to the
 individual miner's hashrate. When Radpool's hashrate increases, the
 variance in the payouts to MSP reduces. The miners are always paid at
-contract expiry as agreed between the MSP and the miner.
+contract expiry as agreed between the MSP and the miner. This attack 
+only increases the variance in the payouts for miners.
 
 == Denial of Service Attack By MSP
 

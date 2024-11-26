@@ -9,10 +9,10 @@ syndicate does not impose any requirements on these terms.
 == Match Making
 
 One miner thus chooses an MSP that funds their payout contract. This
-match making between MSP and miner happens on mailing lists, forums or
-OTC between the two parties.
+match making between MSP and miner happens out of band (mailing lists, forums,
+OTC, nostr, etc.) between the two parties.
 
-Each MSP funds payout contracts for a set of miner. Therefore the
+Each MSP funds payout contracts for a set of miners. Therefore the
 capital requirement for each MSP is related to the hashrate the miners
 bring to the pool. The Radpool syndicate has no view on the DLC
 contracts between the MSP and the miner. Radpool's miner dashboard
